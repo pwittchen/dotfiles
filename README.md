@@ -13,7 +13,7 @@ Detailed information about scripts and config files should be located in their f
   - `android/android-studio/bin/run-studio.sh`
   - `java/idea-ce/bin/run-idea.sh`
   - `python/pycharm-ce/bin/run-pycharm.sh`
-- `install` ~> should be used once after installing OS
+- `install/` ~> should be used once after installing OS
   - `install-stuff.sh`
   - `prepare-windows-manager.sh`
 - `scripts/` ~> location: `$HOME/Scripts/`
