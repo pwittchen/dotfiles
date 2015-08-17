@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# PLEASE NOTE: this script may not install everything at once
+# probably you will be obligated to install each program separately
+
 echo "downloading and installing useful software..."
 
 echo "installing zsh"
@@ -9,16 +13,21 @@ echo "installing oh-my-zsh"
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+echo "installing python-pygments for colorize terminal command"
+
+sudo apt-get install python-pygments
+
 echo "installing Git"
 
 sudo apt-get install git
 
-echo "Installing Java 7 and Java 8"
+echo "Installing Java 7, 8 and 9"
 
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
 sudo apt-get install oracle-java7-installer
 sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java9-installer
 
 echo "Setting Java 8 as default JVM"
 
@@ -31,11 +40,12 @@ sudo apt-get update
 sudo apt-get install openjdk-7-jdk
 sudo apt-get install openjdk-8-jdk
 
-echo "Installing jayatana - HUD support for Swing applications"
+#jaytana is useful only for Unity WM
+#echo "Installing jayatana - HUD support for Swing applications"
 
-sudo add-apt-repository ppa:danjaredg/jayatana
-sudo apt-get update
-sudo apt-get install jayatana
+#sudo add-apt-repository ppa:danjaredg/jayatana
+#sudo apt-get update
+#sudo apt-get install jayatana
 
 echo "installing Node.js"
 
@@ -53,24 +63,26 @@ echo "installing R"
 
 sudo apt-get install r-base
 
+echo "installing Haskell"
+
+sudo apt-get install haskell-platform
+
 echo "installing Chrome"
 
 sudo apt-get install libxss1 libappindicator1 libindicator7
+
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 sudo rm google-chrome*.deb # removing installer package
 
-echo "installing Mutate"
+echo "installing dmenu"
+sudo apt-get install dmenu
 
-sudo add-apt-repository ppa:mutate/ppa
-sudo apt-get update
-sudo apt-get install mutate
-
-echo "installing Skype"
-
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-sudo apt-get update
-sudo apt-get install skype
+# uncomment if you want to use Mutate
+#echo "installing Mutate"
+#sudo add-apt-repository ppa:mutate/ppa
+#sudo apt-get update
+#sudo apt-get install mutate
 
 echo "installing Spotify"
 
@@ -90,6 +102,10 @@ sudo apt-get install gthumb
 echo "installing Pinta - image editor"
 
 sudo apt-get install pinta
+
+echo "installing Gimp"
+
+sudo apt-get install gimp
 
 echo "installing VLC"
 
