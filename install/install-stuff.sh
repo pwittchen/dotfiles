@@ -84,6 +84,10 @@ sudo apt-get install dmenu
 #sudo apt-get update
 #sudo apt-get install mutate
 
+echo "installing Geary e-mail client"
+
+sudo apt-get install geary
+
 echo "installing Spotify"
 
 sudo sh -c 'echo "deb http://repository.spotify.com/ stable non-free" > /etc/apt/sources.list.d/spotify.list'
