@@ -17,5 +17,7 @@ Detailed information about scripts and config files should be located in their f
   - `install-stuff.sh`
   - `prepare-windows-manager.sh`
 - `scripts/` ~> location: `$HOME/Scripts/`
-  - `start-dmenu.sh`
+  - `start-dmenu.sh` ~> my keyboard shortcut for this is `Super+``
   - `start-dropbox.sh`
+
+My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
