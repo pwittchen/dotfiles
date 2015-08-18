@@ -11,7 +11,7 @@ Detailed information about scripts and config files should be located in their f
   - `.gitconfig`
 - `development/` ~> location: `$HOME/Development/`
   - `android/android-studio/bin/run-studio.sh`
-  - `java/idea-ce/bin/run-idea.sh`
+  - `jvm/idea-ce/bin/run-idea.sh`
   - `python/pycharm-ce/bin/run-pycharm.sh`
 - `install/` ~> should be used once after installing OS (please, read comments inside scripts)
   - `install-stuff.sh`
