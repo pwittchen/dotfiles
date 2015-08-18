@@ -1,6 +1,6 @@
 #!/bin/sh
 # change to your location
-IDEA_HOME=$HOME/Development/java/idea-ce
+IDEA_HOME=$HOME/Development/jvm/idea-ce
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 # Note: Can modify $IDEA_HOME/bin/idea{,64}.vmoptions

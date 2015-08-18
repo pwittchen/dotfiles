@@ -1320,17 +1320,10 @@ detectde () {
 						'X-Cinnamon')
 							DE=Cinnamon
 							;;
-
 						Unity)
 							DE=Unity
 							;;
 					esac
-				fi
-
-				# support for gnome-session-fallback
-				if [[ x"$DESKTOP_SESSION" = x"gnome-fallback" 
-				||    x"$DESKTOP_SESSION" = x"gnome-fallback-compiz" ]]; then 
-					DE=GNOME;
 				fi
 
 				if [ x"$DE" = x"" ]; then
@@ -1338,13 +1331,18 @@ detectde () {
 					if [ x"$KDE_FULL_SESSION" != x"" ]; then DE=KDE;
 					elif [ x"$GNOME_DESKTOP_SESSION_ID" != x"" ]; then DE=Gnome;
 					elif [ x"$MATE_DESKTOP_SESSION_ID" != x"" ]; then DE=MATE;
-					
 					elif `dbus-send --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.GetNameOwner string:org.gnome.SessionManager > /dev/null 2>&1` ; then DE=Gnome;
 					elif xprop -root _DT_SAVE_MODE 2> /dev/null | grep ' = \"xfce4\"$' >/dev/null 2>&1; then DE=XFCE;
 					elif xprop -root 2> /dev/null | grep -i '^xfce_desktop_window' >/dev/null 2>&1; then DE=XFCE
 					elif echo $DESKTOP | grep -q '^Enlightenment'; then DE=Enlightenment;
 					fi
 				fi
+
+				case "$DESKTOP_SESSION" in
+					gnome|gnome-fallback|gnome-fallback-compiz )
+						DE=Gnome
+						;;
+				esac
 
 				if [ x"$DE" = x"" ]; then
 					# fallback to checking $DESKTOP_SESSION
@@ -1391,7 +1389,7 @@ detectde () {
 							DE="Unity"
 						elif xprop -name "launcher" >/dev/null 2>&1 &&
 							xprop -name "panel" >/dev/null 2>&1; then
-							
+
 							DE="Unity"
 						fi
 					fi
