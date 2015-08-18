@@ -7,8 +7,8 @@ Contents
 Detailed information about scripts and config files should be located in their file name or content.
 
 - `config/` ~> location: `$HOME`
-  - `.zshrc`
-  - `.gitconfig`
+  - `.zshrc` ~> config for Z Shell
+  - `.gitconfig` ~> config for Git
 - `development/` ~> location: `$HOME/Development/`
   - `android/android-studio/bin/run-studio.sh`
   - `jvm/idea-ce/bin/run-idea.sh`
@@ -20,6 +20,7 @@ Detailed information about scripts and config files should be located in their f
   - `start-dmenu.sh` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
   - `start-dropbox.sh`
 - `usr/local/bin` ~> location: `/usr/local/bin`
-  - [`screenfetch`](https://github.com/KittyKatt/screenFetch/)
+  - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
+  - `switch-java` ~> allows to switch Java version
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
