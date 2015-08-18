@@ -1328,7 +1328,8 @@ detectde () {
 				fi
 
 				# support for gnome-session-fallback
-				if [ x"$DESKTOP_SESSION" = x"gnome-fallback-compiz" ]; then 
+				if [[ x"$DESKTOP_SESSION" = x"gnome-fallback" 
+				||    x"$DESKTOP_SESSION" = x"gnome-fallback-compiz" ]]; then 
 					DE=GNOME;
 				fi
 
