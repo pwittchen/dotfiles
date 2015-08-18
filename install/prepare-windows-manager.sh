@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# PLEASE NOTE: this script may not install everything at once
+# probably you will be ogligated to install everything separately
+# moreover, some actions described in comments have to be performed manually
+
 # install Gnome 2 Classic Session Fallback
 sudo apt-get install gnome-session-fallback
 
