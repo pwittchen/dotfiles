@@ -19,7 +19,7 @@ Detailed information about scripts and config files should be located in their f
 - `scripts/` ~> location: `$HOME/Scripts/`
   - `start-dmenu.sh` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
   - `start-dropbox.sh`
-- `usr/local/bin` ~> location `/usr/local/bin`
+- `usr/local/bin` ~> location: `/usr/local/bin`
   - [`screenfetch`](https://github.com/KittyKatt/screenFetch/)
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
