@@ -5,6 +5,12 @@ sudo apt-get install gnome-session-fallback
 # install gnome tweak tool and unity tweak tool
 sudo apt-get install gnome-tweak-tool unity-tweak-tool
 
+# install compiz config manager with plugins
+sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
+
+# to enable alt+tab in gnome classic fallback, open the manager and navigate to window management
+# check application switcher (previously disabled)
+
 # install Numix theme and icons for Gnome
 
 sudo add-apt-repository ppa:numix/ppa
