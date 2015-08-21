@@ -10,6 +10,7 @@ Detailed information about scripts and config files should be located in their f
   - `.zshrc` ~> config for Z Shell
   - `.gitconfig` ~> config for Git
 - `development/` ~> location: `$HOME/Development/`
+  - `00_jetbrains_ui_config` ~> UI config files for JetBrains IDEs
   - `android/android-studio/bin/run-studio.sh`
   - `jvm/idea-ce/bin/run-idea.sh`
   - `python/pycharm-ce/bin/run-pycharm.sh`
