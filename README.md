@@ -15,6 +15,7 @@ Detailed information about scripts and config files should be located in their f
   - `jvm/idea-ce/bin/run-idea.sh`
   - `python/pycharm-ce/bin/run-pycharm.sh`
 - `install/` ~> should be used once after installing OS (please, read comments inside scripts)
+  - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
   - `install-stuff.sh`
   - `prepare-windows-manager.sh`
 - `scripts/` ~> location: `$HOME/Scripts/`
