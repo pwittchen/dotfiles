@@ -26,3 +26,5 @@ Detailed information about scripts and config files should be located in their f
   - `switch-java` ~> allows to switch Java version
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
+
+If you're interested in configuration of my Gnome Classic desktop environment, you can check this article: http://blog.wittchen.biz.pl/gnome-classic-desktop-environment-on-ubuntu/
