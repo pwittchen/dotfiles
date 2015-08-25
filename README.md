@@ -24,6 +24,7 @@ Detailed information about scripts and config files should be located in their f
 - `usr/local/bin` ~> location: `/usr/local/bin`
   - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
   - `switch-java` ~> allows to switch Java version
+  - `smplayer` ~> downloads music stream to a file and plays it (works with SoundCloud) - requires `wget` and `mplayer`
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
 
