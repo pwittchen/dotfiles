@@ -10,3 +10,7 @@ inside dirs in `$HOME`:
 /config/options/color.scheme.xml
 /config/options/ui.inf.xml
 ```
+
+For code styles check: https://github.com/square/java-code-styles
+
+TODO: automate installation of these configs in the same way as Square's java code styles.
