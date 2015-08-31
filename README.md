@@ -10,10 +10,11 @@ Detailed information about scripts and config files should be located in their f
   - `.zshrc` ~> config for Z Shell
   - `.gitconfig` ~> config for Git
 - `development/` ~> location: `$HOME/Development/`
-  - `00_jetbrains_ui_config` ~> UI config files for JetBrains IDEs
-  - `android/android-studio/bin/run-studio.sh`
-  - `jvm/idea-ce/bin/run-idea.sh`
-  - `python/pycharm-ce/bin/run-pycharm.sh`
+  - `ui-config` ~> UI config files for JetBrains IDEs
+  - `run-scripts`
+    - `android/android-studio/bin/run-studio.sh`
+    - `jvm/idea-ce/bin/run-idea.sh`
+    - `python/pycharm-ce/bin/run-pycharm.sh`
 - `install/` ~> should be used once after installing OS (please, read comments inside scripts)
   - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
   - `install-stuff.sh`
@@ -28,6 +29,27 @@ Detailed information about scripts and config files should be located in their f
   - `smplayer` ~> downloads music stream to a file and plays it (works with SoundCloud) - requires `wget` and `mplayer`
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
   - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "lorem", "bar": "ipsum"}' | pretty-json`
+
+Directory structure for projects
+--------------------------------
+
+- `$HOME/Development/`
+   - android
+     - android-studio
+     - android-sdk
+     - android-projects
+   - jvm
+     - jvm-projects
+     - idea-ce
+   - python
+     - pycharm-ce
+     - python-projects
+   - *any other language or technology...*
+     - *-projects
+     - ...
+
+Other
+-----
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
 
