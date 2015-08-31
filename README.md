@@ -24,11 +24,11 @@ Detailed information about scripts and config files should be located in their f
   - `start-dropbox.sh`
 - `usr/local/bin` ~> location: `/usr/local/bin`
   - [`git-cheat`](https://github.com/0xAX/git-cheat) ~> git cheat sheets in your command line
-  - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
-  - `switch-java` ~> allows to switch Java version
-  - `smplayer` ~> downloads music stream to a file and plays it (works with SoundCloud) - requires `wget` and `mplayer`
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
-  - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "lorem", "bar": "ipsum"}' | pretty-json`
+  - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "bar"}' | pretty-json`
+  - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
+  - `smplayer` ~> downloads music stream with `wget` to a file and plays it with `mplayer`
+  - `switch-java` ~> allows to switch Java version
 
 Directory structure for projects
 --------------------------------
