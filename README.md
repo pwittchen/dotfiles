@@ -27,6 +27,7 @@ Detailed information about scripts and config files should be located in their f
   - `switch-java` ~> allows to switch Java version
   - `smplayer` ~> downloads music stream to a file and plays it (works with SoundCloud) - requires `wget` and `mplayer`
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
+  - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "lorem", "bar": "ipsum"}' | pretty-json`
 
 My keyboard shortcut for terminal is `Ctrl+``. Remaining shortcuts are default.
 
