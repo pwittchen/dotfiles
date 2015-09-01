@@ -83,9 +83,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export ANDROID_HOME=$HOME/Development/android/android-sdk/
+# custom environmental variables and PATH variable
 
+# scripts
 export PATH=$PATH:$HOME/Scripts
+
+# java
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Development/go/workspace
+export GOBIN=$GOPATH/bin
+
+# android
+export ANDROID_HOME=$HOME/Development/android/android-sdk/
 export PATH=$PATH:$HOME/Development/android/android-sdk/platform-tools
 export PATH=$PATH:$HOME/Development/android/android-sdk/tools
