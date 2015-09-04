@@ -19,15 +19,13 @@ Detailed information about scripts and config files should be located in their f
   - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
   - `install-stuff.sh`
   - `prepare-windows-manager.sh`
-- `scripts/` ~> location: `$HOME/Scripts/`
-  - `start-dmenu.sh` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
-  - `start-dropbox.sh`
 - `usr/local/bin` ~> location: `/usr/local/bin`
   - [`git-cheat`](https://github.com/0xAX/git-cheat) ~> git cheat sheets in your command line
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
   - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "bar"}' | pretty-json`
   - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
   - `smplayer` ~> downloads music stream with `wget` to a file and plays it with `mplayer`
+  - `start-dmenu` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
   - `switch-java` ~> allows to switch Java version
 
 Directory structure for projects
