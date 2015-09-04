@@ -11,7 +11,7 @@ inside dirs in `$HOME`:
 /config/options/ui.inf.xml
 ```
 
-How to apply this setting manually: http://blog.wittchen.biz.pl/adjusting-look-feel-of-intellij-idea-and-android-studio-on-ubuntu/
+Article describing how to apply these settings manually: http://blog.wittchen.biz.pl/adjusting-look-feel-of-intellij-idea-and-android-studio-on-ubuntu/
 
 For code styles check: https://github.com/square/java-code-styles
 
