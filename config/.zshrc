@@ -85,9 +85,6 @@ source $ZSH/oh-my-zsh.sh
 
 # custom environmental variables and PATH variable
 
-# scripts
-export PATH=$PATH:$HOME/Scripts
-
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
