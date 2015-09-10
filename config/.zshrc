@@ -83,17 +83,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# custom environmental variables and PATH variable
-
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
-# go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/Development/go/workspace
-export GOBIN=$GOPATH/bin
+# scala
+export SCALA_HOME=/usr/local/share/scala
+export PATH=$PATH:$SCALA_HOME/bin
 
 # android
 export ANDROID_HOME=$HOME/Development/android/android-sdk/
 export PATH=$PATH:$HOME/Development/android/android-sdk/platform-tools
 export PATH=$PATH:$HOME/Development/android/android-sdk/tools
+
+# go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Development/go/workspace
+export GOBIN=$GOPATH/bin
