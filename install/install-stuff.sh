@@ -167,6 +167,12 @@ sudo apt-get install preload
 
 # system optimization - end
 
+echo "installing tmux"
+sudo apt-get install tmux
+
+echo "installing xdotool"
+sudo apt-get install xdotool
+
 echo "installing Dropbox" # should be done in the and, because we download stuff to ~
 
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
