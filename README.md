@@ -27,6 +27,7 @@ Detailed information about scripts and config files should be located in their f
   - `smplayer` ~> downloads music stream with `wget` to a file and plays it with `mplayer`
   - `start-dmenu` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
   - `switch-java` ~> allows to switch Java version
+  - `mux-4tiles` ~> creates 4 tiles (2 rows, 2 columns) in `tmux`
 
 Directory structure for projects
 --------------------------------
