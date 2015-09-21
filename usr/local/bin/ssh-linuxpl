@@ -1,0 +1,4 @@
+#!/bin/bash
+#connects to remote webserver at linuxpl.info via SSH
+#password is required
+ssh -l wittchen -p 59184 wittchen.linuxpl.info
