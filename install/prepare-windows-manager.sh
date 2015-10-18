@@ -16,6 +16,8 @@ sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
 # to enable alt+tab in gnome classic fallback, open the manager and navigate to window management
 # check application switcher (previously disabled)
 
+# to set number of workspaces, open CompizConfig Settings Manager and go to: General Options -> Desktop Size
+
 # install Numix theme and icons for Gnome
 
 sudo add-apt-repository ppa:numix/ppa
