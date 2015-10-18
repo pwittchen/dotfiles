@@ -173,10 +173,14 @@ sudo apt-get install tmux
 echo "installing xdotool"
 sudo apt-get install xdotool
 
+echo "installing caffeine"
+
+sudo add-apt-repository ppa:caffeine-developers/ppa
+sudo apt-get update
+sudo apt-get install caffeine
+
 echo "installing Dropbox" # should be done in the and, because we download stuff to ~
 
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 #sudo apt-get install libappindicator1 # was installed earlier
 sudo apt-get install nautilus-dropbox
-
-
