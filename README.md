@@ -12,9 +12,9 @@ Detailed information about scripts and config files should be located in their f
 - `development/` ~> location: `$HOME/Development/`
   - `ui-config` ~> UI config files for JetBrains IDEs
   - `run-scripts`
-    - `android/android-studio/bin/run-studio.sh`
-    - `jvm/idea-ce/bin/run-idea.sh`
-    - `python/pycharm-ce/bin/run-pycharm.sh`
+    - `android-studio/run-studio.sh` should be located in `android/android-studio/bin/run-studio.sh`
+    - `idea-ce/run-idea.sh` should be located in `jvm/idea-ce/bin/run-idea.sh`
+    - `pycharm-ce/run-pycharm.sh` should be located in `python/pycharm-ce/bin/run-pycharm.sh`
 - `install/` ~> should be used once after installing OS (please, read comments inside scripts)
   - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
   - `install-stuff.sh`
