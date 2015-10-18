@@ -17,6 +17,7 @@ sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
 # check application switcher (previously disabled)
 
 # to set number of workspaces, open CompizConfig Settings Manager and go to: General Options -> Desktop Size
+# to configure look of the windows, go to Effects -> Window Decoration
 
 # install Numix theme and icons for Gnome
 
