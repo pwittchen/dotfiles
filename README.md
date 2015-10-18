@@ -19,7 +19,7 @@ Detailed information about scripts and config files should be located in their f
   - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
   - `install-stuff.sh`
   - `prepare-windows-manager.sh`
-- `usr/local/bin` ~> location: `/usr/local/bin`
+- `scripts/` ~> location: `/usr/local/bin`
   - [`git-cheat`](https://github.com/0xAX/git-cheat) ~> git cheat sheets in your command line
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
   - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "bar"}' | pretty-json`
