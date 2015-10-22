@@ -18,6 +18,7 @@ Detailed information about scripts and config files should be located in their f
   - `prepare-ides.sh`
 - `install/` ~> should be used once after installing OS (please, read comments inside scripts)
   - `icons/spotify` ~> custom Spotify icons and instruction for replacing them with existing ones
+  - `icons/skype` ~> instruction how to change default skype icon in top panel to white monochromatic icon
   - `install-stuff.sh`
   - `install-scripts.sh`
   - `prepare-windows-manager.sh`
