@@ -3,7 +3,7 @@ How to change default Skype icon in top panel to monochromatic white icon?
 
 Original post: http://askubuntu.com/a/549964/435240
 
-I made a .deb package with a hack that compels sni-qt:i386 to use images located in /usr/share/pixmaps/skype/ directory for systemtray skype status icons, based on webguruz.ru page posted by @user312051.
+I made a .deb package with a hack that compels sni-qt:i386 to use images located in `/usr/share/pixmaps/skype/` directory for systemtray skype status icons, based on webguruz.ru page posted by @user312051.
 
 **To install**
 
@@ -27,7 +27,7 @@ sudo cp skype/* /usr/share/pixmaps/skype
 sudo chmod +r /usr/share/pixmaps/skype/*
 ```
 
-The icon set I provide here is based on Faenza-Dark Theme, for change the icons, just replace the images in /usr/share/pixmaps/skype directory.
+The icon set I provide here is based on Faenza-Dark Theme, for change the icons, just replace the images in `/usr/share/pixmaps/skype directory`.
 
 **To remove**
 
