@@ -26,6 +26,7 @@ Detailed information about scripts and config files should be located in their f
   - [`git-cheat`](https://github.com/0xAX/git-cheat) ~> git cheat sheets in your command line
   - [`pidcat`](https://github.com/JakeWharton/pidcat) ~> improved LogCat for Android
   - `prettyjson` ~> script, which prints pretty json - e.g. `echo '{"foo": "bar"}' | pretty-json`
+  - [`rebaseandsquash`](http://rebaseandsqua.sh) ~> script, which rebases and squashes Git commits
   - [`screenfetch`](https://github.com/KittyKatt/screenFetch/) ~> displays system info & its ASCII logo
   - `smplayer` ~> downloads music stream with `wget` to a file and plays it with `mplayer`
   - `start-dmenu` ~> my keyboard shortcut for [dmenu](http://tools.suckless.org/dmenu/) is `Super+``
