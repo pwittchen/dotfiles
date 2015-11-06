@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# TODO: fix this script
 # PLEASE NOTE: this script may not install everything at once
 # probably you will be obligated to install each program separately
 
