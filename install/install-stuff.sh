@@ -76,6 +76,12 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 sudo rm google-chrome*.deb # removing installer package
 
+echo "installing Atom.io"
+
+wget https://atom.io/download/deb
+sudo dpkg -i *.deb
+sudo rm *.deb
+
 echo "installing dmenu"
 sudo apt-get install dmenu
 
