@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# TODO: fix path to the IDEs to make it flexible (independent from concrete version)
 # Prepare look and feel of IntelliJ IDEA, Android Studio and Pycharm
 
 cp ui-config/Darcula-modified.icls $HOME/.IdeaIC14/config/colors/
