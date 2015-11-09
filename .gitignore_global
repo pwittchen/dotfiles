@@ -1,7 +1,19 @@
+# General
 *~
+
+# OS X
 .DS_Store
+
+# IntelliJ IDEA
 .idea
-.class
-.jar
-.war
-.ear
+*.iml
+
+# Gradle
+.gradle
+local.properties
+build
+
+# Java
+*.class
+*.jar
+*.war
