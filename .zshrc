@@ -99,3 +99,7 @@ export PATH=$PATH:$HOME/Development/android/android-sdk/tools
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/Development/go/workspace
 export GOBIN=$GOPATH/bin
+
+# swift
+export PATH=$PATH:$HOME/Development/swift/swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu14.04/usr/bin/
+
