@@ -1,9 +1,9 @@
 Destination file locations:
 
 inside dirs in `$HOME`:
-- `.IdeaIC14`
-- `.AndroidStudio1.3`
-- `.PyCharm40`
+- `.IdeaIC*`
+- `.AndroidStudio*`
+- `.PyCharm*`
 
 ```
 /config/colors/Darcula-modified.icls
