@@ -73,7 +73,9 @@ main() {
   msg "installing Geary e-mail client"
   sudo apt-get install geary
 
-  # TODO: installing California
+  msg "installing California desktop calendar"
+  sudo add-apt-repository ppa:yorba/daily-builds
+  sudo apt-get update && sudo apt-get install california
 
   msg "installing Spotify"
   sudo sh -c 'echo "deb http://repository.spotify.com/ stable non-free" > /etc/apt/sources.list.d/spotify.list'
