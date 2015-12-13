@@ -29,9 +29,9 @@ main() {
   cp ui-config/ui.inf.xml $HOME/.PyCharm*/config/options/ui.inf.xml
 
   msg "copying run scripts to development directories"
-  cp run-scripts/android-studio/run-studio.sh $HOME/Development/android/android-studio/bin/run-studio.sh
-  cp run-scripts/idea-ce/run-idea.sh $HOME/Development/jvm/idea-ce/bin/run-idea.sh
-  cp run-scripts/pycharm-ce/run-pycharm.sh $HOME/Development/python/pycharm-ce/bin/run-pycharm.sh
+  cp run-scripts/run-studio.sh $HOME/Development/android/android-studio/bin/run-studio.sh
+  cp run-scripts/run-idea.sh $HOME/Development/jvm/idea-ce/bin/run-idea.sh
+  cp run-scripts/run-pycharm.sh $HOME/Development/python/pycharm-ce/bin/run-pycharm.sh
 
   msg "DONE!"
 }
