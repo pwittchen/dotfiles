@@ -11,6 +11,8 @@ msg() {
 }
 
 main() {
+    msg "-------- preparing Windows Manager's Look & Feel --------"
+
   msg "installing Gnome 2 Classic Session Fallback"
   sudo apt-get install gnome-session-fallback
 
