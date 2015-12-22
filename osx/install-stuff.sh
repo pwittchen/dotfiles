@@ -21,7 +21,8 @@ main() {
 
   msg "installing zsh"
   brew install zsh zsh-completions
-  chsh -s /bin/zsh # settin zsh as default shell
+  msg "setting zsh as default shell"
+  chsh -s /bin/zsh
   msg "installing oh-my-zsh"
   curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
