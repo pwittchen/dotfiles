@@ -29,3 +29,9 @@ $ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
 ```shell
 $ brew install ant maven gradle
 ```
+
+**JDK**
+
+- [JDK 7 download website](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- [JDK 8 download website](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- [JDK 9 download website](https://jdk9.java.net/download/)
