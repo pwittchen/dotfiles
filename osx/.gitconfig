@@ -1,3 +1,6 @@
+[user]
+	email = piotr.wittchen@sap.com
+	name = Piotr Wittchen
 [core]
 	autocrlf = input
 [alias]
