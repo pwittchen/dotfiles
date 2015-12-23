@@ -1,7 +1,7 @@
 To prepare IDEs, simply run:
 		
 ```
-./prepare-ides.sh
+./configure.sh
 ```
 		
 **Please note**: you need to have appropriate development directories created in your system:

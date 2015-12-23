@@ -12,11 +12,11 @@ msg() {
 
 main() {
   msg "copying scripts to /usr/local/bin/"
-  sudo cp ../scripts/* /usr/local/bin/
+  sudo cp ../../scripts/* /usr/local/bin/
   msg "copying dotfiles to home directory"
-  sudo cp ../.zshrc $HOME
-  sudo cp ../.gitconfig $HOME
-  sudo cp ../.gitignore_global $HOME
+  sudo cp ../../.zshrc $HOME
+  sudo cp ../../.gitconfig $HOME
+  sudo cp ../../.gitignore_global $HOME
   msg "DONE!"
 }
 
