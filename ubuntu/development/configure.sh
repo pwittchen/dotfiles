@@ -11,7 +11,10 @@ msg() {
 }
 
 main() {
-  msg "-------- preparing Look & Feel of JetBrains IDEs --------"
+  # msg "-------- creating directories --------"
+  # TODO: add code creating appropriate directory structure
+
+  msg "-------- preparing Look & Feel of JetBrains IDEs --------"  
 
   msg "copying Darcula-modified theme to JetBrains IDEs directories"
   cp config/Darcula-modified.icls $HOME/.IdeaIC*/config/colors/
