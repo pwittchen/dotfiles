@@ -12,10 +12,10 @@ msg() {
 
 main() {
     msg "starting system configuration"
-    source ./configuration/copy-stuff.sh
-    source ./configuration/install-stuff.sh
-    source ./configuration/prepare-windows-manager.sh
-    source ./configuration/fix-icons.sh
+    source ./scripts/copy-stuff.sh
+    source ./scripts/install-stuff.sh
+    source ./scripts/prepare-windows-manager.sh
+    source ./scripts/fix-icons.sh
     msg "DONE! System configuration finished!"
 }
 
