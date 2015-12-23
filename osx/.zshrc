@@ -102,4 +102,4 @@ alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles YES &
 alias hide-hidden-files="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
 # hybris settings
-source $HOME/.zshrc.hybris
+# source $HOME/.zshrc.hybris
