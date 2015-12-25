@@ -11,8 +11,10 @@ msg() {
 }
 
 main() {
-  # msg "-------- creating directories --------"
-  # TODO: add code creating appropriate directory structure
+  msg "-------- creating directories --------"
+  mkdir -p $HOME/Development/android/android-studio/bin/
+  mkdir -p $HOME/Development/jvm/idea-ce/bin/
+  mkdir -p $HOME/Development/python/pycharm-ce/bin/
 
   msg "-------- preparing Look & Feel of JetBrains IDEs --------"  
 
