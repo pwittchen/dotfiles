@@ -1,5 +1,5 @@
-To prepare IDEs, simply run:
-		
+To prepare development environment, simply run:
+	
 ```
 ./configure.sh
 ```
