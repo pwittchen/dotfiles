@@ -11,11 +11,6 @@ msg() {
 }
 
 main() {
-  msg "-------- creating directories --------"
-  mkdir -p $HOME/Development/android/android-studio/bin/
-  mkdir -p $HOME/Development/jvm/idea-ce/bin/
-  mkdir -p $HOME/Development/python/pycharm-ce/bin/
-
   msg "-------- preparing Look & Feel of JetBrains IDEs --------"  
 
   msg "copying Darcula-modified theme to JetBrains IDEs directories"
@@ -33,10 +28,15 @@ main() {
   cp config/ui.inf.xml $HOME/.AndroidStudio*/config/options/ui.inf.xml
   cp config/ui.inf.xml $HOME/.PyCharm*/config/options/ui.inf.xml
 
+  # you can setup your own paths below
+  export PATH_TO_ANDROID_STUDIO=$HOME/Development/android/android-studio
+  export PATH_TO_INTELLIJ_IDEA=$HOME/Development/jvm/idea-ce
+  export PATH_TO_PYCHARM=$HOME/Development/python/pycharm-ce
+
   msg "copying run scripts to development directories"
-  cp scripts/run-studio.sh $HOME/Development/android/android-studio/bin/run-studio.sh
-  cp scripts/run-idea.sh $HOME/Development/jvm/idea-ce/bin/run-idea.sh
-  cp scripts/run-pycharm.sh $HOME/Development/python/pycharm-ce/bin/run-pycharm.sh
+  cp scripts/run-studio.sh $PATH_TO_ANDROID_STUDIO/bin/run-studio.sh
+  cp scripts/run-idea.sh $PATH_TO_INTELLIJ_IDEA/bin/run-idea.sh
+  cp scripts/run-pycharm.sh $PATH_TO_PYCHARM/bin/run-pycharm.sh
 
   msg "DONE!"
 }
