@@ -85,15 +85,16 @@ source $ZSH/oh-my-zsh.sh
 
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export PATH=$PATH:$JAVA_HOME
 
 # scala
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
 # android
-export ANDROID_HOME=$HOME/Development/android/android-sdk/
-export PATH=$PATH:$HOME/Development/android/android-sdk/platform-tools
-export PATH=$PATH:$HOME/Development/android/android-sdk/tools
+export ANDROID_HOME=$HOME/Development/android/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
 
 # go
 export PATH=$PATH:/usr/local/go/bin
@@ -102,4 +103,3 @@ export GOBIN=$GOPATH/bin
 
 # swift
 export PATH=$PATH:$HOME/Development/swift/swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu14.04/usr/bin/
-
