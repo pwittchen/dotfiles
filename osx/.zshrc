@@ -101,5 +101,10 @@ alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hide-hidden-files="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
+# docker variables (you should get it during docker installation)
+export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
+export DOCKER_CERT_PATH=/Users/$SAP_USER_ID/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
 # hybris settings
 # source $HOME/.hybris_profile
