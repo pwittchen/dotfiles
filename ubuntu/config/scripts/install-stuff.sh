@@ -13,6 +13,9 @@ msg() {
 main() {
   msg "-------- downloading and installing useful software --------"
 
+  msg "installing Git"
+  sudo apt-get install git
+
   msg "installing zsh"
   sudo apt-get install zsh
 
@@ -21,9 +24,6 @@ main() {
 
   msg "installing python-pygments for colorize terminal command"
   sudo apt-get install python-pygments
-
-  msg "installing Git"
-  sudo apt-get install git
 
   msg "Installing Java 7, 8 and 9"
   sudo add-apt-repository ppa:webupd8team/java -y
