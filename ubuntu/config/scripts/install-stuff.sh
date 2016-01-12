@@ -48,7 +48,7 @@ main() {
   sudo apt-get install php5
 
   msg "installing Go"
-  msg apt-get install golang
+  sudo apt-get install golang
 
   msg "installing R"
   sudo apt-get install r-base
