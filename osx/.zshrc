@@ -94,6 +94,9 @@ alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
 # setting current java version and JAVA_HOME
 setJdk8
 
+# setting JDK for Android Studio
+export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
+
 # resetting Tomcat Server
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 
