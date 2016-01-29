@@ -1,7 +1,5 @@
 # dotfiles (Mac OS X)
-my scripts, installers and config files for Mac OS X
-
-it's my current setup at work
+My dotfiles for Mac OS X. It's my current setup at work.
 
 Common tools I use on OS X are as follows:
 - [homebrew](http://brew.sh/)
