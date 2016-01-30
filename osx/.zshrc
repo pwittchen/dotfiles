@@ -109,5 +109,10 @@ export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
 export DOCKER_CERT_PATH=/Users/$SAP_USER_ID/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
+# go
+export GOPATH=~/Projects/other/go/workspace
+export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
+
 # hybris settings
 # source $HOME/.hybris_profile
