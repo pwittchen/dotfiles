@@ -114,8 +114,5 @@ export GOPATH=~/Projects/other/go/workspace
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
-# PKUP script
-# alias createPkupDiffs='~/Projects/Scripts/pkup.sh'
-
 # hybris settings
 # source $HOME/.hybris_profile
