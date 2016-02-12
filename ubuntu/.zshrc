@@ -83,7 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias reset-gnome-panel="sudo killall gnome-panel"
+alias resetGnomePanel="sudo killall gnome-panel"
+alias showMyIp="ifconfig | grep inet"
 
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
