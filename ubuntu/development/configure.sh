@@ -5,7 +5,7 @@ set -e # tells bash, in a script, to exit whenever anything returns a non-zero r
 msg() {
     tput setab 2 # green bg
     tput setaf 7 # white text
-    echo ">>> $1"
+    echo "$1"
     tput sgr 0
     sleep 1
 }
