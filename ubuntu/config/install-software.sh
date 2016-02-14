@@ -26,7 +26,7 @@ main() {
 
   sudo apt-get update
 
-  sudo apt-get install git zsh python-pygments oracle-java7-installer oracle-java8-installer oracle-java9-installer openjdk-7-jdk openjdk-8-jdk nodejs php5 golang r-base haskell-platform libxss1 libappindicator1 libindicator7 dmenu geary california transmission gthumb pinta gimp vlc browser-plugin-vlc furiusisomount tmux xdotool spotify-client indicator-multiload indicator-sensors my-weather-indicator compizconfig-settings-manager preload nautilus-dropbox
+  sudo apt-get install git zsh python-pygments oracle-java7-installer oracle-java8-installer oracle-java9-installer openjdk-7-jdk openjdk-8-jdk oracle-java8-set-default nodejs php5 golang r-base haskell-platform libxss1 libappindicator1 libindicator7 dmenu geary california transmission gthumb pinta gimp vlc browser-plugin-vlc furiusisomount tmux xdotool spotify-client indicator-multiload indicator-sensors my-weather-indicator compizconfig-settings-manager preload nautilus-dropbox
 
   msg "installing Chrome"
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -40,9 +40,6 @@ main() {
 
   msg "installing oh-my-zsh"
   sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-  msg "setting Java 8 as default JVM"
-  sudo apt-get install oracle-java8-set-default
 
   msg "removing unwanted lenses from dashboard"
   sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video
