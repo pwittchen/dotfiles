@@ -83,26 +83,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# custom aliases
 alias resetGnomePanel="sudo killall gnome-panel"
 alias showMyIp="ifconfig | grep inet"
 
+# development directory
+export DEV=$HOME/Development
+
 # java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export PATH=$PATH:$JAVA_HOME
-
-# scala
-export SCALA_HOME=/usr/local/share/scala
-export PATH=$PATH:$SCALA_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH
 
 # android
-export ANDROID_HOME=$HOME/Development/android/android-sdk
+export ANDROID_HOME=$DEV/android/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 
+# scala
+export SCALA_HOME=/usr/share/scala
+export PATH=$SCALA_HOME/bin:$PATH
+
 # go
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/Development/go/workspace
+export PATH=/usr/local/go/bin:$PATH
+export GOPATH=$DEV/go/workspace
 export GOBIN=$GOPATH/bin
+export PATH=$GOBIN:$PATH
 
 # swift
-export PATH=$PATH:$HOME/Development/swift/swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu14.04/usr/bin/
+export PATH=$DEV/swift/swift/usr/bin:$PATH
