@@ -86,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # custom aliases
 alias resetGnomePanel="sudo killall gnome-panel"
 alias showMyIp="ifconfig | grep inet"
+alias weather="curl -4 http://wttr.in/Gliwice"
 
 # development directory
 export DEV=$HOME/Development
