@@ -97,11 +97,10 @@ setJdk8
 # setting JDK for Android Studio
 export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
 
-# resetting Tomcat Server
+# custom aliases
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
-
-# showing ip address
 alias showMyIp="ifconfig | grep inet"
+alias weather="curl -4 http://wttr.in/Gliwice"
 
 # hiding and showing hidden files on OS X
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
