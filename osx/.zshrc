@@ -91,18 +91,22 @@ alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
 
-# setting current java version and JAVA_HOME
+# set current java version and JAVA_HOME
 setJdk8
 
-# setting JDK for Android Studio
+# set JDK for Android Studio
 export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
 
-# custom aliases
+# reset tomcat server
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
+
+# show ip
 alias showMyIp="ifconfig | grep inet"
+
+# show weather in my city
 alias weather="curl -4 http://wttr.in/Gliwice"
 
-# hiding and showing hidden files on OS X
+# hide and show hidden files
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
