@@ -99,15 +99,20 @@ alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showMyIp="ifconfig | grep inet"
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
-alias weather="curl -4 http://wttr.in/Gliwice"
+alias showWeather="curl -4 http://wttr.in/Gliwice"
 
 # custom functions
+
 function findFile() {
   find ~/ -type f -name "$1"
 }
 
 function findDir() {
   find ~/ -type d -name "$1"
+}
+
+function showWeatherIn() {
+  curl -4 http://wttr.in/"$1"
 }
 
 # set JDK for Android Studio

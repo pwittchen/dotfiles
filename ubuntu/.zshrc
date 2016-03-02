@@ -86,15 +86,29 @@ source $ZSH/oh-my-zsh.sh
 # custom aliases
 alias resetGnomePanel="sudo killall gnome-panel"
 alias showMyIp="ifconfig | grep inet"
-alias weather="curl -4 http://wttr.in/Gliwice"
+alias switchJava="sudo update-alternatives --config java"
+alias prettyJson="python -m json.tool"
+
+# personalized aliases
+alias showWeather="curl -4 http://wttr.in/Gliwice"
+alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 
 # custom functions
+
 function findFile() {
   find ~/ -type f -name "$1"
 }
 
 function findDir() {
   find ~/ -type d -name "$1"
+}
+
+function getAndPlay() {
+  wget $@ && mplayer $(basename $@);
+}
+
+function showWeatherIn() {
+  curl -4 http://wttr.in/"$1"
 }
 
 # development directory
