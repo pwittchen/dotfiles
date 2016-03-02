@@ -110,6 +110,16 @@ alias weather="curl -4 http://wttr.in/Gliwice"
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
+# finding file in the $HOME dir
+function findFile() {
+  find ~/ -type f -name "$1"
+}
+
+# finding dir in the $HOME dir
+function findDir() {
+  find ~/ -type d -name "$1"
+}
+
 # docker variables (you should get them during docker installation)
 export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
 export DOCKER_CERT_PATH=/Users/$SAP_USER_ID/.boot2docker/certs/boot2docker-vm
