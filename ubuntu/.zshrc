@@ -88,6 +88,15 @@ alias resetGnomePanel="sudo killall gnome-panel"
 alias showMyIp="ifconfig | grep inet"
 alias weather="curl -4 http://wttr.in/Gliwice"
 
+# custom functions
+function findFile() {
+  find ~/ -type f -name "$1"
+}
+
+function findDir() {
+  find ~/ -type d -name "$1"
+}
+
 # development directory
 export DEV=$HOME/Development
 
