@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# switching java version on OS X
+# aliases for switching java version (works only for OS X)
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
@@ -94,31 +94,24 @@ alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
 # set current java version and JAVA_HOME
 setJdk8
 
-# set JDK for Android Studio
-export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
-
-# reset tomcat server
+# custom aliases
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
-
-# show ip
 alias showMyIp="ifconfig | grep inet"
-
-# show weather in my city
-alias weather="curl -4 http://wttr.in/Gliwice"
-
-# hide and show hidden files
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
+alias weather="curl -4 http://wttr.in/Gliwice"
 
-# finding file in the $HOME dir
+# custom functions
 function findFile() {
   find ~/ -type f -name "$1"
 }
 
-# finding dir in the $HOME dir
 function findDir() {
   find ~/ -type d -name "$1"
 }
+
+# set JDK for Android Studio
+export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
 
 # docker variables (you should get them during docker installation)
 export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
