@@ -123,5 +123,5 @@ export GOPATH=~/Projects/other/go/workspace
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 
-# hybris settings
-# source $HOME/.hybris_profile
+# hybris settings (contains local env variables)
+source $HOME/.hybris_profile
