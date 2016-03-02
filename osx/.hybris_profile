@@ -1,0 +1,23 @@
+# hybris variables
+export yHYBRIS_PROJECTS="/Users/$SAP_USER_ID/Projects/hybris-projects"
+export yHYBRIS_SRC="$yHYBRIS_PROJECTS/hybrisSrc"
+export yHYBRIS_DIR="$yHYBRIS_PROJECTS/hybris"
+export yDEV_NG_ENV="$yHYBRIS_PROJECTS/dev-env-ng"
+
+# sources of the projects
+export yBACKOFFICE="$yHYBRIS_SRC/backoffice"
+export yCOCKPIT_NG="$yHYBRIS_SRC/cockpitng"
+export yPLBACKOFFICE="$yHYBRIS_SRC/platform-backoffice/platformbackoffice"
+export ySOLR_BACKOFFICE="$yHYBRIS_SRC/backofficesearch"
+
+# hybris platform
+export yPLATFORM_BIN="$yHYBRIS_DIR/bin/platform"
+export yCONFIG_PLATFORM="$yHYBRIS_DIR/config"
+
+# hybris logs
+export yHYBRIS_LOGS="$yHYBRIS_DIR/log"
+export yHYBRIS_LOGS_TOMCAT="$yHYBRIS_LOGS/tomcat"
+
+# hybris development environment scripts
+source $yDEV_NG_ENV/scripts/ng_essentials.sh
+source $yDEV_NG_ENV/scripts/vcs_essentials.sh
