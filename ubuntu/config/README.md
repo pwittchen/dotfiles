@@ -7,7 +7,7 @@ $ ./install-software.sh
 to prepare Windows Manager run:
 
 ```
-$ ./prepare-wm.sh
+$ ./install-wm-tools.sh
 ```
 
 to fix Spotify and Skype icons, check repositories:
