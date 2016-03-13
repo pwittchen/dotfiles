@@ -1,13 +1,13 @@
 to install software run:
 
 ```
-$ ./install-software.sh
+$ ./installSoftware.sh
 ```
 
 to prepare Windows Manager run:
 
 ```
-$ ./install-wm-tools.sh
+$ ./installWmTools.sh
 ```
 
 to fix Spotify and Skype icons, check repositories:
