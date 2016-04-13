@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Creates diffs with my changes in code from the last month for PKUP report
+# PKUP stands for "Podwyższone Koszty Uzyskania Przychodu" in Polish
 
 set -e
 
