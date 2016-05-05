@@ -12,5 +12,3 @@
 	ignored-local = !git ls-files -v | grep "^[[:lower:]]"
 [push]
 	default = simple
-[branch "develop"]
-	mergeoptions = --no-ff
