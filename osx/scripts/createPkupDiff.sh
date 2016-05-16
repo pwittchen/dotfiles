@@ -3,6 +3,12 @@
 # Creates diffs with my changes in code from the last month for PKUP report
 # PKUP stands for "Podwyższone Koszty Uzyskania Przychodu" in Polish
 
+# TODO:
+# - update it to generate diffs from 20th day of previous month - not last 20 days
+# - automatically delete empty diff files or don't generate them
+# - generate report in *.doc file (consider external python script)
+# - parametrize this script to make it generic
+
 set -e
 
 msg() {
