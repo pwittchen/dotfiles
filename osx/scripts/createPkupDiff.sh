@@ -5,7 +5,6 @@
 
 # TODO:
 # - update it to generate diffs from 20th day of previous month - not last 20 days
-# - automatically delete empty diff files or don't generate them
 # - generate report in *.doc file (consider external python script)
 # - parametrize this script to make it generic
 
@@ -28,10 +27,25 @@ saveDiff() {
   git log --author="$gitUserName" -p --since="20 days ago" > ~/"$filePath"/"$1".diff
 }
 
+removeDiffIfEmpty() {
+  dateFormat=$(date +'%Y%m')
+  filePath=Documents/hybris/pkup/raporty/doc/Wittchen_Piotr_"$dateFormat"
+
+  if [ ! -s ~/"$filePath"/"$1".diff ]
+  then
+    msg "no changes performed in $1 -> removing empty $1.diff file"
+    rm -f ~/"$filePath"/"$1".diff
+  fi
+}
+
 main() {
   saveDiff backoffice
   saveDiff platform-backoffice
   saveDiff cockpitng
+
+  removeDiffIfEmpty backoffice
+  removeDiffIfEmpty platform-backoffice
+  removeDiffIfEmpty cockpitng
 }
 
 main "$@"
