@@ -18,7 +18,7 @@ saveDiff() {
   gitUserName=$(git config user.name)
   dateFormat=$(date +'%Y%m')
   filePath=Documents/hybris/pkup/raporty/doc/Wittchen_Piotr_"$dateFormat"
-  git log --author="$gitUserName" -p --since="last month" > ~/"$filePath"/"$1".diff
+  git log --author="$gitUserName" -p --since="20 days ago" > ~/"$filePath"/"$1".diff
 }
 
 main() {
