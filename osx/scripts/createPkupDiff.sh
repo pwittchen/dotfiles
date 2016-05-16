@@ -17,6 +17,7 @@ saveDiff() {
   cd $yHYBRIS_SRC/"$1"
   gitUserName=$(git config user.name)
   dateFormat=$(date +'%Y%m')
+  mkdir -p ~/Documents/hybris/pkup/raporty/doc/Wittchen_Piotr_"$dateFormat"
   filePath=Documents/hybris/pkup/raporty/doc/Wittchen_Piotr_"$dateFormat"
   git log --author="$gitUserName" -p --since="20 days ago" > ~/"$filePath"/"$1".diff
 }
