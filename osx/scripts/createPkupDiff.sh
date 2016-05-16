@@ -42,13 +42,13 @@ removeDiffIfEmpty() {
 }
 
 main() {
-  saveDiff backoffice
-  saveDiff platform-backoffice
-  saveDiff cockpitng
+  projects=(backoffice platform-backoffice cockpitng)
 
-  removeDiffIfEmpty backoffice
-  removeDiffIfEmpty platform-backoffice
-  removeDiffIfEmpty cockpitng
+  for project in "${projects[@]}"
+  do
+    saveDiff $project
+    removeDiffIfEmpty $project
+  done
 }
 
 main "$@"
