@@ -10,6 +10,5 @@
 	ignore-local = update-index --assume-unchanged
 	unignore-local = update-index --no-assume-unchanged
 	ignored-local = !git ls-files -v | grep "^[[:lower:]]"
-
 [push]
 	default = simple
