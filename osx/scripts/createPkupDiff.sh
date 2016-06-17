@@ -43,7 +43,7 @@ removeDiffIfEmpty() {
 }
 
 main() {
-  projects=(backoffice platform-backoffice cockpitng)
+  projects=(backoffice platform-backoffice cockpitng backofficesearch)
 
   for project in "${projects[@]}"
   do
