@@ -10,3 +10,6 @@
 
 # Java
 *.class
+
+# Node.js
+node_modules
