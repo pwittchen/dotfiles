@@ -16,3 +16,6 @@ build
 # Java
 *.class
 *.war
+
+# Node.js
+node_modules
