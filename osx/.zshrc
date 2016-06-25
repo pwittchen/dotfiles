@@ -1,8 +1,5 @@
-# Current SAP User ID
-export SAP_USER_ID=PUT_YOUR_ID_HERE
-
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/$SAP_USER_ID/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -120,7 +117,7 @@ export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
 
 # docker variables (you should get them during docker installation)
 export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
-export DOCKER_CERT_PATH=/Users/$SAP_USER_ID/.boot2docker/certs/boot2docker-vm
+export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 # go
