@@ -1,2 +1,3 @@
-### dotfiles
-my dotfiles used on Linux (Ubuntu) and Mac OS X
+dotfiles
+========
+my dotfiles used on Ubuntu Linux and Mac OS X
