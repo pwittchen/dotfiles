@@ -83,15 +83,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# setting tmux as default shell
+[[ $TERM != "screen" ]] && exec tmux
+
 # custom aliases
+
 alias resetGnomePanel="sudo killall gnome-panel"
+alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias showMyIp="ifconfig | grep inet"
 alias switchJava="sudo update-alternatives --config java"
 alias prettyJson="python -m json.tool"
-
-# personalized aliases
+alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 alias showWeather="curl -4 http://wttr.in/Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
+alias moo="cowsay"
 
 # custom functions
 
