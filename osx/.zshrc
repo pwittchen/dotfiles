@@ -92,38 +92,8 @@ alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
 setJdk8
 
 # custom aliases
-alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
-alias showMyIp="ifconfig | grep inet"
 alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
 alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
-alias showWeather="curl -4 http://wttr.in/Gliwice"
-
-# custom functions
-
-function findFile() {
-  find ~/ -type f -name "$1"
-}
-
-function findDir() {
-  find ~/ -type d -name "$1"
-}
-
-function showWeatherIn() {
-  curl -4 http://wttr.in/"$1"
-}
-
-# set JDK for Android Studio
-export STUDIO_JDK=$HOME/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
-
-# docker variables (you should get them during docker installation)
-export DOCKER_HOST=tcp://PUT_YOUR_IP_HERE:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-# go
-export GOPATH=~/Projects/other/go/workspace
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
 
 # hybris settings (contains local env variables)
 source $HOME/.hybris_profile
