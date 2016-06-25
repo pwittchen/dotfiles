@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias resetGnomePanel="sudo killall gnome-panel"
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
+alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias switchJava="sudo update-alternatives --config java"
 alias prettyJson="python -m json.tool"
