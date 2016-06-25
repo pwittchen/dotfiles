@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias resetGnomePanel="sudo killall gnome-panel"
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
-alias showMyIp="ifconfig | grep inet"
+alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias switchJava="sudo update-alternatives --config java"
 alias prettyJson="python -m json.tool"
 alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
@@ -116,6 +116,10 @@ function getAndPlay() {
 
 function showWeatherIn() {
   curl -4 http://wttr.in/"$1"
+}
+
+function showMyIntIps() {
+  ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }'
 }
 
 # development directory
