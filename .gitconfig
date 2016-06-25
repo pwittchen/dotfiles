@@ -1,5 +1,6 @@
 [user]
-	email = piotr.wittchen@sap.com
+	;email = piotr.wittchen@sap.com # e-mail used at work
+	email = piotr@wittchen.biz.pl   # personal e-mail
 	name = Piotr Wittchen
 [core]
 	autocrlf = input

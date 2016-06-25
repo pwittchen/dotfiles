@@ -83,25 +83,68 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# setting tmux as default shell
-[[ $TERM != "screen" ]] && exec tmux
+# setup for Ubuntu Linux used at home
+if [ `uname` = "Linux" ]; then
+  # right now, I'm using tmux only on Linux
+  [[ $TERM != "screen" ]] && exec tmux
 
-# custom aliases
+  alias resetGnomePanel="sudo killall gnome-panel"
+  alias switchJava="sudo update-alternatives --config java"
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+  alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
 
-alias resetGnomePanel="sudo killall gnome-panel"
+  # development directory
+  export DEV=$HOME/Development
+
+  # java
+  export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+  export PATH=$JAVA_HOME/bin:$PATH
+
+  # android
+  export ANDROID_HOME=$DEV/android/android-sdk
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+  export PATH=$PATH:$ANDROID_HOME/tools
+
+  # scala
+  export SCALA_HOME=/usr/share/scala
+  export PATH=$SCALA_HOME/bin:$PATH
+
+  # go
+  export PATH=/usr/local/go/bin:$PATH
+  export GOPATH=$DEV/go/workspace
+  export GOBIN=$GOPATH/bin
+  export PATH=$GOBIN:$PATH
+
+  # swift
+  export PATH=$DEV/swift/swift/usr/bin:$PATH
+fi
+
+# setup for OS X used at work
+if [ `uname` = "Darwin" ]; then
+  # aliases for switching java version
+  alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+  alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+  alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
+
+  # set current java version and JAVA_HOME
+  setJdk8
+
+  # showing and hiding hidden files
+  alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
+  alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
+
+  # hybris settings (contains local env variables)
+  source $HOME/.hybris_profile
+fi
+
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
-alias switchJava="sudo update-alternatives --config java"
 alias prettyJson="python -m json.tool"
-alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
 alias showWeather="curl -4 http://wttr.in/Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias moo="cowsay"
-
-# custom functions
 
 function findFile() {
   find ~/ -type f -name "$1"
@@ -123,31 +166,6 @@ function showMyIntIps() {
   ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }'
 }
 
-function showMyIntIpFor() { 
+function showMyIntIpFor() {
   /sbin/ifconfig $1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}';
 }
-
-# development directory
-export DEV=$HOME/Development
-
-# java
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export PATH=$JAVA_HOME/bin:$PATH
-
-# android
-export ANDROID_HOME=$DEV/android/android-sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools
-
-# scala
-export SCALA_HOME=/usr/share/scala
-export PATH=$SCALA_HOME/bin:$PATH
-
-# go
-export PATH=/usr/local/go/bin:$PATH
-export GOPATH=$DEV/go/workspace
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
-
-# swift
-export PATH=$DEV/swift/swift/usr/bin:$PATH
