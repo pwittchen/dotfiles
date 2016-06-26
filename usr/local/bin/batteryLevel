@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ `uname` = "Linux" ]; then
+  BATTERY_LVEL_LINUX=$(cat /sys/class/power_supply/BAT0/capacity)
+  echo $BATTERY_LVEL_LINUX'%'
+fi
+
+if [ `uname` = "Darwin" ]; then
+  pmset -g batt | awk '{print $2}' | sed 's/;//' | tail -n+2
+fi
