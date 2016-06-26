@@ -1,9 +1,2 @@
 #!/usr/bin/env bash
-
-if [ `uname` = "Linux" ]; then
-  uptime | awk '{print $3}'|sed 's/,//'
-fi
-
-if [ `uname` = "Darwin" ]; then
-  uptime | awk '{print $1}'|sed 's/;//'
-fi
+uptime | awk '{print $3}'|sed 's/,//'
