@@ -143,6 +143,8 @@ if [ `uname` = "Darwin" ]; then
   # showing and hiding hidden files
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
   alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
+  
+  alias showBatteryLevel="pmset -g batt | awk '{print $2}' | sed 's/;//' | tail -n+2"
 
   # hybris settings (contains local env variables)
   source $HOME/.hybris_profile
