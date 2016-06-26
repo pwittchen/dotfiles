@@ -118,6 +118,9 @@ if [ `uname` = "Linux" ]; then
 
   # swift
   export PATH=$DEV/swift/swift/usr/bin:$PATH
+
+  # smalltalk
+  alias gnu-smalltalk="/usr/bin/gst"
 fi
 
 # setup for OS X used at work
