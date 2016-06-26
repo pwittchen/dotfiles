@@ -93,7 +93,7 @@ if [ `uname` = "Linux" ]; then
   alias pbpaste='xsel --clipboard --output'
 
   # system info
-  alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
+  alias showBatteryLevel="cat /sys/class/power_supply/BAT0/capacity"
   alias countCpus='cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l'
   alias countCores='cat /proc/cpuinfo | grep "siblings" | sort -u | cut -d: -f2'
   alias countTotalRam="grep MemTotal /proc/meminfo"
