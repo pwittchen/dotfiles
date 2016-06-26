@@ -151,6 +151,7 @@ if [ `uname` = "Darwin" ]; then
   
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
+  alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
 
   # go to the home directory in the beginning
   cd $HOME
