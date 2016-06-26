@@ -143,16 +143,20 @@ if [ `uname` = "Darwin" ]; then
   # showing and hiding hidden files
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
   alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
-  
+
   alias showBatteryLevel="pmset -g batt | awk '{print $2}' | sed 's/;//' | tail -n+2"
 
   # hybris settings (contains local env variables)
   source $HOME/.hybris_profile
-  
+
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  export PATH=$ANDROID_HOME:$PATH
+  export PATH=$ANDROID_HOME/tools:$PATH
+  export PATH=$ANDROID_HOME/platform-tools:$PATH
   alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
-
+  
   # go to the home directory in the beginning
   cd $HOME
 fi
