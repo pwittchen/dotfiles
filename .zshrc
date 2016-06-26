@@ -138,7 +138,7 @@ if [ `uname` = "Darwin" ]; then
   alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
 
   # set current java version and JAVA_HOME
-  setJdk8
+  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
   # showing and hiding hidden files
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
@@ -147,6 +147,9 @@ if [ `uname` = "Darwin" ]; then
   # hybris settings (contains local env variables)
   source $HOME/.hybris_profile
   
+  # android
+  export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
+
   # go to the home directory in the beginning
   cd $HOME
 fi
