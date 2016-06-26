@@ -91,7 +91,13 @@ if [ `uname` = "Linux" ]; then
   alias resetGnomePanel="sudo killall gnome-panel"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
+
+  # system info
   alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
+  alias countCpus='cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l'
+  alias countCores='cat /proc/cpuinfo | grep "siblings" | sort -u | cut -d: -f2'
+  alias countTotalRam="grep MemTotal /proc/meminfo"
+  alias countFreeRam="grep MemFree /proc/meminfo"
 
   # development directory
   export DEV=$HOME/Development
