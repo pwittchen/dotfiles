@@ -98,6 +98,7 @@ if [ `uname` = "Linux" ]; then
   alias countCores='cat /proc/cpuinfo | grep "siblings" | sort -u | cut -d: -f2'
   alias countTotalRam="grep MemTotal /proc/meminfo"
   alias countFreeRam="grep MemFree /proc/meminfo"
+  alias countTotalSwap="grep SwapTotal /proc/meminfo"
 
   # development directory
   export DEV=$HOME/Development
