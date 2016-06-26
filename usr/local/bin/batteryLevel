@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ `uname` = "Linux" ]; then
-  BATTERY_LEVEL_LINUX=$(cat /sys/class/power_supply/BAT0/capacity)
-  echo $BATTERY_LEVEL_LINUX'%'
+  batteryLevelLinux=$(cat /sys/class/power_supply/BAT0/capacity)
+  echo $batteryLevelLinux'%'
 fi
 
 if [ `uname` = "Darwin" ]; then
