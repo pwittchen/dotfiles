@@ -89,7 +89,6 @@ if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
 
   alias resetGnomePanel="sudo killall gnome-panel"
-  alias switchJava="sudo update-alternatives --config java"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
   alias batteryLevel="cat /sys/class/power_supply/BAT0/capacity"
@@ -100,6 +99,7 @@ if [ `uname` = "Linux" ]; then
   # java
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle
   export PATH=$JAVA_HOME/bin:$PATH
+  alias switchJava="sudo update-alternatives --config java"
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
@@ -139,6 +139,9 @@ if [ `uname` = "Darwin" ]; then
 
   # hybris settings (contains local env variables)
   source $HOME/.hybris_profile
+  
+  # go to the home directory in the beginning
+  cd $HOME
 fi
 
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
