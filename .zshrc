@@ -99,6 +99,12 @@ if [ `uname` = "Linux" ]; then
   alias countFreeRam="grep MemFree /proc/meminfo"
   alias countTotalSwap="grep SwapTotal /proc/meminfo"
 
+  # network info
+  alias showNeighbourhood="sudo neighbourhood"
+  
+  # raspberry pi
+  alias connectToPi="ssh pi@10.10.140.102"
+
   # development directory
   export DEV=$HOME/Development
 
