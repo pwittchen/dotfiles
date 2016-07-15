@@ -160,6 +160,9 @@ if [ `uname` = "Darwin" ]; then
   export PATH=$ANDROID_HOME/platform-tools:$PATH
   alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
   
+  # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
+  export PATH=/usr/local/m-cli:$PATH
+  
   # go to the home directory in the beginning
   cd $HOME
 fi
