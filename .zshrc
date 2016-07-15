@@ -101,7 +101,7 @@ if [ `uname` = "Linux" ]; then
 
   # network info
   alias showNeighbourhood="sudo neighbourhood"
-  
+
   # raspberry pi
   alias connectToPi="ssh pi@10.10.140.102"
 
@@ -159,10 +159,10 @@ if [ `uname` = "Darwin" ]; then
   export PATH=$ANDROID_HOME/tools:$PATH
   export PATH=$ANDROID_HOME/platform-tools:$PATH
   alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
-  
+
   # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
-  
+
   # go to the home directory in the beginning
   cd $HOME
 fi
@@ -192,9 +192,13 @@ function showWeatherIn() {
 }
 
 function showMyIntIps() {
-  ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }'
+  ifconfig | grep -B1 "inet addr" | awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' | awk -F: '{ print $1 ": " $3 }'
 }
 
 function showMyIntIpFor() {
   /sbin/ifconfig $1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}';
+}
+
+function catColorized() {
+  cat "$1" | colorize
 }
