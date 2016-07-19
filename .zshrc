@@ -133,6 +133,8 @@ if [ `uname` = "Linux" ]; then
 
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
+
+  alias mc="mc -b" # midnight commander without colors
 fi
 
 # setup for OS X used at work
@@ -163,6 +165,8 @@ if [ `uname` = "Darwin" ]; then
   # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
 
+  alias mc='mc -a -S modarin256-defbg' # midgnight commander colorized
+
   # go to the home directory in the beginning
   cd $HOME
 fi
@@ -174,7 +178,6 @@ alias prettyJson="python -m json.tool"
 alias showWeather="curl -4 http://wttr.in/Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias moo="cowsay"
-alias mc='mc -a -S modarin256-defbg' # midgnight commander colorized
 
 function findFile() {
   find ~/ -type f -name "$1"
