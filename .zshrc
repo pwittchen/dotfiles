@@ -91,6 +91,7 @@ if [ `uname` = "Linux" ]; then
   alias resetGnomePanel="sudo killall gnome-panel"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
+  alias mc="mc -b" # midnight commander without colors
 
   # system info
   alias countCpus='cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l'
@@ -132,9 +133,7 @@ if [ `uname` = "Linux" ]; then
   export PATH=$DEV/swift/swift/usr/bin:$PATH
 
   # smalltalk
-  alias gnu-smalltalk="/usr/bin/gst"
-
-  alias mc="mc -b" # midnight commander without colors
+  alias gnu-smalltalk="/usr/bin/gst"  
 fi
 
 # setup for OS X used at work
