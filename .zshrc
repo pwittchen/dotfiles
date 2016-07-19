@@ -163,6 +163,9 @@ if [ `uname` = "Darwin" ]; then
   # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
 
+  # midnight commander colorized
+  alias mc='mc -a -S modarin256-defbg'
+
   # go to the home directory in the beginning
   cd $HOME
 fi
