@@ -161,12 +161,6 @@ if [ `uname` = "Darwin" ]; then
   export PATH=$ANDROID_HOME/platform-tools:$PATH
   alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
   
-  # docker configuration
-  export DOCKER_HOST=tcp://192.168.59.103:2376
-  export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-  export DOCKER_TLS_VERIFY=1
-  export DOCKER_API_VERSION=1.21
-
   # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
 
