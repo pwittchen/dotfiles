@@ -9,7 +9,9 @@ export yBACKOFFICE="$yHYBRIS_SRC/backoffice"
 export yCOCKPIT_NG="$yHYBRIS_SRC/cockpitng"
 export yPLBACKOFFICE="$yHYBRIS_SRC/platform-backoffice/platformbackoffice"
 export ySOLR_BACKOFFICE="$yHYBRIS_SRC/backofficesearch"
-export ySEARCH_AND_NAV="$yHYBRIS_SRC/search-and-nav
+export ySEARCH_AND_NAV="$yHYBRIS_SRC/search-and-nav"
+export yATF_CORE="$yHYBRIS_SRC/yatf-core"
+export yATF_BACKOFFICE="$yHYBRIS_SRC/yatf-backoffice"
 
 # hybris platform
 export yPLATFORM_BIN="$yHYBRIS_DIR/bin/platform"
