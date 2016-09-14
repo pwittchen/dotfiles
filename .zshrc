@@ -150,8 +150,8 @@ if [ `uname` = "Darwin" ]; then
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
   alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
-  # hybris settings (contains local env variables)
-  source $HOME/.hybris_profile
+  # hybris P&T development configuration
+  source $HOME/.hybris.conf
 
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
