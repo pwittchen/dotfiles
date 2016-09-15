@@ -171,6 +171,7 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
+alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
