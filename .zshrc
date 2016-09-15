@@ -177,6 +177,7 @@ alias prettyJson="python -m json.tool"
 alias showWeather="curl -4 http://wttr.in/Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias moo="cowsay"
+alias cowthink="cowsay"
 
 function findFile() {
   find ~/ -type f -name "$1"
