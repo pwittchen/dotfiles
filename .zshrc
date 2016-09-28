@@ -92,10 +92,14 @@ if [ `uname` = "Linux" ]; then
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
   alias mc="mc -b" # midnight commander without colors
-  alias inst="sudo apt-get install"
-  alias rmv="sudo apt-get remove"
-  alias updt="sudo apt-get update"
-  alias upgrd="sudo apt-get update && sudo apt-get updgrade" # update currently installed software
+
+  if [[ $(python -mplatform | grep Ubuntu) ]]; then
+    alias if-ubuntu="python -mplatform | grep -qi Ubuntu"
+    alias inst="sudo apt-get install"
+    alias rmv="sudo apt-get remove"
+    alias updt="sudo apt-get update"
+    alias upgrd="sudo apt-get update && sudo apt-get updgrade"
+  fi
 
   # system info
   alias countCpus='cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l'
