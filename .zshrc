@@ -94,7 +94,6 @@ if [ `uname` = "Linux" ]; then
   alias mc="mc -b" # midnight commander without colors
 
   if [[ $(python -mplatform | grep Ubuntu) ]]; then
-    alias if-ubuntu="python -mplatform | grep -qi Ubuntu"
     alias inst="sudo apt-get install"
     alias rmv="sudo apt-get remove"
     alias updt="sudo apt-get update"
