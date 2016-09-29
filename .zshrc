@@ -190,6 +190,7 @@ alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
 alias showWeather="curl -4 http://wttr.in/Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
+alias runHttpSever="python -m SimpleHTTPServer 8000"
 alias moo="cowsay"
 alias cowthink="cowsay"
 
