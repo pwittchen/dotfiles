@@ -91,7 +91,10 @@ if [ `uname` = "Linux" ]; then
   alias resetGnomePanel="sudo killall gnome-panel"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
-  alias mc="mc -b" # midnight commander without colors
+  
+  # get Midnight Commander themes from:
+  # https://github.com/MidnightCommander/mc/tree/master/misc/skins
+  alias mc="mc -S nicedark"
 
   if [[ $(python -mplatform | grep Ubuntu) ]]; then
     alias inst="sudo apt-get install"
