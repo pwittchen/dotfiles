@@ -89,6 +89,7 @@ if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
 
   alias resetGnomePanel="sudo killall gnome-panel"
+  alias resetNautilus="sudo killall nautilus && nautilus"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
   
