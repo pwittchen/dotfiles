@@ -167,6 +167,9 @@ if [ `uname` = "Darwin" ]; then
 
   # hybris P&T development configuration
   source $HOME/.hybris.conf
+  
+  # hybris office utils
+  alias checkToiletStatus='curl http://10.27.176.134:8666/state -s | jq -r'
 
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
