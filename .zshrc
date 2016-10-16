@@ -230,3 +230,7 @@ function showMyIntIpFor() {
 function catColorized() {
   cat "$1" | colorize
 }
+
+function killProcess() {
+  ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
+}
