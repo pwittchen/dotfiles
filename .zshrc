@@ -98,10 +98,10 @@ if [ `uname` = "Linux" ]; then
   alias mc="mc -S nicedark"
 
   if [[ $(python -mplatform | grep Ubuntu) ]]; then
-    alias inst="sudo apt-get install"
-    alias rmv="sudo apt-get remove"
-    alias updt="sudo apt-get update"
-    alias upgrd="sudo apt-get update && sudo apt-get updgrade"
+    alias get="sudo apt-get install"
+    alias remove="sudo apt-get remove"
+    alias update="sudo apt-get update"
+    alias upgrade="sudo apt-get update && sudo apt-get updgrade"
   fi
 
   # system info
