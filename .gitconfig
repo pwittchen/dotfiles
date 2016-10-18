@@ -11,5 +11,6 @@
 	ignore-local = update-index --assume-unchanged
 	unignore-local = update-index --no-assume-unchanged
 	ignored-local = !git ls-files -v | grep "^[[:lower:]]"
+	reset-file = checkout HEAD --
 [push]
 	default = simple
