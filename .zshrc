@@ -100,6 +100,8 @@ if [ `uname` = "Linux" ]; then
   if [[ $(python -mplatform | grep Ubuntu) ]]; then
     alias get="sudo apt-get install"
     alias remove="sudo apt-get remove"
+    alias autoremove="sudo apt-get remove --auto-remove"
+    alias purge="sudo apt-get purge --auto-remove"
     alias update="sudo apt-get update"
     alias upgrade="sudo apt-get update && sudo apt-get updgrade"
   fi
@@ -234,3 +236,4 @@ function catColorized() {
 function killProcess() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
+
