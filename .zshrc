@@ -204,6 +204,7 @@ alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias runHttpSever="python -m SimpleHTTPServer 8000"
 alias startMySqlServer="sudo /etc/init.d/mysql start"
 alias stopMySqlServer="sudo /etc/init.d/mysql stop"
+alias connectToMySqlServer="sudo mysql -u root -p"
 alias moo="cowsay"
 alias cowthink="cowsay"
 
