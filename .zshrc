@@ -167,12 +167,13 @@ if [ `uname` = "Darwin" ]; then
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
   alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
-  # hybris P&T development configuration
+  # hybris Backoffice development configuration
   source $HOME/.hybris.conf
   
-  # hybris P&T office utils
-  alias checkToiletStatus='curl http://10.27.176.134:8666/state -s | jq -r'
-  alias countFreeToilets='curl http://10.27.176.134:8666/state -s | python -m json.tool | grep false | wc -l | tr -d " "'
+  # hybris Gliwice office toilet monitor (2nd floor)
+  export TOILET_URL="http://10.27.176.134:8666"
+  alias checkToiletStatus='curl $TOILET_URL/state -s | jq -r'
+  alias countFreeToilets='curl $TOILET_URL/state -s | python -m json.tool | grep false | wc -l | tr -d " "'
 
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
@@ -185,7 +186,7 @@ if [ `uname` = "Darwin" ]; then
   # go
   export GOPATH=$HOME/Projects/other/go/workspace
   
-  # m-cli  Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
+  # m-cli Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
 
   alias mc='mc -a -S modarin256-defbg' # midgnight commander colorized
