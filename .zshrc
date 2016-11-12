@@ -127,6 +127,7 @@ if [ `uname` = "Linux" ]; then
   export PATH=$JAVA_HOME/bin:$PATH
   alias switchJava="sudo update-alternatives --config java"
   alias showJavaVersions="ls -l /usr/lib/jvm"
+  alias showJavaProcesses="jps -lV"
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
