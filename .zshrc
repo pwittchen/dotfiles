@@ -126,8 +126,7 @@ if [ `uname` = "Linux" ]; then
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle
   export PATH=$JAVA_HOME/bin:$PATH
   alias switchJava="sudo update-alternatives --config java"
-  alias showJavaVersions="ls -l /usr/lib/jvm"
-  alias showJavaProcesses="jps -lV"
+  alias showJavaVersions="ls -l /usr/lib/jvm" 
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
@@ -151,7 +150,7 @@ if [ `uname` = "Linux" ]; then
   alias gnu-smalltalk="/usr/bin/gst"  
 fi
 
-# setup for OS X used at work
+# setup for macOS used at work
 if [ `uname` = "Darwin" ]; then
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
@@ -195,9 +194,11 @@ if [ `uname` = "Darwin" ]; then
   cd $HOME
 fi
 
+# aliases, which work both on Linux and macOS
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
+alias showJavaProcesses="jps -lV"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
 alias showWeather="curl -4 http://wttr.in/Gliwice"
