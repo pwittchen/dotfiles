@@ -162,6 +162,9 @@ if [ `uname` = "Darwin" ]; then
 
   # set current java version and JAVA_HOME
   export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+  
+  # go to directory with JVMs
+  alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
   # showing and hiding hidden files
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
