@@ -137,6 +137,9 @@ if [ `uname` = "Linux" ]; then
   export SCALA_HOME=/usr/share/scala
   export PATH=$SCALA_HOME/bin:$PATH
 
+  # python
+  alias pip="sudo pip"
+
   # go
   export PATH=/usr/local/go/bin:$PATH
   export GOPATH=$DEV/go/workspace
