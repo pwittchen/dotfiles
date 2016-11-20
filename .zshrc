@@ -202,6 +202,7 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 # aliases, which work both on Linux and macOS
+
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
@@ -216,6 +217,8 @@ alias stopMySqlServer="sudo /etc/init.d/mysql stop"
 alias connectToMySqlServer="sudo mysql -u root -p"
 alias moo="cowsay"
 alias cowthink="cowsay"
+
+# functions for Linux and macOS
 
 function findFile() {
   find ~/ -type f -name "$1"
