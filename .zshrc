@@ -173,6 +173,9 @@ if [ `uname` = "Darwin" ]; then
   alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
   alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
 
+  # shows corpo network connections
+  alias checkCorpoNetworkStatus="sudo odutil show nodenames"
+
   # hybris Backoffice development configuration
   source $HOME/.hybris.conf
   
