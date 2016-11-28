@@ -1,3 +1,7 @@
 set -e
-wget -O .gitconfig https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitconfig_work
-sudo mv .gitconfig ~/
+original_gitconfig=`cat ~/.gitconfig`
+work_email=piotr.wittchen@sap.com
+work_gitconfig="${original_gitconfig/piotr@wittchen.biz.pl/$work_email}"
+rm ~/.gitconfig
+touch .gitconfig
+echo $work_gitconfig > ~/.gitconfig

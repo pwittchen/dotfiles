@@ -1,5 +1,5 @@
 [user]
-	email = piotr@wittchen.biz.pl   # personal e-mail
+	email = piotr@wittchen.biz.pl
 	name = Piotr Wittchen
 [core]
 	autocrlf = input
