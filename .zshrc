@@ -220,6 +220,7 @@ alias stopMySqlServer="sudo /etc/init.d/mysql stop"
 alias connectToMySqlServer="sudo mysql -u root -p"
 alias moo="cowsay"
 alias cowthink="cowsay"
+alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 
 # functions for Linux and macOS
 
