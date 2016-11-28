@@ -255,3 +255,7 @@ function killProcess() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
 
+# display function output log in the console and save it into a given file
+function tea() {
+  tee -a $1
+}
