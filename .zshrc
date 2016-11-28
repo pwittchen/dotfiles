@@ -215,7 +215,7 @@ alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showJavaProcesses="jps -lV"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
-alias showWeather="curl -4 http://wttr.in/Gliwice"
+alias showWeather="showWeatherIn Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias runHttpSever="python -m SimpleHTTPServer 8000"
 alias startMySqlServer="sudo /etc/init.d/mysql start"
@@ -240,7 +240,7 @@ function getAndPlay() {
 }
 
 function showWeatherIn() {
-  curl -4 http://wttr.in/"$1"
+  curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
 }
 
 function showMyIntIps() {
