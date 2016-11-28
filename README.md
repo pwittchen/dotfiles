@@ -14,5 +14,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/
 ### scripts
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateScripts)"
+git clone git@github.com:pwittchen/dotfiles.git
+cd scripts
+sudo cp * /usr/local/bin/
 ```
