@@ -1,0 +1,3 @@
+set -e
+wget -O .gitconfig https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitconfig_work
+sudo mv .gitconfig ~/
