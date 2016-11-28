@@ -23,7 +23,7 @@ sudo cp * /usr/local/bin/
 
 ### git for work
 
-I use different `.gitconfig` for work and command below can be used to set it up.
+I use different e-mail address in `.gitconfig` for work and command below can be used to set it up.
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateGitForWork)"
