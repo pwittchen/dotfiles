@@ -7,7 +7,6 @@ installation and update
 
 ### configuration
 
-with **curl**:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"
 ```
