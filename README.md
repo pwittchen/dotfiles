@@ -28,3 +28,5 @@ I use different `.gitconfig` for work and command below can be used to set it up
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateGitForWork)"
 ```
+
+To revert setup of git for work and bring back personal git setup, we can use `updateDotfilesRemote` command.
