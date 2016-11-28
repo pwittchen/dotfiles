@@ -10,3 +10,9 @@ installation and update
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"
 ```
+
+### scripts
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateScripts)"
+```

@@ -6,16 +6,9 @@ wget -O .tmux.conf https://raw.githubusercontent.com/pwittchen/dotfiles/master/.
 wget -O .vimrc https://raw.githubusercontent.com/pwittchen/dotfiles/master/.vimrc
 wget -O .zshrc https://raw.githubusercontent.com/pwittchen/dotfiles/master/.zshrc
 
-chmod +x .gitconfig
-chmod +x .gitignore_global 
-chmod +x .hybris.conf
-chmod +x .tmux.conf
-chmod +x .vimrc
-chmod +x .zshrc 
-
 sudo mv .gitconfig ~/
 sudo mv .gitignore_global ~/
 sudo mv .hybris.conf ~/
 sudo mv .tmux.conf ~/
 sudo mv .vimrc ~/
-sudo mv .zshrc ~/ 
+sudo mv .zshrc ~/
