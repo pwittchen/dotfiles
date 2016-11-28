@@ -1,6 +1,6 @@
 set -e
 wget -O batteryLevel https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/batteryLevel
-wget -O hybrisPkupReport https://raw.githubusercontent.com/pwittchen/dotfiles/scripts/hybrisPkupReport
+wget -O hybrisPkupReport https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/hybrisPkupReport
 wget -O neighbourhood https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/neighbourhood
 wget -O rebaseAndSquash https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/rebaseAndSquash
 wget -O showUptime https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/showUptime
@@ -16,4 +16,4 @@ sudo mv showUptime /usr/local/bin/
 sudo mv startDmenu /usr/local/bin/
 sudo mv tmux4tiles /usr/local/bin/
 sudo mv updateDotfiles /usr/local/bin/
-sudo mv updateDotfiles /usr/local/bin/
+sudo mv updateScripts /usr/local/bin/
