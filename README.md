@@ -11,7 +11,7 @@ installation and update
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"
 ```
 
-Once we installed configuration, after reloading shell, we can simply type: `updateDotfilesRemote` to be up to date.
+Once we installed configuration, after reloading shell, we can simply type `updateDotfilesRemote` to be up to date.
 
 ### scripts
 
