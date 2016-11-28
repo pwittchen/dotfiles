@@ -92,7 +92,7 @@ if [ `uname` = "Linux" ]; then
   alias resetNautilus="sudo killall nautilus && nautilus"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
-  
+
   # get Midnight Commander themes from:
   # https://github.com/MidnightCommander/mc/tree/master/misc/skins
   alias mc="mc -S nicedark"
@@ -126,7 +126,7 @@ if [ `uname` = "Linux" ]; then
   export JAVA_HOME=/usr/lib/jvm/java-8-oracle
   export PATH=$JAVA_HOME/bin:$PATH
   alias switchJava="sudo update-alternatives --config java"
-  alias showJavaVersions="ls -l /usr/lib/jvm" 
+  alias showJavaVersions="ls -l /usr/lib/jvm"
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
@@ -150,7 +150,7 @@ if [ `uname` = "Linux" ]; then
   export PATH=$DEV/swift/swift/usr/bin:$PATH
 
   # smalltalk
-  alias gnu-smalltalk="/usr/bin/gst"  
+  alias gnu-smalltalk="/usr/bin/gst"
 fi
 
 # setup for macOS used at work
@@ -165,20 +165,24 @@ if [ `uname` = "Darwin" ]; then
 
   # set current java version and JAVA_HOME
   export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-  
+
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
   # showing and hiding hidden files
-  alias showHiddenFiles="defaults write com.apple.finder AppleShowAllFiles YES && sudo killall Finder"
-  alias hideHiddenFiles="defaults write com.apple.finder AppleShowAllFiles NO && sudo killall Finder"
+  function makeFilesVisible() {
+    defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
+  }
+
+  alias showHiddenFiles="makeFilesVisible YES"
+  alias hideHiddenFiles="makeFilesVisible NO"
 
   # shows corpo network connections
   alias checkCorpoNetworkStatus="sudo odutil show nodenames"
 
   # hybris Backoffice development configuration
   source $HOME/.hybris.conf
-  
+
   # hybris Gliwice office toilet monitor (2nd floor)
   export TOILET_URL="http://10.27.176.134:8666"
   alias checkToiletStatus='curl $TOILET_URL/state -s | jq -r'
@@ -191,10 +195,10 @@ if [ `uname` = "Darwin" ]; then
   export PATH=$ANDROID_HOME/tools:$PATH
   export PATH=$ANDROID_HOME/platform-tools:$PATH
   alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
-  
+
   # go
   export GOPATH=$HOME/Projects/other/go/workspace
-  
+
   # m-cli Swiss Army Knife for Mac OS X (https://github.com/rgcr/m-cli)
   export PATH=/usr/local/m-cli:$PATH
 
