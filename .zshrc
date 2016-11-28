@@ -228,6 +228,7 @@ alias connectToMySqlServer="sudo mysql -u root -p"
 alias moo="cowsay"
 alias cowthink="cowsay"
 alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
+alias excludeGrep="grep -v grep"
 
 # functions for Linux and macOS
 
