@@ -1,7 +1,2 @@
 set -e
-original_gitconfig=`cat ~/.gitconfig`
-work_email=piotr.wittchen@sap.com
-work_gitconfig="${original_gitconfig/piotr@wittchen.biz.pl/$work_email}"
-rm ~/.gitconfig
-touch .gitconfig
-echo $work_gitconfig > ~/.gitconfig
+sed -i -e 's/piotr@wittchen.biz.pl/piotr.wittchen@sap.com/g' ~/.gitconfig
