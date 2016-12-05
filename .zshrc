@@ -177,6 +177,10 @@ if [ `uname` = "Darwin" ]; then
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
 
+  function showMyIntIps() {
+    ifconfig | grep inet | grep netmask | awk '{print $2}'
+  }
+
   # shows corpo network connections
   alias checkCorpoNetworkStatus="sudo odutil show nodenames"
 
@@ -246,14 +250,6 @@ function getAndPlay() {
 
 function showWeatherIn() {
   curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
-}
-
-function showMyIntIps() {
-  ifconfig | grep -B1 "inet addr" | awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' | awk -F: '{ print $1 ": " $3 }'
-}
-
-function showMyIntIpFor() {
-  /sbin/ifconfig $1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}';
 }
 
 function catColorized() {
