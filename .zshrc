@@ -132,6 +132,7 @@ if [ `uname` = "Linux" ]; then
   export ANDROID_HOME=$DEV/android/android-sdk
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
 
   # scala
   export SCALA_HOME=/usr/share/scala
@@ -176,10 +177,6 @@ if [ `uname` = "Darwin" ]; then
 
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
-
-  function showMyIntIps() {
-    ifconfig | grep inet | grep netmask | awk '{print $2}'
-  }
 
   # shows corpo network connections
   alias checkCorpoNetworkStatus="sudo odutil show nodenames"
@@ -250,6 +247,10 @@ function getAndPlay() {
 
 function showWeatherIn() {
   curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
+}
+
+function showMyIntIps() {
+  ifconfig | grep inet | grep netmask | awk '{print $2}'
 }
 
 function catColorized() {
