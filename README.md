@@ -29,4 +29,6 @@ I use different e-mail address in `.gitconfig` for work and command below can be
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateGitForWork)"
 ```
 
+Once we have dotfiles installed, we can simply type `updateGitForWork` to setup git configuration for work.
+
 To revert setup of git for work and bring back personal git setup, we can use `updateDotfilesRemote` command.
