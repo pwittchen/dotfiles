@@ -1,4 +1,4 @@
-set clipboard=unnamed
-filetype plugin indent on
-syntax on
-:color desert
+set clipboard=unnamed		"Enable clipboard
+filetype plugin indent on	"Enable indent plugin
+syntax on			"Enable syntax coloring
+:color desert			"Set desert syntax coloring
