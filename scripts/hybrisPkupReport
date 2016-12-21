@@ -4,7 +4,7 @@
 # PKUP stands for "Podwyższone Koszty Uzyskania Przychodu" in Polish
 
 # TODO:
-# - update it to generate diffs from 20th day of previous month - not last 20 days
+
 # - generate report in *.doc file (consider external python script)
 # - parametrize this script to make it generic
 
@@ -26,12 +26,27 @@ msg() {
   sleep 1
 }
 
+setAfterDate() {
+  currentMonth=$(date +%m)
+  if [ $currentMonth -eq "1" ]; then
+    lastMonth=12
+  else
+    monthsToRemove=1
+    lastMonth=$(echo "$currentMonth-$monthsToRemove" | bc)
+  fi
+
+  year=$(date +%Y)
+  day=20
+  afterDate="$year-$lastMonth-$day"
+}
+
 saveDiff() {
-  msg "saving diff for $1"
+  setAfterDate
+  msg "saving diff for $1 commits from $afterDate"
   cd $yHYBRIS_SRC/"$1"
   gitUserName=$(git config user.name)
   mkdir -p "$filePath"
-  git log --author="$gitUserName" -p --since="20 days" > "$filePath"/"$1"."$fileExtension"
+  git log --author="$gitUserName" -p --after="$afterDate" > "$filePath"/"$1"."$fileExtension"
 }
 
 removeDiffIfEmpty() {
