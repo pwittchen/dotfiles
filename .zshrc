@@ -152,6 +152,9 @@ if [ `uname` = "Linux" ]; then
 
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
+
+  # js
+  alias npm="sudo npm"
 fi
 
 # setup for macOS used at work
