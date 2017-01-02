@@ -138,9 +138,6 @@ if [ `uname` = "Linux" ]; then
   export SCALA_HOME=/usr/share/scala
   export PATH=$SCALA_HOME/bin:$PATH
 
-  # python
-  alias pip="sudo pip"
-
   # go
   export PATH=/usr/local/go/bin:$PATH
   export GOPATH=$DEV/go/workspace
@@ -152,9 +149,6 @@ if [ `uname` = "Linux" ]; then
 
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
-
-  # js
-  alias npm="sudo npm"
 fi
 
 # setup for macOS used at work
@@ -220,6 +214,14 @@ fi
 alias updateDotfilesRemote='sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"'
 
 # aliases, which work both on Linux and macOS
+
+# js
+alias npm="sudo npm"
+
+# python
+alias pip="sudo pip"
+
+# general aliases
 
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
