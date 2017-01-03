@@ -4,6 +4,11 @@ function getIp() {
     ip=$(ifconfig | grep -A 1 $netInterface | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)
 }
 
+# it's my SAP specific config
+function getIpCorpo() {
+    ip=$(ifconfig | grep -A 1 'en5' | tail -1 | awk '{print $2}')
+}
+
 netInterface='wlan0'
 getIp
 
@@ -13,6 +18,9 @@ else
     netInterface='eth0'
     getIp
     if [ ! -z "$ip" ]; then
+        echo $ip
+    else
+        getIpCorpo
         echo $ip
     fi
 fi
