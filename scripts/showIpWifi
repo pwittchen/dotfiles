@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-ipWifi=$(ifconfig | grep -A 1 'wlan0' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)
-
-if [ -z "$ipWifi" ]; then
-  echo "wifi off"
-else
-  echo $ipWifi
-fi

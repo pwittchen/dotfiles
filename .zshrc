@@ -167,10 +167,6 @@ if [ `uname` = "Darwin" ]; then
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
-  function showMyIntIps() {
-    ifconfig | grep inet | grep netmask | awk '{print $2}'
-  }
-
   # showing and hiding hidden files
   function makeFilesVisible() {
     defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder

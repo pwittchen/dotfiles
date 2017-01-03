@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function getIp() {
+    ip=$(ifconfig | grep -A 1 $netInterface | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)
+}
+
+netInterface='wlan0'
+getIp
+
+if [ ! -z "$ip" ]; then
+   echo $ip 
+else
+    netInterface='eth0'
+    getIp
+    if [ ! -z "$ip" ]; then
+        echo $ip
+    fi
+fi
