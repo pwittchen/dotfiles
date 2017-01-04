@@ -154,24 +154,10 @@ fi
 # setup for macOS used at work
 if [ `uname` = "Darwin" ]; then
 
-  ###################################
-  # SAP Hybris related stuff: begin #
-  ###################################
-
   # SAP Hybris Backoffice development configuration
-  source $HOME/.hybris.conf
-
-  # SAP Hybris Gliwice office toilet monitor (2nd floor)
-  export TOILET_URL="http://10.27.176.134:8666"
-  alias checkToiletStatus='curl $TOILET_URL/state -s | jq -r'
-  alias countFreeToilets='curl $TOILET_URL/state -s | python -m json.tool | grep false | wc -l | tr -d " "'
-
-  # SAP Hybris corpo network connections status
-  alias checkSapCorpoNetworkStatus="sudo odutil show nodenames"
-
-  ###################################
-  # SAP Hybris related stuff: end   #
-  ###################################
+  source $HOME/.hybris.backoffice.conf
+  # SAP Hybris various office and corpo utils
+  source $HOME/.hybris.utils.conf
 
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
