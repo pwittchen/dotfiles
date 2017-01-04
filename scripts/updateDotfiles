@@ -1,16 +1,14 @@
 set -e
 wget -O .gitconfig https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitconfig
 wget -O .gitignore_global https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitignore_global
-wget -O .hybris.backoffice.conf https://raw.githubusercontent.com/pwittchen/dotfiles/master/.hybris.backoffice.conf
-wget -O .hybris.utils.conf https://raw.githubusercontent.com/pwittchen/dotfiles/master/.hybris.utils.conf
+wget -O .hybris.conf https://raw.githubusercontent.com/pwittchen/dotfiles/master/.hybris.conf
 wget -O .tmux.conf https://raw.githubusercontent.com/pwittchen/dotfiles/master/.tmux.conf
 wget -O .vimrc https://raw.githubusercontent.com/pwittchen/dotfiles/master/.vimrc
 wget -O .zshrc https://raw.githubusercontent.com/pwittchen/dotfiles/master/.zshrc
 
 sudo mv .gitconfig ~/
 sudo mv .gitignore_global ~/
-sudo mv .hybris.backoffice.conf ~/
-sudo mv .hybris.utils.conf ~/
+sudo mv .hybris.conf ~/
 sudo mv .tmux.conf ~/
 sudo mv .vimrc ~/
 sudo mv .zshrc ~/

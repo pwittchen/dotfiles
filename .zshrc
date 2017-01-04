@@ -154,10 +154,8 @@ fi
 # setup for macOS used at work
 if [ `uname` = "Darwin" ]; then
 
-  # SAP Hybris Backoffice development configuration
-  source $HOME/.hybris.backoffice.conf
-  # SAP Hybris various office and corpo utils
-  source $HOME/.hybris.utils.conf
+  # SAP Hybris Backoffice development configuration + office and corpo utils
+  source $HOME/.hybris.conf
 
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
