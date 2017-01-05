@@ -161,6 +161,7 @@ if [ `uname` = "Darwin" ]; then
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
   alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
   alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
+  alias setJdk8SAP='export JAVA_HOME=/Library/Java/JavaVirtualMachines/sapjvm_8/'
 
   # show existing java versions (JDKs)
   alias showJavaVersions='ls -l /Library/Java/JavaVirtualMachines'
