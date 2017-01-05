@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# this script comes from:
+# https://github.com/JakeWharton/rebaseandsqua.sh
+
 # Get the current branch name.
 branch=`git rev-parse --abbrev-ref HEAD`
 # Determine the commit at which the current branch diverged.
