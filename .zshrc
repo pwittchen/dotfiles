@@ -114,7 +114,7 @@ if [ `uname` = "Linux" ]; then
   alias countTotalSwap="grep SwapTotal /proc/meminfo"
 
   # network info
-  alias showNeighbourhood="sudo neighbourhood"
+  alias neighbourhood="sudo neighbourhood.py"
 
   # raspberry pi
   alias connectToPi="ssh pi@10.10.140.102"
