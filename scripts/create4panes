@@ -1,5 +1,5 @@
 #!/bin/bash
-# generates 4 tiles in tmux (requires tmux and xdotool)
+# generates 4 panes in tmux (requires tmux and xdotool)
 xdotool key ctrl+b shift+5 \
 && xdotool key ctrl+b shift+48 \
 && xdotool key ctrl+b o \
