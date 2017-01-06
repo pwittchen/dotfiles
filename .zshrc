@@ -200,9 +200,6 @@ if [ `uname` = "Darwin" ]; then
   cd $HOME
 fi
 
-# update and installation
-alias updateDotfilesRemote='sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"'
-
 # aliases, which work both on Linux and macOS
 
 # js
