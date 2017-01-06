@@ -1,0 +1,4 @@
+#!/bin/bash
+ramUsagePl=$(free -m | grep "Pam" | awk '{print $3/$2 * 100}' | cut -f1 -d".")
+echo "$ramUsagePl%"
+
