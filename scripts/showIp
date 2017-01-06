@@ -13,14 +13,27 @@ netInterface='wlan0'
 getIp
 
 if [ ! -z "$ip" ]; then
-   echo $ip 
+  if [[ $ip == *.* ]] ; then
+    echo $ip
+    exit
+  fi
 else
     netInterface='eth0'
     getIp
     if [ ! -z "$ip" ]; then
+      if [[ $ip == *.* ]] ; then
         echo $ip
+        exit
+      fi
     else
         getIpCorpo
-        echo $ip
+        if [ ! -z "$ip" ]; then
+          if [[ $ip == *.* ]] ; then
+            echo $ip
+            exit
+          fi
+        fi
     fi
 fi
+
+echo "not connected"
