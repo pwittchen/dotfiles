@@ -23,6 +23,4 @@ git pull
 git setup
 ---------
 - git for work: `setupGitForWork`
-- git for personal projects: `setupGitPersonal`
-
-Default config is personal.
+- git for personal projects: `setupGitPersonal` (default configuration)
