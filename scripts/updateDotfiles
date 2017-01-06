@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 wget -O .gitconfig https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitconfig
 wget -O .gitignore_global https://raw.githubusercontent.com/pwittchen/dotfiles/master/.gitignore_global
