@@ -2,33 +2,27 @@ dotfiles
 ========
 my dotfiles used on Linux and macOS
 
-installation and update
------------------------
+installation
+------------
 
-### configuration setup
-
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateDotfiles)"
-```
-
-Once we installed configuration, after reloading shell, we can simply type `updateDotfilesRemote` to be up to date.
-
-### scripts setup
-
-```
+```shell
 git clone git@github.com:pwittchen/dotfiles.git
-cd scripts
-sudo cp * /usr/local/bin/
+cd dotfiles
+./install.sh
 ```
 
-### git for work
+update
+------
 
-I use different e-mail address in `.gitconfig` for work and command below can be used to set it up.
-
+```shell
+cd dotfiles
+git pull
+./install.sh
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/dotfiles/master/scripts/updateGitForWork)"
-```
 
-Once we have dotfiles installed, we can simply type `updateGitForWork` to setup git configuration for work.
+git setup
+---------
+- git for work: `setupGitForWork`
+- git for personal projects: `setupGitPersonal`
 
-To revert setup of git for work and bring back personal git setup, we can use `updateDotfilesRemote` command.
+Default config is personal.
