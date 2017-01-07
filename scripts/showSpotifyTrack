@@ -19,5 +19,5 @@ try:
     # print artist name and track title
     print "%s - %s" % (metadata['xesam:artist'][0], metadata['xesam:title'])
 except:
-    # print nothing when Spotify is turned off
+    # we go here when spotify is turned off 
     print "x"
