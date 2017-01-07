@@ -226,6 +226,7 @@ alias moo="cowsay"
 alias cowthink="cowsay"
 alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 alias excludeGrep="grep -v grep"
+alias quickPing="ping 8.8.8.8 -c 1"
 
 # functions for Linux and macOS
 
