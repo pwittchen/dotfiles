@@ -117,6 +117,18 @@ if [ `uname` = "Linux" ]; then
   # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
+  # spotify control
+
+  function spotifyDo() {
+    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify \
+    /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.$1
+  }
+
+  alias spotifyPlay='spotifyDo Play'
+  alias spotifyPause='spotifyDo Pause'
+  alias spotifyNext='spotifyDo Next'
+  alias spotifyPrevious='spotifyDo Previous'
+
   # development directory
   export DEV=$HOME/Development
 
