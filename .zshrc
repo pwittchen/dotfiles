@@ -117,9 +117,6 @@ if [ `uname` = "Linux" ]; then
   # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
-  # raspberry pi
-  alias connectToPi="ssh pi@10.10.140.102"
-
   # development directory
   export DEV=$HOME/Development
 
