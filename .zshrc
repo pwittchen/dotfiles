@@ -114,6 +114,7 @@ if [ `uname` = "Linux" ]; then
   alias countTotalSwap="grep SwapTotal /proc/meminfo"
 
   # network info
+  # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
   # raspberry pi
