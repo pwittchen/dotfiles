@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-set -e
-sed -i -e 's/piotr@wittchen.biz.pl/piotr.wittchen@sap.com/g' ~/.gitconfig

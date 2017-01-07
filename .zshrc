@@ -208,6 +208,10 @@ alias npm="sudo npm"
 # python
 alias pip="sudo pip"
 
+# git setup
+alias setupGitPersonal="sed -i -e 's/piotr.wittchen@sap.com/piotr@wittchen.biz.pl/g' ~/.gitconfig"
+alias setupGitForWork="sed -i -e 's/piotr@wittchen.biz.pl/piotr.wittchen@sap.com/g' ~/.gitconfig"
+
 # general aliases
 
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
