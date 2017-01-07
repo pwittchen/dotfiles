@@ -17,7 +17,8 @@ try:
     #   print key, value
 
     # print artist name and track title
-    print "%s - %s" % (metadata['xesam:artist'][0], metadata['xesam:title'])
+    title = metadata['xesam:title'][:10] + (metadata['xesam:title'][10:] and '...')
+    print "%s - %s" % (metadata['xesam:artist'][0], title)
 except:
-    # we go here when spotify is turned off 
+    # we go here when spotify is turned off
     print "x"
