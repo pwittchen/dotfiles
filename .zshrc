@@ -272,3 +272,8 @@ function killProcess() {
 function tea() {
   tee -a $1
 }
+
+# allows to perform a given operation with constant refresh in an infinite loop
+function doContinuously() {
+    while [ 1 ]; do $1 | head -n 30; sleep 3; echo -en "$(tput cuu 30; tput ed)"; done
+}
