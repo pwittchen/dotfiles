@@ -1,2 +1,6 @@
 #!/bin/bash
-mpstat | awk '$12 ~ /[0-9.]+/ { print 100 - $12"%" }'
+if [ `uname` = "Linux" ]; then
+  mpstat | awk '$12 ~ /[0-9.]+/ { print 100 - $12"%" }'
+elif [ `uname` = "Darwin" ]; then
+  ps -A -o %cpu | awk '{s+=$1} END {print s "%"}'
+fi
