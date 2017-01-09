@@ -1,15 +1,17 @@
 #!/bin/bash
+if [ `uname` = "Linux" ]; then
+  function getRamUsage() {
+      ramUsage=$(free -m | grep $memKeyword | awk '{print $3/$2 * 100}' | cut -f1 -d".")
+  }
 
-function getRamUsage() {
-    ramUsage=$(free -m | grep $memKeyword | awk '{print $3/$2 * 100}' | cut -f1 -d".")
-}
+  memKeyword="Mem"
+  getRamUsage
 
-memKeyword="Mem"
-getRamUsage
-
-if [ -z "$ramUsage" ]; then
-    memKeyword="Pam"
-    getRamUsage
+  if [ -z "$ramUsage" ]; then
+      memKeyword="Pam"
+      getRamUsage
+  fi
+  echo "$ramUsage%"
+elif [ `uname` = "Darwin" ]; then
+  top -l 1 -s 0 | grep PhysMem | awk '{print $2}'
 fi
-
-echo "$ramUsage%"
