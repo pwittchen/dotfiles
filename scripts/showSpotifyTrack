@@ -1,7 +1,14 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import dbus
+# macOS doesn't have dbus, so we are handling import errors
+
+try:
+  import dbus
+except:
+  # we go here, when dbus is not available
+  print "x"
+  exit()
 
 try:
     session_bus = dbus.SessionBus()
