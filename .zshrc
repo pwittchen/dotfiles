@@ -166,6 +166,9 @@ if [ `uname` = "Darwin" ]; then
 
   # SAP Hybris Backoffice development configuration + office and corpo utils
   source $HOME/.hybris.conf
+  
+  # SAP Hybris e-mail used for Git
+  git config --global user.email "piotr.wittchen@sap.com"  
 
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
