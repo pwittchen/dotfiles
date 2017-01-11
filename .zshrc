@@ -164,11 +164,11 @@ fi
 # setup for macOS used at work
 if [ `uname` = "Darwin" ]; then
 
-  # SAP Hybris Backoffice development configuration + office and corpo utils
+  # loading SAP Hybris Backoffice development configuration + office and corpo utils
   source $HOME/.hybris.conf
   
-  # SAP Hybris e-mail used for Git
-  git config --global user.email "piotr.wittchen@sap.com"  
+  # setting SAP Hybris e-mail address used for Git
+  setupGitForWork  
 
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
@@ -221,9 +221,9 @@ alias npm="sudo npm"
 # python
 alias pip="sudo pip"
 
-# git setup
-alias setupGitPersonal="sed -i -e 's/piotr.wittchen@sap.com/piotr@wittchen.biz.pl/g' ~/.gitconfig"
-alias setupGitForWork="sed -i -e 's/piotr@wittchen.biz.pl/piotr.wittchen@sap.com/g' ~/.gitconfig"
+# git setup aliases
+alias setupGitPersonal="git config --global user.email \"piotr@wittchen.biz.pl\""
+alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
 
 # general aliases
 
