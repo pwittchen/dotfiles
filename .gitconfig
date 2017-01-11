@@ -6,21 +6,32 @@
 	editor = vi
 	excludesfile = ~/.gitignore_global
 [alias]
+	; showing metadata
 	list-aliases = !git config -l | grep alias | cut -c 7-
+
+	; showing logs
+	my-commits = log --author='Piotr Wittchen'
 	log-with-branches = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
-	my-commits = !git log --author="$(git config user.name)"
 	branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
+
+	; ignoring files
 	ignore-local = update-index --assume-unchanged
 	unignore-local = update-index --no-assume-unchanged
 	ignored-local = !git ls-files -v | grep "^[[:lower:]]"
+
+	; resetting changes
 	reset-file = checkout HEAD --
 	reset-hard = reset --hard
+
+	; showing diffs
 	diff-from-last-commit = diff --cached HEAD^
+
+	; searching files
 	find-file= !git ls-files | grep -i
 [push]
 	default = simple
 
 ; interesting references for git aliases and configuration:
-; https://gist.github.com/mwhite/6887990
-; http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+; - https://gist.github.com/mwhite/6887990
+; - http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
