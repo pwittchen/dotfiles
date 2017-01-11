@@ -6,6 +6,7 @@
 	editor = vi
 	excludesfile = ~/.gitignore_global
 [alias]
+	list-aliases = !git config -l | grep alias | cut -c 7-
 	hist = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	my-commits = log --author='Piotr Wittchen'
 	ignore-local = update-index --assume-unchanged
