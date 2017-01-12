@@ -83,6 +83,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# git setup aliases
+alias setupGitPersonal="git config --global user.email \"piotr@wittchen.biz.pl\""
+alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
+
 # setup for Ubuntu Linux used at home
 if [ `uname` = "Linux" ]; then
   # right now, I'm using tmux only on Linux
@@ -220,10 +224,6 @@ alias npm="sudo npm"
 
 # python
 alias pip="sudo pip"
-
-# git setup aliases
-alias setupGitPersonal="git config --global user.email \"piotr@wittchen.biz.pl\""
-alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
 
 # general aliases
 
