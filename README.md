@@ -16,6 +16,5 @@ update
 
 ```shell
 cd dotfiles
-git pull
-./install.sh
+git pull && ./install.sh
 ```
