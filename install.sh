@@ -8,3 +8,4 @@ sudo cp .vimrc ~/
 sudo cp .zshrc ~/
 sudo cp scripts/* /usr/local/bin/
 echo "dotfiles installed successfully! \o/"
+echo "run source ~/.zshrc command manually to refresh your configuration"
