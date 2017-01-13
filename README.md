@@ -19,8 +19,3 @@ cd dotfiles
 git pull
 ./install.sh
 ```
-
-git setup
----------
-- git for work: `setupGitForWork`
-- git for personal projects: `setupGitPersonal` (default configuration)
