@@ -133,6 +133,10 @@ if [ `uname` = "Linux" ]; then
   alias spotifyNext='spotifyDo Next'
   alias spotifyPrevious='spotifyDo Previous'
 
+  # volume control
+  alias volumeUp='pactl set-sink-volume 0 +10%'
+  alias volumeDown='pactl set-sink-volume 0 -10%'
+
   # development directory
   export DEV=$HOME/Development
 
