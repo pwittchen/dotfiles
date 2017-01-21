@@ -31,6 +31,9 @@
     ; merging changes
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
 
+    ; branching
+    new-branch = checkout -b
+
     ; showing diffs
     diff-from-last-commit = diff --cached HEAD^
     diff-staged = diff --staged ; shows diff after git add command
