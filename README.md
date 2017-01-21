@@ -1,6 +1,6 @@
 dotfiles
 ========
-my dotfiles used on Linux and macOS
+my dotfiles for Linux and macOS
 
 installation
 ------------
