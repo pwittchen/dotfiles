@@ -23,8 +23,8 @@
 
 	; resetting and reverting changes
 	reset-file = checkout HEAD --
-    discard-uncommited-changes = reset --hard
-    undo-last-commit = reset --hard HEAD^
+    	discard-uncommited-changes = reset --hard
+    	undo-last-commit = reset --hard HEAD^
 
 	; showing diffs
 	diff-from-last-commit = diff --cached HEAD^
