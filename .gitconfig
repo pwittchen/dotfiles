@@ -1,41 +1,43 @@
 [user]
-	email = piotr@wittchen.biz.pl
-	name = Piotr Wittchen
+    email = piotr@wittchen.biz.pl
+    name = Piotr Wittchen
 [core]
-	autocrlf = input
-	editor = vim
-	excludesfile = ~/.gitignore_global
+    autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitignore_global
 [alias]
-	; showing metadata
-	list-aliases = !git config -l | grep alias | cut -c 7-
+    ; showing metadata
+    list-aliases = !git config -l | grep alias | cut -c 7-
 
-	; showing logs and branches
-	my-commits = log --author='Piotr Wittchen'
-	last-commit-msg = log -1 --pretty=%B
-	log-with-branches = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
-	branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
+    ; showing logs and branches
+    my-commits = log --author='Piotr Wittchen'
+    last-commit-msg = log -1 --pretty=%B
+    log-with-branches = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
+    branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
 
-	; ignoring files
-	ignore-local = update-index --assume-unchanged
-	unignore-local = update-index --no-assume-unchanged
-	ignored-local = !git ls-files -v | grep "^[[:lower:]]"
+    ; ignoring files
+    ignore-local = update-index --assume-unchanged
+    unignore-local = update-index --no-assume-unchanged
+    ignored-local = !git ls-files -v | grep "^[[:lower:]]"
 
-	; resetting and reverting changes
-	reset-file = checkout HEAD --
-	discard-uncommited-changes = reset --hard
-	undo-last-commit = reset --hard HEAD^
+    ; resetting and reverting changes
+    reset-file = checkout HEAD --
+    discard-uncommited-changes = reset --hard
+    undo-last-commit = reset --hard HEAD^
+    ; side note: git reset <filename> makes undo after git add command 
 
-	; merging changes
-	merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
+    ; merging changes
+    merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
 
-	; showing diffs
-	diff-from-last-commit = diff --cached HEAD^
+    ; showing diffs
+    diff-from-last-commit = diff --cached HEAD^
+    diff-staged = diff --staged ; shows diff after git add command
 
-	; searching files
-	find-file= !git ls-files | grep -i
+    ; searching files
+    find-file= !git ls-files | grep -i
 [push]
-	default = simple
+    default = simple
 
 ; interesting references for git aliases and configuration:
 ; - https://gist.github.com/mwhite/6887990
