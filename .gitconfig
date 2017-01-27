@@ -37,6 +37,8 @@
 
     ; branching
     new-branch = checkout -b
+    delete-local-branch = branch -d
+    force-delete-local-branch = branch -D
     delete-remote-branch = push origin --delete
 
     ; showing diffs
