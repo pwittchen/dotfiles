@@ -21,6 +21,10 @@
     unignore-local = update-index --no-assume-unchanged
     ignored-local = !git ls-files -v | grep "^[[:lower:]]"
 
+    ; adding & reviewing changes
+    review-changes = add -p
+    add-all = add -A
+
     ; resetting and reverting changes
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
