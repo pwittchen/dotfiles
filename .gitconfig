@@ -37,6 +37,7 @@
 
     ; branching
     new-branch = checkout -b
+    delete-remote-branch = push origin --delete
 
     ; showing diffs
     diff-from-last-commit = diff --cached HEAD^
