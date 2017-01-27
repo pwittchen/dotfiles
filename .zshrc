@@ -253,6 +253,10 @@ alias quickPing="ping 8.8.8.8 -c 1"
 
 # functions for Linux and macOS
 
+function lcd() {
+  cd "$1"; ls;
+}
+
 function findFile() {
   find ~/ -type f -name "$1"
 }
