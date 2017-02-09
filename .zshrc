@@ -282,6 +282,11 @@ function killProcess() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
 
+# shows cpu and memory usage of a single process
+function showProcessStats() {
+  ps -p $1 -o %cpu,%mem,cmd
+}
+
 # display function output log in the console and save it into a given file
 function tea() {
   tee -a $1
