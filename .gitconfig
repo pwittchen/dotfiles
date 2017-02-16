@@ -32,6 +32,8 @@
     discard-unstaged-changes = checkout -- .
     undo-last-commit = reset --hard HEAD^
     ; side note: git reset <filename> makes undo after git add command 
+    revert-merge-commit=git revert -m 1
+    ; commit hash should be provided for the command above and it should be confirmed with commit
 
     ; merging changes
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
