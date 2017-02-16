@@ -231,6 +231,7 @@ alias pip="sudo pip"
 
 # general aliases
 
+alias vi="vim"
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
