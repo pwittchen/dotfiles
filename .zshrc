@@ -189,9 +189,15 @@ if [ `uname` = "Darwin" ]; then
 
   # set current java version and JAVA_HOME
   export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+  export PATH=$JAVA_HOME/bin:$PATH
 
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
+
+  # maven configuration
+  export M2_HOME=$(/usr/local/Cellar/maven/3.3.9/libexec)
+  export M2=$M2_HOME/bin
+  export PATH=$M2:$PATH
 
   # showing and hiding hidden files
   function makeFilesVisible() {
