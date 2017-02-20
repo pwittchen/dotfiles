@@ -194,11 +194,6 @@ if [ `uname` = "Darwin" ]; then
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
-  # maven configuration
-  export M2_HOME=$(/usr/local/Cellar/maven/3.3.9/libexec)
-  export M2=$M2_HOME/bin
-  export PATH=$M2:$PATH
-
   # showing and hiding hidden files
   function makeFilesVisible() {
     defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
