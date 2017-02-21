@@ -9,6 +9,9 @@
     ; showing metadata
     list-aliases = !git config -l | grep alias | cut -c 7-
 
+    ; showing urls
+    show-remote-url = config --get remote.origin.url
+
     ; showing commits, logs & branches
     my-commits = log --author='Piotr Wittchen'
     last-commit-msg = log -1 --pretty=%B
