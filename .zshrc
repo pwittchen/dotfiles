@@ -258,6 +258,12 @@ function lcd() {
   cd "$1"; ls;
 }
 
+function cutLastChars() {
+  numberOfCharsToCut=$1
+  numberOfCharsToCut=$[numberOfCharsToCut+1];
+  rev | cut -c $numberOfCharsToCut- | rev
+}
+
 # searches for a phrase in all files in the current directory recursively
 function findPhrase() {
   grep -r "$1" .
