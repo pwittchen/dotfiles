@@ -34,6 +34,7 @@
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
+    remove-from-stage = reset HEAD
     undo-last-commit = reset --hard HEAD^
     ; side note: git reset <filename> makes undo after git add command 
     revert-merge-commit=git revert -m 1
