@@ -273,8 +273,16 @@ function findFile() {
   find ~/ -type f -name "$1"
 }
 
+function findFileInCurrentDir() {
+ find . -type f -ls | grep "$1"
+}
+
 function findDir() {
   find ~/ -type d -name "$1"
+}
+
+function findDirInCurrentDir() {
+ find . -type d -ls | grep "$1"
 }
 
 function getAndPlay() {
