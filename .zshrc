@@ -219,7 +219,7 @@ alias npm="sudo npm"
 alias pip="sudo pip"
 
 # android
-alias abdWifiDown='adb shell svc wifi disable'
+alias adbWifiDown='adb shell svc wifi disable'
 alias adbWifiUp='adb shell svc wifi enable'
 
 # general aliases
