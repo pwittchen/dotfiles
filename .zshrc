@@ -121,6 +121,10 @@ if [ `uname` = "Linux" ]; then
   # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
+  # volume control
+  alias volUp='pactl set-sink-volume 0 +3%'
+  alias volDown='pactl set-sink-volume 0 -3%'
+
   # development directory
   export DEV=$HOME/Development
 
