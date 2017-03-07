@@ -121,22 +121,6 @@ if [ `uname` = "Linux" ]; then
   # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
-  # spotify control
-
-  function spotifyDo() {
-    dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify \
-    /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.$1
-  }
-
-  alias spotifyPlay='spotifyDo Play'
-  alias spotifyPause='spotifyDo Pause'
-  alias spotifyNext='spotifyDo Next'
-  alias spotifyPrevious='spotifyDo Previous'
-
-  # volume control
-  alias volumeUp='pactl set-sink-volume 0 +10%'
-  alias volumeDown='pactl set-sink-volume 0 -10%'
-
   # development directory
   export DEV=$HOME/Development
 
@@ -240,7 +224,8 @@ alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
 alias showWeather="showWeatherIn Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
-alias runHttpSever="python -m SimpleHTTPServer 8000"
+alias runPythonHttpSever="python -m SimpleHTTPServer 8000"
+alias runPhpHttpServer="php -S localhost:8000 -t ./"
 alias startMySqlServer="sudo /etc/init.d/mysql start"
 alias stopMySqlServer="sudo /etc/init.d/mysql stop"
 alias connectToMySqlServer="sudo mysql -u root -p"
