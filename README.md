@@ -7,8 +7,7 @@ installation
 
 ```shell
 git clone git@github.com:pwittchen/dotfiles.git
-cd dotfiles
-./install.sh
+cd dotfiles && ./install.sh
 ```
 
 update
