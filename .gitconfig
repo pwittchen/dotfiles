@@ -57,8 +57,6 @@
     find-file= !git ls-files | grep -i
 [push]
     default = simple
-[merge]
-	ff = false
 
 ; interesting references for git aliases and configuration:
 ; - https://gist.github.com/mwhite/6887990
