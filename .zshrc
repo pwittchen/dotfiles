@@ -305,7 +305,7 @@ function tea() {
 }
 
 # allows to perform a given operation with constant refresh in an infinite loop
-function repeat() {
+function repeatOperation() {
  watch -n 1 $1 
 }
 
