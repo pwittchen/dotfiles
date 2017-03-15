@@ -48,6 +48,8 @@
     delete-local-branch = branch -d
     force-delete-local-branch = branch -D
     delete-remote-branch = push origin --delete
+    ; deletes any branches that have been merged into master, see also: https://gist.github.com/robmiller/5133264
+    delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
     diff-from-last-commit = diff --cached HEAD^
