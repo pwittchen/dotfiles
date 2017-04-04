@@ -10,6 +10,8 @@ git clone git@github.com:pwittchen/dotfiles.git
 cd dotfiles && ./install.sh
 ```
 
+**note**: commands above won't install plugin managers & plugins
+
 update
 ------
 
