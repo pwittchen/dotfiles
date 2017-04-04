@@ -12,6 +12,9 @@
     ; showing urls
     show-remote-url = config --get remote.origin.url
 
+    ; showing status
+    status-detailed = status -sb
+
     ; showing commits, logs & branches
     my-commits = log --author="$(git config user.name)" 
     last-commit-msg = log -1 --pretty=%B
