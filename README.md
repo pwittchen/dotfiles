@@ -30,4 +30,5 @@ plugins
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
     - [nerdtree](https://github.com/scrooloose/nerdtree)
+    - [tagbar](https://github.com/majutsushi/tagbar)
     - [ctrlp](https://github.com/kien/ctrlp.vim)
