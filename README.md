@@ -20,15 +20,14 @@ git pull && ./install.sh
 
 plugins
 -------
-**tmux**
-- plugin manager: [tpm](https://github.com/tmux-plugins/tpm)
-- plugins:
-  - [tmux-sidebar](https://github.com/tmux-plugins/tmux-sidebar)
-  - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
-  - [tmux-pain-control](https://github.com/tmux-plugins/tmux-pain-control)
-
-**vim**
-- plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
-- plugins:
-  - [nerdtree](https://github.com/scrooloose/nerdtree)
-  - [ctrlp](https://github.com/kien/ctrlp.vim)
+- **tmux**
+  - plugin manager: [tpm](https://github.com/tmux-plugins/tpm)
+  - plugins:
+    - [tmux-sidebar](https://github.com/tmux-plugins/tmux-sidebar)
+    - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
+    - [tmux-pain-control](https://github.com/tmux-plugins/tmux-pain-control)
+- **vim**
+  - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
+  - plugins:
+    - [nerdtree](https://github.com/scrooloose/nerdtree)
+    - [ctrlp](https://github.com/kien/ctrlp.vim)
