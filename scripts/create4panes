@@ -1,7 +1,0 @@
-#!/bin/bash
-# generates 4 panes in tmux (requires tmux and xdotool)
-xdotool key ctrl+b shift+5 \
-&& xdotool key ctrl+b shift+48 \
-&& xdotool key ctrl+b o \
-&& xdotool key ctrl+b shift+48 ctrl+b o ctrl+b o ctrl+b o \
-&& clear
