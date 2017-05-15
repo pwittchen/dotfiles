@@ -84,13 +84,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # git setup aliases
+alias setupGitUserName="git config --global user.name \"Piotr Wittchen\""
 alias setupGitPersonal="git config --global user.email \"piotr@wittchen.biz.pl\""
 alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
+
+setupGitUserName
 
 # setup for Ubuntu Linux used at home
 if [ `uname` = "Linux" ]; then
   # right now, I'm using tmux only on Linux
   [[ $TERM != "screen" ]] && exec tmux
+
+  # setting personal e-mail for git
+  setupGitPersonal
 
   alias resetGnomePanel="sudo killall gnome-panel"
   alias resetNautilus="sudo killall nautilus && nautilus"
@@ -163,8 +169,8 @@ if [ `uname` = "Darwin" ]; then
   # loading SAP Hybris Backoffice development configuration + office and corpo utils
   source $HOME/.hybris.conf
   
-  # setting SAP Hybris e-mail address used for Git
-  setupGitForWork  
+  # setting SAP Hybris (work) e-mail for git 
+  setupGitForWork 
 
   # aliases for switching java version
   alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
@@ -268,7 +274,7 @@ function findFile() {
 }
 
 function findFileInCurrentDir() {
- find . -type f -ls | grep "$1"
+  find . -type f -ls | grep "$1"
 }
 
 function findDir() {
@@ -276,7 +282,7 @@ function findDir() {
 }
 
 function findDirInCurrentDir() {
- find . -type d -ls | grep "$1"
+  find . -type d -ls | grep "$1"
 }
 
 function getAndPlay() {
@@ -308,6 +314,6 @@ function tea() {
 
 # allows to perform a given operation with constant refresh in an infinite loop
 function repeatOperation() {
- watch -n 1 $1 
+  watch -n 1 $1 
 }
 
