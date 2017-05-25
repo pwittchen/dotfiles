@@ -18,6 +18,7 @@
     ; showing commits, logs & branches
     my-commits = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short"
     my-commits-today = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=00:00:00 --all --no-merges"
+    my-commits-last-month = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=\"30 days ago\" --all --no-merges"
     last-commit-msg = log -1 --pretty=%B
     last-commit-hash = log -1 --pretty=%h
     top-commiters = shortlog -sn
