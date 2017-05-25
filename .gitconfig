@@ -16,9 +16,11 @@
     status-detailed = status -sb
 
     ; showing commits, logs & branches
-    my-commits = log --author="$(git config user.name)" 
+    my-commits = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short"
+    my-commits-today = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=00:00:00 --all --no-merges"
     last-commit-msg = log -1 --pretty=%B
     last-commit-hash = log -1 --pretty=%h
+    top-commiters = shortlog -sn
     log-with-branches = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
     branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
