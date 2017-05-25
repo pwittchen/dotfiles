@@ -59,7 +59,7 @@
     delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
-    diff-from-last-commit = diff --cached HEAD^
+    diff-commit = diff --cached HEAD^ ; shows diff from last commit
     diff-staged = diff --staged ; shows diff after git add command
 
     ; searching files
