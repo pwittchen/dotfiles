@@ -59,7 +59,8 @@
     delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; pushing changes
-    fire=!git-fire ; script from https://github.com/qw3rtman/git-fire needs to be in usr/local/bin/ dir
+    fire=!git-fire ; should be called in the case of fire
+                   ; to make it work, script from https://github.com/qw3rtman/git-fire needs to be placed in /usr/local/bin/ dir
 
     ; showing diffs
     diff-commit = diff --cached HEAD^ ; shows diff from last commit
