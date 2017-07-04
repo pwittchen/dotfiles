@@ -188,6 +188,9 @@ if [ `uname` = "Darwin" ]; then
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
+  # run jshell from Java 9
+  alias jshell='/usr/lib/jvm/java-9-oracle/bin/jshell'
+
   # showing and hiding hidden files
   function makeFilesVisible() {
     defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
