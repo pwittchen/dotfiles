@@ -139,6 +139,7 @@ if [ `uname` = "Linux" ]; then
   export PATH=$JAVA_HOME/bin:$PATH
   alias switchJava="sudo update-alternatives --config java"
   alias showJavaVersions="ls -l /usr/lib/jvm"
+  alias jshell='/usr/lib/jvm/java-9-oracle/bin/jshell'
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
@@ -188,8 +189,8 @@ if [ `uname` = "Darwin" ]; then
   # go to directory with JVMs
   alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
 
-  # run jshell from Java 9
-  alias jshell='/usr/lib/jvm/java-9-oracle/bin/jshell'
+  # jshell
+  alias jshell='/Library/Java/JavaVirtualMachines/jdk1.9.0.jdk/Contents/Home/bin/jshell'
 
   # showing and hiding hidden files
   function makeFilesVisible() {
