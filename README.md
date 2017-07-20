@@ -28,6 +28,7 @@ plugins
     - [tmux-sidebar](https://github.com/tmux-plugins/tmux-sidebar)
     - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
     - [tmux-pain-control](https://github.com/tmux-plugins/tmux-pain-control)
+    - [tmux-urlview](https://github.com/tmux-plugins/tmux-urlview)
 - **vim**
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
