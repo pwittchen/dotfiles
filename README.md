@@ -29,6 +29,7 @@ plugins
     - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
     - [tmux-pain-control](https://github.com/tmux-plugins/tmux-pain-control)
     - [tmux-urlview](https://github.com/tmux-plugins/tmux-urlview)
+    - [tmux-plugin-battery](https://github.com/pwittchen/tmux-plugin-battery)
 - **vim**
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
