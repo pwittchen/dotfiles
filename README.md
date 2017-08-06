@@ -34,6 +34,7 @@ plugins
     - [tmux-plugin-cpu](https://github.com/pwittchen/tmux-plugin-cpu)
     - [tmux-plugin-ram](https://github.com/pwittchen/tmux-plugin-ram)
     - [tmux-plugin-ip](https://github.com/pwittchen/tmux-plugin-ip)
+    - [tmux-plugin-spotify](https://github.com/pwittchen/tmux-plugin-spotify)
 - **vim**
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
