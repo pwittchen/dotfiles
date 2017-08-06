@@ -32,6 +32,7 @@ plugins
     - [tmux-plugin-battery](https://github.com/pwittchen/tmux-plugin-battery)
     - [tmux-plugin-uptime](https://github.com/pwittchen/tmux-plugin-uptime)
     - [tmux-plugin-cpu](https://github.com/pwittchen/tmux-plugin-cpu)
+    - [tmux-plugin-ram](https://github.com/pwittchen/tmux-plugin-ram)
 - **vim**
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
