@@ -196,6 +196,7 @@ if [ `uname` = "Darwin" ]; then
 
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
+  alias restartMenuBar="killall -KILL SystemUIServer"
 
   # android
   export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
