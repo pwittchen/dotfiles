@@ -41,3 +41,11 @@ plugins
     - [nerdtree](https://github.com/scrooloose/nerdtree)
     - [tagbar](https://github.com/majutsushi/tagbar)
     - [ctrlp](https://github.com/kien/ctrlp.vim)
+    
+themes
+------
+
+[Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usuall use for oh-my-zsh are:
+- [minimal](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#minimal)
+- [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
+  - this theme requires additional font: [Menlo for Powerline](https://github.com/abertsch/Menlo-for-Powerline)
