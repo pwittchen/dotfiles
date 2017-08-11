@@ -45,7 +45,7 @@ plugins
 themes
 ------
 
-[Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usuall use for oh-my-zsh are:
+[Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usually use for oh-my-zsh are:
 - [minimal](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#minimal)
 - [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
   - color scheme for macOS: [Solarized Dark](https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
