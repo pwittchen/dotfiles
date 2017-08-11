@@ -48,4 +48,6 @@ themes
 [Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usuall use for oh-my-zsh are:
 - [minimal](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#minimal)
 - [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
-  - this theme requires additional font: [Menlo for Powerline](https://github.com/abertsch/Menlo-for-Powerline)
+  - color scheme for macOS: [Solarized Dark](https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
+  - font for macOS: 12 pt Meslo LG M DZ Regular for Powerline - can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
+  - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
