@@ -146,6 +146,10 @@ if [ `uname` = "Linux" ]; then
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   export PATH=$PATH:$ANDROID_HOME/tools
   export PATH=$PATH:$ANDROID_HOME/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  alias listAndroidEmulators="emulator -list-avds"
+  alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd Nexus_5X_API_24"
+  # hint: we can access local machine from Android emulator at: 10.0.2.2
 
   # scala
   export SCALA_HOME=/usr/share/scala
