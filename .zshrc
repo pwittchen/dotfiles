@@ -256,8 +256,8 @@ alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 alias firstLine="head -n1"
 alias lastLine="tail -n1"
 alias excludeGrep="grep -v grep"
-alias quickPing="ping 8.8.8.8 -c 1"
 alias vi="vim"
+alias fuck="sudo !!"
 
 # functions for Linux and macOS
 
