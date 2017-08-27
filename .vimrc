@@ -27,5 +27,6 @@ set tabstop=4               "Set Tab width to 4
 set shiftwidth=4            "Indents will have width of 4
 set softtabstop=4           "Set the number of columns for tab
 set expandtab               "Expand tabs to spaces
+set pastetoggle=<F2>        "Toggles paste mode (useful while pasting text from other apps)
 
 execute pathogen#infect()
