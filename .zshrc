@@ -93,9 +93,7 @@ setupGitUserName
 # setup for Ubuntu Linux used at home
 if [ `uname` = "Linux" ]; then
   # right now, I'm using tmux only on Linux
-
-  # disabling tmux completly right now due to zsh-newuser-install error
-  # [[ $TERM != "screen" ]] && exec tmux
+  [[ $TERM != "screen" ]] && exec tmux
 
   # setting personal e-mail for git
   setupGitPersonal
