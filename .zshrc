@@ -257,6 +257,9 @@ alias firstLine="head -n1"
 alias lastLine="tail -n1"
 alias excludeGrep="grep -v grep"
 alias vi="vim"
+alias showNumberOfCpuCores="sysctl -n hw.ncpu"
+
+
 
 # functions for Linux and macOS
 
