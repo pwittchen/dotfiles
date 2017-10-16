@@ -26,6 +26,7 @@
     log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
     branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
     list-new-unstaged-files = ls-files --others --exclude-standard
+    list-contributors = shortlog -sn
 
     ; ignoring files
     ignore-local = update-index --assume-unchanged
