@@ -211,7 +211,6 @@ if [ `uname` = "Darwin" ]; then
   export PATH=$ANDROID_HOME:$PATH
   export PATH=$ANDROID_HOME/tools:$PATH
   export PATH=$ANDROID_HOME/platform-tools:$PATH
-  alias runAndroidStudio="/Applications/Android\ Studio.app/Contents/MacOS/studio"
 
   # go
   export GOPATH=$HOME/Projects/other/go/workspace
