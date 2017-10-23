@@ -135,8 +135,6 @@ if [ `uname` = "Linux" ]; then
   export DEV=$HOME/Development
 
   # java
-  # export JAVA_HOME=/usr/lib/jvm/java-9-oracle
-  # export PATH=$JAVA_HOME/bin:$PATH
   alias switchJava="sudo update-alternatives --config java"
   alias showJavaVersions="ls -l /usr/lib/jvm"
 
@@ -177,16 +175,14 @@ if [ `uname` = "Darwin" ]; then
   setupGitForWork 
 
   # aliases for switching java version
-  alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
-  alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
-  alias setJdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 1.9)'
-  alias setJdk8SAP='export JAVA_HOME=/Library/Java/JavaVirtualMachines/sapjvm_8/'
+  alias setJava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) && source ~/.zshrc && java -version'
+  alias setJava9='export JAVA_HOME=$(/usr/libexec/java_home -v 9) && source ~/.zshrc && java -version'
+  alias setJava8sap='export JAVA_HOME=/Library/Java/JavaVirtualMachines/sapjvm_8/ && source ~/.zshrc && java -version'
 
   # show existing java versions (JDKs)
   alias showJavaVersions='ls -l /Library/Java/JavaVirtualMachines'
 
   # set current java version and JAVA_HOME
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
   export PATH=$JAVA_HOME/bin:$PATH
 
   # go to directory with JVMs
