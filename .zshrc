@@ -256,6 +256,7 @@ alias lastLine="tail -n1"
 alias excludeGrep="grep -v grep"
 alias vi="vim"
 alias countCpusWithPython="python -c 'import multiprocessing as mp; print(mp.cpu_count())'"
+alias javaInfo="echo 'JAVA_HOME:' $JAVA_HOME && java -version"
 
 # functions for Linux and macOS
 
