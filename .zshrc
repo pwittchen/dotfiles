@@ -127,6 +127,9 @@ if [ `uname` = "Linux" ]; then
   # reference for script below: https://github.com/bwaldvogel/neighbourhood
   alias neighbourhood="sudo neighbourhood.py"
 
+  # bluetooth
+  alias restartBluetooth="hciconfig sspmode 1 && hciconfig hci0 down && hcicongig hci0 up"
+
   # volume control
   alias volUp='pactl set-sink-volume 0 +3%'
   alias volDown='pactl set-sink-volume 0 -3%'
