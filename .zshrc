@@ -168,6 +168,9 @@ if [ `uname` = "Linux" ]; then
 
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
+
+  # configuring linux brew
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
 
 # setup for macOS used at work
