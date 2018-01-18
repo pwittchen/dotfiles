@@ -52,4 +52,4 @@ themes
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
-   - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json)
+   - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json) based on Monokai Dark
