@@ -316,8 +316,12 @@ function killProcess() {
 }
 
 # kill all detached sessions of the screen
-function killScreens () {
+function killScreens() {
     screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
+}
+
+function killScreen() {
+    screen -X -S $1 quit
 }
 
 # shows cpu and memory usage of a single process
