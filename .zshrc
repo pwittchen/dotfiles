@@ -315,6 +315,11 @@ function killProcess() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
 
+# kill all detached sessions of the screen
+function killScreens () {
+    screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
+}
+
 # shows cpu and memory usage of a single process
 function showProcessStats() {
   ps -p $1 -o %cpu,%mem,cmd
