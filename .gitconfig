@@ -47,6 +47,10 @@
     revert-merge-commit=git revert -m 1
     ; commit hash should be provided for the command above and it should be confirmed with commit
 
+    ; removing untracked files
+    show-untracked-files-to-remove=clean -n
+    remove-untracked-files=clean -f
+
     ; merging changes
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
 
