@@ -170,6 +170,10 @@ if [ `uname` = "Linux" ]; then
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
 
+  # mysql
+  alias startMySqlServer="sudo service mysql start"
+  alias stopMySqlServer="sudo service mysql stop"
+
   # configuring linux brew
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
@@ -223,6 +227,10 @@ if [ `uname` = "Darwin" ]; then
   # midnight commander colorized
   alias mc='mc -a -S modarin256-defbg'
 
+  # mysql
+  alias startMySqlServer="sudo /etc/init.d/mysql start"
+  alias stopMySqlServer="sudo /etc/init.d/mysql stop"
+
   # go to the home directory in the beginning
   cd $HOME
 fi
@@ -250,8 +258,6 @@ alias showWeather="showWeatherIn Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias runPythonHttpSever="python -m SimpleHTTPServer 8000"
 alias runPhpHttpServer="php -S localhost:8000 -t ./"
-alias startMySqlServer="sudo /etc/init.d/mysql start"
-alias stopMySqlServer="sudo /etc/init.d/mysql stop"
 alias connectToMySqlServer="sudo mysql -u root -p"
 alias startMongoDb="sudo service mongod start"
 alias stopMongoDb="sudo service mongod stop"
