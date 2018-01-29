@@ -174,6 +174,10 @@ if [ `uname` = "Linux" ]; then
   alias startMySqlServer="sudo service mysql start"
   alias stopMySqlServer="sudo service mysql stop"
 
+  # mongodb
+  alias startMongoDb="sudo service mongod start"
+  alias stopMongoDb="sudo service mongod stop"
+
   # configuring linux brew
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
@@ -228,8 +232,10 @@ if [ `uname` = "Darwin" ]; then
   alias mc='mc -a -S modarin256-defbg'
 
   # mysql
-  alias startMySqlServer="sudo /etc/init.d/mysql start"
-  alias stopMySqlServer="sudo /etc/init.d/mysql stop"
+  export PATH=/usr/local/mysql/bin/:$PATH
+  alias startMySqlServer="sudo /usr/local/mysql/support-files/mysql.server start"
+  alias stopMySqlServer="sudo /usr/local/mysql/support-files/mysql.server stop"
+  alias restartMySqlServer="sudo /usr/local/mysql/support-files/mysql.server restart"
 
   # go to the home directory in the beginning
   cd $HOME
@@ -259,8 +265,6 @@ alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias runPythonHttpSever="python -m SimpleHTTPServer 8000"
 alias runPhpHttpServer="php -S localhost:8000 -t ./"
 alias connectToMySqlServer="sudo mysql -u root -p"
-alias startMongoDb="sudo service mongod start"
-alias stopMongoDb="sudo service mongod stop"
 alias moo="cowsay"
 alias cowthink="cowsay"
 alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
