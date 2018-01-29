@@ -53,3 +53,10 @@ themes
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
    - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json) based on Monokai Dark
+   
+ screenshots
+ -----------
+ 
+ ### linux
+ 
+ ![screenshot of terminal on Ubuntu Linux](screenshot_terminal_linux.png "screenshot of terminal on Ubuntu Linux")
