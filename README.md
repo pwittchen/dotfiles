@@ -60,3 +60,7 @@ themes
  ### linux
  
  ![screenshot of terminal on Ubuntu Linux](screenshot_terminal_linux.png "screenshot of terminal on Ubuntu Linux")
+
+ ### macOS
+ 
+ ![screenshot of terminal on macOS](screenshot_terminal_macos.png "screenshot of terminal on macOS")
