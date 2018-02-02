@@ -48,9 +48,10 @@ themes
 [Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usually use for oh-my-zsh are:
 - [minimal](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#minimal)
 - [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
-  - color schemes usually used for macOS & Linux: Solarized Dark, Neutron or Monokai Dark
+  - color schemes usually used for macOS & Linux: Solarized Dark, Neutron, Monokai Dark or similar
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
    - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json) based on Monokai Dark
- - find more color schemes for iTerm2 on macOS at: https://github.com/mbadolato/iTerm2-Color-Schemes
+ - more color schemes for iTerm2 on macOS: https://github.com/mbadolato/iTerm2-Color-Schemes
+ - more color schemes for Tilix on Linux: https://github.com/storm119/Tilix-Themes
