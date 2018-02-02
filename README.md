@@ -53,6 +53,7 @@ themes
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
    - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json) based on Monokai Dark
+ - find more color schemes for iTerm2 on macOS at: https://github.com/mbadolato/iTerm2-Color-Schemes
    
  screenshots
  -----------
