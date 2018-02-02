@@ -54,6 +54,6 @@ themes
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
    - custom color scheme: [color_scheme_linux_tilix.json](https://github.com/pwittchen/dotfiles/blob/master/color_scheme_linux_tilix.json) based on Monokai Dark
    - more color schemes for Tilix on Linux: https://github.com/storm119/Tilix-Themes
- - [iTerm2](https://www.iterm2.com/)
+ - [iTerm2](https://www.iterm2.com/) on macOS
    - custom color scheme: [color_scheme_macos_iterm2.itermcolors](https://github.com/pwittchen/dotfiles/blob/master/color_scheme_macos_iterm2.itermcolors) based on Neutron
    - more color schemes for iTerm2 on macOS: https://github.com/mbadolato/iTerm2-Color-Schemes
