@@ -52,6 +52,8 @@ themes
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
  - [tilix](https://gnunn1.github.io/tilix-web/) on Linux
-   - custom color scheme: [tilix-color-scheme_201801.json](https://github.com/pwittchen/dotfiles/blob/master/tilix-color-scheme_201801.json) based on Monokai Dark
- - more color schemes for iTerm2 on macOS: https://github.com/mbadolato/iTerm2-Color-Schemes
- - more color schemes for Tilix on Linux: https://github.com/storm119/Tilix-Themes
+   - custom color scheme: [color_scheme_linux_tilix.json](https://github.com/pwittchen/dotfiles/blob/master/color_scheme_linux_tilix.json) based on Monokai Dark
+   - more color schemes for Tilix on Linux: https://github.com/storm119/Tilix-Themes
+ - [iTerm2](https://www.iterm2.com/)
+   - custom color scheme: [color_scheme_macos_iterm2.itermcolors](https://github.com/pwittchen/dotfiles/blob/master/color_scheme_macos_iterm2.itermcolors) based on Neutron
+   - more color schemes for iTerm2 on macOS: https://github.com/mbadolato/iTerm2-Color-Schemes
