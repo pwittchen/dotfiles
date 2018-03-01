@@ -170,6 +170,9 @@ if [ `uname` = "Linux" ]; then
   # smalltalk
   alias gnu-smalltalk="/usr/bin/gst"
 
+  # dart
+  export PATH=/usr/lib/dart/bin:$PATH
+
   # mysql
   alias startMySqlServer="sudo service mysql start"
   alias stopMySqlServer="sudo service mysql stop"
