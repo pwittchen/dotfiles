@@ -45,10 +45,9 @@ plugins
 themes and terminal emulators
 -----------------------------
 
-[Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usually use for oh-my-zsh are:
-- [minimal](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#minimal)
+[Theme](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usually use for oh-my-zsh is:
 - [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
-  - color schemes usually used for macOS & Linux: Solarized Dark, Neutron, Monokai Dark or similar
+  - color schemes usually used for macOS & Linux: Solarized Dark, Neutron, Monokai Dark, Dimmed Monokai or similar
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
 
