@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions)
+plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-256color)
 
 # User configuration
 
@@ -352,6 +352,7 @@ function repeatOperation() {
   watch -n 1 $1 
 }
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 # this must be at the end of the file for sdkman to work!
 export SDKMAN_DIR="/$HOME/.sdkman"
