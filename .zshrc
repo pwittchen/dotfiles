@@ -140,8 +140,10 @@ if [ `uname` = "Linux" ]; then
   # java
   alias switchJava="sudo update-alternatives --config java"
   alias showJavaVersions="ls -l /usr/lib/jvm"
-  alias setJava8_Home="export JAVA_HOME=/usr/lib/jvm/java-8-oracle && echo $JAVA_HOME"
-  alias setJava9_Home="export JAVA_HOME=/usr/lib/jvm/java-9-oracle && echo $JAVA_HOME"
+  alias setJava08_Home="export JAVA_HOME=/usr/lib/jvm/java-8-oracle && echo $JAVA_HOME"
+  alias setJava09_Home="export JAVA_HOME=/usr/lib/jvm/java-9-oracle && echo $JAVA_HOME"
+  alias setJava10_Home="export JAVA_HOME=/usr/lib/jvm/jdk-10 && echo $JAVA_HOME"
+  alias setJava11_Home="export JAVA_HOME=/usr/lib/jvm/jdk-11 && echo $JAVA_HOME"
   alias sjk="java -jar ~/Software/sjk/sjk-plus-0.9.jar" # see: https://github.com/aragozin/jvm-tools
 
   # android
