@@ -354,6 +354,11 @@ function repeatOperation() {
   watch -n 1 $1 
 }
 
+# removes docker container by name
+function removeDockerContainer() {
+  sudo docker rmi -f $(docker images | grep $1 | awk '{print $3}')
+}
+
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 # this must be at the end of the file for sdkman to work!
