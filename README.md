@@ -42,6 +42,7 @@ plugins
     - [tagbar](https://github.com/majutsushi/tagbar)
     - [ctrlp](https://github.com/kien/ctrlp.vim)
     - [supertab](https://github.com/ervandew/supertab)
+    - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 
 themes and terminal emulators
 -----------------------------
