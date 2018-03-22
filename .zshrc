@@ -356,7 +356,7 @@ function repeatOperation() {
 
 # removes docker container by name
 function removeDockerContainer() {
-  sudo docker rmi -f $(docker images | grep $1 | awk '{print $3}')
+  sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
 }
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
