@@ -233,6 +233,9 @@ if [ `uname` = "Darwin" ]; then
   # go
   export GOPATH=$HOME/Projects/other/go/workspace
 
+  # flutter
+  export PATH=$HOME/flutter/bin:$PATH
+
   # midnight commander colorized
   alias mc='mc -a -S modarin256-defbg'
 
