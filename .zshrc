@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 
 # git setup aliases
 alias setupGitUserName="git config --global user.name \"Piotr Wittchen\""
-alias setupGitPersonal="git config --global user.email \"piotr@wittchen.biz.pl\""
+alias setupGitPersonal="git config --global user.email \"piotr@wittchen.io\""
 alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
 
 setupGitUserName
