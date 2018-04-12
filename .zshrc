@@ -183,6 +183,9 @@ if [ `uname` = "Linux" ]; then
   alias startMongoDb="sudo service mongod start"
   alias stopMongoDb="sudo service mongod stop"
 
+  # marktext
+  alias marktext="~/Software/marktext/marktext-0.9.25-x86_64.AppImage"
+
   # configuring linux brew
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
