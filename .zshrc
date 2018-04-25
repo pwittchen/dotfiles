@@ -259,6 +259,12 @@ alias npm="sudo npm"
 
 # python
 alias pip="sudo pip"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+# init pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
 
 # android
 alias adbWifiDown='adb shell svc wifi disable'
