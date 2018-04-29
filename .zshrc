@@ -163,6 +163,10 @@ if [ `uname` = "Linux" ]; then
   export SCALA_HOME=/usr/share/scala
   export PATH=$SCALA_HOME/bin:$PATH
 
+  # node.js and npm
+  export NPM_CONFIG_PREFIX=~/.npm-global
+  export PATH=~/.npm-global/bin:$PATH
+
   # go
   export PATH=/usr/local/go/bin:$PATH
   export GOPATH=$DEV/go/workspace
