@@ -137,16 +137,6 @@ if [ `uname` = "Linux" ]; then
   # development directory
   export DEV=$HOME/Development
 
-  # java
-  #
-  # I'm disabling aliases below for now in favor of SDKman
-  #
-  # alias switchJava="sudo update-alternatives --config java"
-  # alias showJavaVersions="ls -l /usr/lib/jvm"
-  # alias setJava08_Home="export JAVA_HOME=/usr/lib/jvm/java-8-oracle && echo $JAVA_HOME"
-  # alias setJava09_Home="export JAVA_HOME=/usr/lib/jvm/java-9-oracle && echo $JAVA_HOME"
-  # alias setJava10_Home="export JAVA_HOME=/usr/lib/jvm/jdk-10 && echo $JAVA_HOME"
-  # alias setJava11_Home="export JAVA_HOME=/usr/lib/jvm/jdk-11 && echo $JAVA_HOME"
   alias sjk="java -jar ~/Software/sjk/sjk-plus-0.9.3.jar" # see: https://github.com/aragozin/jvm-tools
 
   # android
@@ -205,23 +195,6 @@ if [ `uname` = "Darwin" ]; then
   
   # setting SAP Hybris (work) e-mail for git 
   setupGitForWork 
-
-  # aliases for switching java version
-  alias setJava8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) && source ~/.zshrc && java -version'
-  alias setJava9='export JAVA_HOME=$(/usr/libexec/java_home -v 9) && source ~/.zshrc && java -version'
-  alias setJava8sap='export JAVA_HOME=/Library/Java/JavaVirtualMachines/sapjvm_8/ && source ~/.zshrc && java -version'
-
-  # show existing java versions (JDKs)
-  alias showJavaVersions='ls -l /Library/Java/JavaVirtualMachines'
-
-  # set current java version and JAVA_HOME
-  export PATH=$JAVA_HOME/bin:$PATH
-
-  # go to directory with JVMs
-  alias goToJvmsDir='cd /Library/Java/JavaVirtualMachines'
-
-  # alias to jshell
-  alias jshell="/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home/bin/jshell"
 
   # showing and hiding hidden files
   function makeFilesVisible() {
