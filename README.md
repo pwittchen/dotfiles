@@ -43,6 +43,7 @@ plugins
     - [ctrlp](https://github.com/kien/ctrlp.vim)
     - [supertab](https://github.com/ervandew/supertab)
     - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+    - [javap-vim](https://github.com/udalov/javap-vim)
 
 themes and terminal emulators
 -----------------------------
