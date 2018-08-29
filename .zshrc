@@ -138,6 +138,7 @@ if [ `uname` = "Linux" ]; then
   export DEV=$HOME/Development
 
   alias sjk="java -jar ~/Software/sjk/sjk-plus-0.9.3.jar" # see: https://github.com/aragozin/jvm-tools
+  alias yed="java -jar ~/Software/yed-3.18.1.1/yed.jar"
 
   # android
   export ANDROID_HOME=$DEV/android/android-sdk
