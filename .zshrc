@@ -273,6 +273,8 @@ alias vi="vim"
 alias countCpusWithPython="python -c 'import multiprocessing as mp; print(mp.cpu_count())'"
 alias javaInfo="echo 'JAVA_HOME:' $JAVA_HOME && java -version"
 alias lg="lazygit"
+alias hex2bin="wcalc -d"
+alias bin2hex="wcalc -h"
 
 # functions for Linux and macOS
 
