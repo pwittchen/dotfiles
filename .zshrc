@@ -370,6 +370,23 @@ function gitPullAll() {
       echo "pulling $project"
       cd $1/$project
       git pull || true
+      echo "-------------------------"
+  done
+  echo "going back to $current_dir"
+  cd $current_dir
+}
+
+function gitStatusAll() {
+  current_dir=$(pwd)
+  echo "going into $1"
+  cd $1
+  projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
+  for project in "${projects[@]}"
+  do
+      echo "showing status of $project"
+      cd $1/$project
+      git status || true
+      echo "--------------------------"
   done
   echo "going back to $current_dir"
   cd $current_dir
