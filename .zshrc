@@ -369,7 +369,7 @@ function gitPullAll() {
   do
       echo "pulling $project"
       cd $1/$project
-      git pull
+      git pull || true
   done
   echo "going back to $current_dir"
   cd $current_dir
