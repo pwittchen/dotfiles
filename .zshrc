@@ -359,6 +359,22 @@ function removeDockerContainer() {
   sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
 }
 
+# pulls all git repos in a given dir
+function gitPullAll() {
+  current_dir=$(pwd)
+  echo "going into $1"
+  cd $1
+  projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
+  for project in "${projects[@]}"
+  do
+      echo "pulling $project"
+      cd $1/$project
+      git pull
+  done
+  echo "going back to $current_dir"
+  cd $current_dir
+}
+
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 # this must be at the end of the file for sdkman to work!
