@@ -361,31 +361,23 @@ function removeDockerContainer() {
 
 # pulls all git repos in a given dir
 function gitPullAll() {
-  current_dir=$(pwd)
-  echo "going into $1"
-  cd $1
-  projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
-  for project in "${projects[@]}"
-  do
-      echo "pulling $project"
-      cd $1/$project
-      git pull || true
-      echo "-------------------------"
-  done
-  echo "going back to $current_dir"
-  cd $current_dir
+  gitCmdAll $1 pull
 }
 
 function gitStatusAll() {
+  gitCmdAll $1 status
+}
+
+function gitCmdAll() {
   current_dir=$(pwd)
   echo "going into $1"
   cd $1
   projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
   for project in "${projects[@]}"
   do
-      echo "showing status of $project"
+      echo "executing git $2 for $project"
       cd $1/$project
-      git status || true
+      git $2 || true
       echo "--------------------------"
   done
   echo "going back to $current_dir"
