@@ -359,7 +359,6 @@ function removeDockerContainer() {
   sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
 }
 
-# pulls all git repos in a given dir
 function gitPullAll() {
   gitCmdAll $1 pull
 }
@@ -368,6 +367,7 @@ function gitStatusAll() {
   gitCmdAll $1 status
 }
 
+# for all git repos in a given dir ($1), it runs a given command ($2)
 function gitCmdAll() {
   current_dir=$(pwd)
   echo "going into $1"
