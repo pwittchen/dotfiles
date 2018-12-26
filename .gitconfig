@@ -29,6 +29,11 @@
     list-new-unstaged-files = ls-files --others --exclude-standard
     list-contributors = shortlog -sn
 
+    ; showing files
+    show-tracked-files = ls-files -t
+    show-untracked-files = ls-files --others
+    show-ignored-files = ls-files --others -i --exclude-standard
+
     ; ignoring files
     ignore-local = update-index --assume-unchanged
     unignore-local = update-index --no-assume-unchanged
@@ -47,12 +52,13 @@
     ; commited changes
     undo-last-commit = reset --hard HEAD^
     ; side note: git reset <filename> makes undo after git add command (when file is on stage)
-    revert-merge-commit=git revert -m 1
+    revert-merge-commit = git revert -m 1
     ; commit hash should be provided for the command above and it should be confirmed with commit
 
     ; removing untracked files
-    show-untracked-files-to-remove=clean -n
-    remove-untracked-files=clean -f
+    show-untracked-files-to-remove = clean -n
+    remove-untracked-files = clean -f
+    remove-untracked-dir = git clean -f -d
 
     ; merging changes
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
