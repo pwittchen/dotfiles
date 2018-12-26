@@ -54,6 +54,7 @@
     ; side note: git reset <filename> makes undo after git add command (when file is on stage)
     revert-merge-commit = git revert -m 1
     ; commit hash should be provided for the command above and it should be confirmed with commit
+    restore-deleted-file = !sh -c 'git checkout $1^ -- $2' - ; $1 = deleting commit, $2 = file path
 
     ; removing untracked files
     show-untracked-files-to-remove = clean -n
