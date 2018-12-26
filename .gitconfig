@@ -39,12 +39,14 @@
     add-all = add -A
 
     ; resetting and reverting changes
+    ; unstaged and staged changes
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
     remove-from-stage = reset HEAD -- 
+    ; commited changes
     undo-last-commit = reset --hard HEAD^
-    ; side note: git reset <filename> makes undo after git add command 
+    ; side note: git reset <filename> makes undo after git add command (when file is on stage)
     revert-merge-commit=git revert -m 1
     ; commit hash should be provided for the command above and it should be confirmed with commit
 
@@ -56,7 +58,7 @@
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
     squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";  };f"
 
-    ; branching
+    ; branches
     new-branch = checkout -b
     delete-local-branch = branch -d
     force-delete-local-branch = branch -D
