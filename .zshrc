@@ -239,11 +239,7 @@ fi
 
 # aliases, which work both on Linux and macOS
 
-# js
-alias npm="sudo npm"
-
 # python
-alias pip="sudo pip"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 # init pyenv
