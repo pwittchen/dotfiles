@@ -59,7 +59,7 @@
     ; removing untracked files
     show-untracked-files-to-remove = clean -n
     remove-untracked-files = clean -f
-    remove-untracked-dir = git clean -f -d
+    remove-untracked-dir = clean -f -d
 
     ; merging changes
     merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
