@@ -53,7 +53,7 @@ themes and terminal emulators
 
 [Theme](https://github.com/robbyrussell/oh-my-zsh/wiki/themes) I usually use for oh-my-zsh is:
 - [agnoster](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#agnoster)
-  - color scheme I currently use: [nord](https://arcticicestudio.github.io/nord/)
+  - color scheme I currently use: [nord](https://arcticicestudio.github.io/nord/) ([Tilix](https://github.com/arcticicestudio/nord-tilix), [iTerm2](https://github.com/arcticicestudio/nord-iterm2))
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
 
