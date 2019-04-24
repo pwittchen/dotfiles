@@ -7,8 +7,8 @@
     excludesfile = ~/.gitignore_global
 [alias]
     ; metadata
-    list-aliases = !git config -l | grep alias | cut -c 7- | sort
-    show-remote-url = config --get remote.origin.url
+    aliases = !git config -l | grep alias | cut -c 7- | sort
+    remote-url = config --get remote.origin.url
 
     ; status
     status-short = status -sb
