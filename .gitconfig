@@ -13,7 +13,7 @@
     ; status
     status-short = status -sb
 
-    ; showing commits, logs & branches
+    ; commits, logs & branches
     my-commits = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short"
     my-commits-today = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=00:00:00 --all --no-merges"
     my-commits-last-month = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=\"30 days ago\" --all --no-merges"
@@ -22,25 +22,24 @@
     log-raw = log --raw
     log-hist = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     log-short = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
-    list-branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
     list-new-unstaged-files = ls-files --others --exclude-standard
     list-contributors = shortlog -sn
 
-    ; showing files
-    show-tracked-files = ls-files -t
-    show-untracked-files = ls-files --others
-    show-ignored-files = ls-files --others -i --exclude-standard
+    ; tracked files
+    tracked-files = ls-files -t
+    untracked-files = ls-files --others
+    ignored = ls-files --others -i --exclude-standard
 
     ; ignoring files locally
     ignore-local = update-index --assume-unchanged
     unignore-local = update-index --no-assume-unchanged
     ignored-local = !git ls-files -v | grep "^[[:lower:]]"
 
-    ; adding files and reviewing changes
+    ; adding new files and reviewing changes
     review = add -p
     add-all = add -A
 
-    ; resetting and reverting changes
+    ; undoing things
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
@@ -60,15 +59,15 @@
 
     ; branches
     new-branch = checkout -b
-    delete-local-branch = branch -d
-    force-delete-local-branch = branch -D
+    delete-branch = branch -d
+    force-delete-branch = branch -D
     delete-remote-branch = push origin --delete
     delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
     delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
-    diff-commit = diff --cached HEAD^ ; shows diff from last commit
-    diff-staged = diff --staged ; shows diff after git add command
+    diff-commit = diff --cached HEAD^
+    diff-staged = diff --staged
 
     ; searching files
     find-file= !git ls-files | grep -i
