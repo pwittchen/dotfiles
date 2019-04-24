@@ -1,20 +1,17 @@
 [user]
-	email = piotr@wittchen.io
-	name = Piotr Wittchen
+    email = piotr@wittchen.io
+    name = Piotr Wittchen
 [core]
     autocrlf = input
     editor = vim
     excludesfile = ~/.gitignore_global
 [alias]
-    ; showing metadata
+    ; metadata
     list-aliases = !git config -l | grep alias | cut -c 7- | sort
-
-    ; showing urls
     show-remote-url = config --get remote.origin.url
 
-    ; showing status
-    status-detailed = status -sb
-    is-dirty = status --porcelain
+    ; status
+    status-short = status -sb
 
     ; showing commits, logs & branches
     my-commits = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short"
@@ -22,8 +19,9 @@
     my-commits-last-month = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=\"30 days ago\" --all --no-merges"
     last-commit-msg = log -1 --pretty=%B
     last-commit-hash = log -1 --pretty=%h
+    log-raw = log --raw
     log-hist = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    log-oneline = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
+    log-short = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
     list-branches-by-last-modified = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
     list-new-unstaged-files = ls-files --others --exclude-standard
     list-contributors = shortlog -sn
@@ -38,32 +36,26 @@
     unignore-local = update-index --no-assume-unchanged
     ignored-local = !git ls-files -v | grep "^[[:lower:]]"
 
-    ; adding & reviewing changes
-    review-changes = add -p
+    ; adding files and reviewing changes
+    review = add -p
     add-all = add -A
 
     ; resetting and reverting changes
-    ; unstaged and staged changes
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
     remove-from-stage = reset HEAD -- 
-    ; commited changes
     undo-last-commit = reset --hard HEAD^
-    ; side note: git reset <filename> makes undo after git add command (when file is on stage)
     revert-merge-commit = git revert -m 1
-    ; commit hash should be provided for the command above and it should be confirmed with commit
-    restore-deleted-file = !sh -c 'git checkout $1^ -- $2' - ; $1 = deleting commit, $2 = file path
-    ; restore file $1, when we don't know deleting commit
     restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 
-    ; removing untracked files
+    ; removing untracked files/dirs
     show-untracked-files-to-remove = clean -n
     remove-untracked-files = clean -f
     remove-untracked-dir = clean -f -d
 
-    ; merging changes
-    merge-local-commits = !sh -c 'git reset --soft HEAD~$1' - ; merges n (arg) commits into one
+    ; merging/squashing commits
+    merge-commits = !sh -c 'git reset --soft HEAD~$1' -
     squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";  };f"
 
     ; branches
@@ -71,13 +63,8 @@
     delete-local-branch = branch -d
     force-delete-local-branch = branch -D
     delete-remote-branch = push origin --delete
-    ; deletes any branches that have been merged into master, see also: https://gist.github.com/robmiller/5133264
     delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
     delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-    ; pushing changes
-    fire=!git-fire ; should be called in the case of fire
-                   ; to make it work, script from https://github.com/qw3rtman/git-fire needs to be placed in /usr/local/bin/ dir
 
     ; showing diffs
     diff-commit = diff --cached HEAD^ ; shows diff from last commit
@@ -95,3 +82,5 @@
 ; - http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 ; - https://gist.github.com/robmiller/6018582
 ; - https://github.com/git-tips/tips
+; - https://gist.github.com/robmiller/5133264
+; - https://github.com/qw3rtman/git-fire
