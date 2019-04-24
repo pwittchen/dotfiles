@@ -150,14 +150,6 @@ if [ `uname` = "Linux" ]; then
   alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p)"
   # hint: we can access local machine from Android emulator at: 10.0.2.2
 
-  # java
-  alias jvisualvm="~/Software/visualvm_141/bin/visualvm"
-  # rest of the stuff is handled by sdkman
-
-  # scala
-  export SCALA_HOME=/usr/share/scala
-  export PATH=$SCALA_HOME/bin:$PATH
-
   # node.js and npm
   export NPM_CONFIG_PREFIX=~/.npm-global
   export PATH=~/.npm-global/bin:$PATH
