@@ -54,6 +54,8 @@
     revert-merge-commit = git revert -m 1
     ; commit hash should be provided for the command above and it should be confirmed with commit
     restore-deleted-file = !sh -c 'git checkout $1^ -- $2' - ; $1 = deleting commit, $2 = file path
+    ; restore file $1, when we don't know deleting commit
+    restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 
     ; removing untracked files
     show-untracked-files-to-remove = clean -n
