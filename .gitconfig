@@ -51,7 +51,7 @@
     ; removing untracked files/dirs
     show-untracked-files-to-remove = clean -n
     remove-untracked-files = clean -f
-    remove-untracked-dir = clean -f -d
+    remove-untracked-dirs = clean -fd
 
     ; merging/squashing commits
     merge-commits = !sh -c 'git reset --soft HEAD~$1' -
