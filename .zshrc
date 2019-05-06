@@ -86,7 +86,6 @@ source $ZSH/oh-my-zsh.sh
 # git setup aliases
 alias setupGitUserName="git config --global user.name \"Piotr Wittchen\""
 alias setupGitPersonal="git config --global user.email \"piotr@wittchen.io\""
-alias setupGitForWork="git config --global user.email \"piotr.wittchen@sap.com\""
 
 setupGitUserName
 
@@ -186,12 +185,6 @@ fi
 
 # setup for macOS used at work
 if [ `uname` = "Darwin" ]; then
-
-  # loading SAP Hybris Backoffice development configuration + office and corpo utils
-  source $HOME/.hybris.conf
-  
-  # setting SAP Hybris (work) e-mail for git 
-  setupGitForWork 
 
   # showing and hiding hidden files
   function makeFilesVisible() {
