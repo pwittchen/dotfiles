@@ -140,7 +140,7 @@ if [ `uname` = "Linux" ]; then
   alias yed="java -jar ~/Software/yed-3.18.1.1/yed.jar"
 
   # android
-  export ANDROID_HOME=$DEV/android/android-sdk
+  export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   export PATH=$PATH:$ANDROID_HOME/tools
   export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -254,7 +254,6 @@ alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 alias firstLine="head -n1"
 alias lastLine="tail -n1"
 alias excludeGrep="grep -v grep"
-alias vi="vim"
 alias countCpusWithPython="python -c 'import multiprocessing as mp; print(mp.cpu_count())'"
 alias javaInfo="echo 'JAVA_HOME:' $JAVA_HOME && java -version"
 alias lg="lazygit"
