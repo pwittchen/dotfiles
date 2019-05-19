@@ -225,16 +225,8 @@ fi
 # aliases, which work both on Linux and macOS
 
 # python
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-# init pyenv
-#if command -v pyenv 1>/dev/null 2>&1; then
-#    eval "$(pyenv init -)"
-#fi
 
-# due to issues with pyenv, I'm setting python version like below
-alias python="/usr/bin/python3.6"
-alias pip="/usr/bin/pip3"
+export PATH=$HOME/.local/lib/python3.6/site-packages/:$PATH
 
 # android
 alias adbWifiDown='adb shell svc wifi disable'
