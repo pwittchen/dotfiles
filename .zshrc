@@ -97,7 +97,6 @@ if [ `uname` = "Linux" ]; then
   # setting personal e-mail for git
   setupGitPersonal
 
-  alias resetGnomePanel="sudo killall gnome-panel"
   alias resetNautilus="sudo killall nautilus && nautilus"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
@@ -106,38 +105,8 @@ if [ `uname` = "Linux" ]; then
   # https://github.com/MidnightCommander/mc/tree/master/misc/skins
   alias mc="mc -S nicedark"
 
-  if [[ $(python -mplatform | grep Ubuntu) ]]; then
-    alias get="sudo apt-get install"
-    alias remove="sudo apt-get remove"
-    alias autoremove="sudo apt-get remove --auto-remove"
-    alias purge="sudo apt-get purge --auto-remove"
-    alias update="sudo apt-get update"
-    alias upgrade="sudo apt-get update && sudo apt-get updgrade"
-  fi
-
-  # system info
-  alias countCpus='cat /proc/cpuinfo | grep "physical id" | sort -u | wc -l'
-  alias countCores='cat /proc/cpuinfo | grep "siblings" | sort -u | cut -d: -f2'
-  alias countTotalRam="grep MemTotal /proc/meminfo"
-  alias countFreeRam="grep MemFree /proc/meminfo"
-  alias countTotalSwap="grep SwapTotal /proc/meminfo"
-
-  # network info
-  # reference for script below: https://github.com/bwaldvogel/neighbourhood
-  alias neighbourhood="sudo neighbourhood.py"
-
-  # bluetooth
-  alias restartBluetooth="hciconfig sspmode 1 && hciconfig hci0 down && hcicongig hci0 up"
-
-  # volume control
-  alias volUp='pactl set-sink-volume 0 +3%'
-  alias volDown='pactl set-sink-volume 0 -3%'
-
   # development directory
   export DEV=$HOME/Development
-
-  alias sjk="java -jar ~/Software/sjk/sjk-plus-0.9.3.jar" # see: https://github.com/aragozin/jvm-tools
-  alias yed="java -jar ~/Software/yed-3.18.1.1/yed.jar"
 
   # android
   export ANDROID_HOME=$HOME/Android/Sdk
@@ -176,14 +145,11 @@ if [ `uname` = "Linux" ]; then
   alias startMongoDb="sudo service mongod start"
   alias stopMongoDb="sudo service mongod stop"
 
-  # marktext
-  alias marktext="~/Software/marktext/marktext-0.9.25-x86_64.AppImage"
-
   # configuring linux brew
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
 
-# setup for macOS used at work
+# setup for macOS
 if [ `uname` = "Darwin" ]; then
 
   # showing and hiding hidden files
@@ -196,43 +162,19 @@ if [ `uname` = "Darwin" ]; then
   alias hideHiddenFiles="makeFilesVisible NO"
   alias restartMenuBar="killall -KILL SystemUIServer"
 
-  # android
-  export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk
-  export ANDROID_HOME=$HOME/Library/Android/sdk
-  export PATH=$ANDROID_HOME:$PATH
-  export PATH=$ANDROID_HOME/tools:$PATH
-  export PATH=$ANDROID_HOME/platform-tools:$PATH
-
-  # go
-  export GOPATH=$HOME/Projects/other/go/workspace
-
-  # flutter
-  export PATH=$HOME/flutter/bin:$PATH
-
   # midnight commander colorized
   alias mc='mc -a -S modarin256-defbg'
-
-  # mysql
-  export PATH=/usr/local/mysql/bin/:$PATH
-  alias startMySqlServer="sudo /usr/local/mysql/support-files/mysql.server start"
-  alias stopMySqlServer="sudo /usr/local/mysql/support-files/mysql.server stop"
-  alias restartMySqlServer="sudo /usr/local/mysql/support-files/mysql.server restart"
 
   # go to the home directory in the beginning
   cd $HOME
 fi
 
-# aliases, which work both on Linux and macOS
-
 # python
-
 export PATH=$HOME/.local/lib/python3.6/site-packages/:$PATH
 
-# android
+# general aliases
 alias adbWifiDown='adb shell svc wifi disable'
 alias adbWifiUp='adb shell svc wifi enable'
-
-# general aliases
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
@@ -256,7 +198,7 @@ alias lg="lazygit"
 alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
-# functions for Linux and macOS
+# general functions
 
 function lcd() {
   cd "$1"; ls;
@@ -268,8 +210,7 @@ function cutLastChars() {
   rev | cut -c $numberOfCharsToCut- | rev
 }
 
-# searches for a phrase in all files in the current directory recursively
-function findPhrase() {
+function findPhraseInCurrentDir() {
   grep -r "$1" .
 }
 
@@ -301,13 +242,11 @@ function catColorized() {
   cat "$1" | colorize
 }
 
-# kill process with a given name
-function killProcess() {
+function killProcessByName() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
 
-# kill all detached sessions of the screen
-function killScreens() {
+function killAllDetachedScreenSessions() {
     screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
 }
 
@@ -315,23 +254,19 @@ function killScreen() {
     screen -X -S $1 quit
 }
 
-# shows cpu and memory usage of a single process
 function showProcessStats() {
   ps -p $1 -o %cpu,%mem,cmd
 }
 
-# display function output log in the console and save it into a given file
 function tea() {
   tee -a $1
 }
 
-# allows to perform a given operation with constant refresh in an infinite loop
 function repeatOperation() {
   watch -n 1 $1 
 }
 
-# removes docker container by name
-function removeDockerContainer() {
+function removeDockerContainerByName() {
   sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
 }
 
@@ -343,10 +278,9 @@ function gitStatusAll() {
   gitCmdAll $1 status
 }
 
-# for all git repos in a given dir ($1), it runs a given command ($2)
 function gitCmdAll() {
   current_dir=$(pwd)
-  echo "going into $1"
+  echo "going into $1 directory"
   cd $1
   projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
   for project in "${projects[@]}"
