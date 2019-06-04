@@ -97,7 +97,6 @@ if [ `uname` = "Linux" ]; then
   # setting personal e-mail for git
   setupGitPersonal
 
-  alias resetNautilus="sudo killall nautilus && nautilus"
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
 
