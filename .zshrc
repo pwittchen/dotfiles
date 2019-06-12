@@ -104,6 +104,9 @@ if [ `uname` = "Linux" ]; then
   # https://github.com/MidnightCommander/mc/tree/master/misc/skins
   alias mc="mc -S nicedark"
 
+  # clears all desktop backgrounds in gnome set by the user
+  alias clearGnomeDesktopBgs="sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*"
+
   # development directory
   export DEV=$HOME/Development
 
