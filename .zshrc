@@ -110,7 +110,7 @@ if [ `uname` = "Linux" ]; then
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/emulator
   alias listAndroidEmulators="emulator -list-avds"
-  alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p)"
+  alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p) && cd -"
   # hint: IP of the local machine visible for emulator: 10.0.2.2
 fi
 
