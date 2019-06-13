@@ -95,82 +95,41 @@ if [ `uname` = "Linux" ]; then
       setupGitPersonal
   fi
 
+  # linux aliases
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
-
-  # get Midnight Commander themes from:
-  # https://github.com/MidnightCommander/mc/tree/master/misc/skins
   alias mc="mc -S nicedark"
-
-  # clears all desktop backgrounds in gnome set by the user
+  alias tsm="transmission-remote"
   alias clearGnomeDesktopBgs="sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*"
 
-  # development directory
+  # linux paths
   export DEV=$HOME/Development
-
-  # directory with the custom scripts used in the system
   export PATH=$PATH:$HOME/.scripts
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 
   # android
   export ANDROID_HOME=$HOME/Android/Sdk
-  export PATH=$PATH:$ANDROID_HOME/platform-tools
-  export PATH=$PATH:$ANDROID_HOME/tools
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/emulator
   alias listAndroidEmulators="emulator -list-avds"
   alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p)"
-  alias adbWifiDown='adb shell svc wifi disable'
-  alias adbWifiUp='adb shell svc wifi enable'
   # hint: we can access local machine from Android emulator at: 10.0.2.2
-
-  # node.js and npm
-  export NPM_CONFIG_PREFIX=~/.npm-global
-  export PATH=~/.npm-global/bin:$PATH
-
-  # go
-  export PATH=/usr/local/go/bin:$PATH
-  export GOPATH=$DEV/go/workspace
-  export GOBIN=$GOPATH/bin
-  export PATH=$GOBIN:$PATH
-
-  # swift
-  export PATH=$DEV/swift/swift/usr/bin:$PATH
-
-  # smalltalk
-  alias gnu-smalltalk="/usr/bin/gst"
-
-  # dart
-  export PATH=/usr/lib/dart/bin:$PATH
-
-  # mysql
-  alias startMySqlServer="sudo service mysql start"
-  alias stopMySqlServer="sudo service mysql stop"
-
-  # mongodb
-  alias startMongoDb="sudo service mongod start"
-  alias stopMongoDb="sudo service mongod stop"
-
-  # configuring linux brew
-  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 fi
 
-# setup for macOS
 if [ `uname` = "Darwin" ]; then
 
-  # showing and hiding hidden files
+  # macOS functions
+
   function makeFilesVisible() {
     defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
   }
 
-  # macOS system aliases
+  # macOS aliases
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
   alias restartMenuBar="killall -KILL SystemUIServer"
-
-  # midnight commander colorized
   alias mc='mc -a -S modarin256-defbg'
 
-  # go to the home directory in the beginning
   cd $HOME
 fi
 
@@ -180,14 +139,12 @@ export PATH=$HOME/.local/lib/python3.6/site-packages/:$PATH
 # general aliases
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
-alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
 alias showJavaProcesses="jps -lV"
 alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
 alias showWeather="showWeatherIn Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
 alias runPythonHttpSever="python3 -m http.server 8000"
-alias connectToMySqlServer="sudo mysql -u root"
 alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 alias firstLine="head -n1"
 alias lastLine="tail -n1"
