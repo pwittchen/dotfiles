@@ -6,12 +6,7 @@ sudo cp .tmux.conf ~/
 sudo cp .vimrc ~/
 sudo cp .zshrc ~/
 sudo cp .ghci ~/
-
-# I'm using hybris config on macOS only
-
-if [ `uname` = "Darwin"  ]; then
-  sudo cp .hybris.conf ~/
-fi
-
+sudo cp .argos/* ~/.config/argos/
+sudo cp .scripts/* ~/.scripts/
 echo "dotfiles installed successfully! \o/"
 echo "run source ~/.zshrc command manually to refresh your configuration"
