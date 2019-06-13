@@ -83,19 +83,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# git setup aliases
 alias setupGitUserName="git config --global user.name \"Piotr Wittchen\""
 alias setupGitPersonal="git config --global user.email \"piotr@wittchen.io\""
 
 setupGitUserName
 
-# setup for Ubuntu Linux used at home
 if [ `uname` = "Linux" ]; then
-  # right now, I'm using tmux only on Linux
   [[ $TERM != "screen" ]] && exec tmux
 
-  # setting personal e-mail for git
-  setupGitPersonal
+  if [ `hostname` = "t470s" ]; then
+      setupGitPersonal
+  fi
 
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
@@ -110,6 +108,9 @@ if [ `uname` = "Linux" ]; then
   # development directory
   export DEV=$HOME/Development
 
+  # directory with the custom scripts used in the system
+  export PATH=$PATH:$HOME/.scripts
+
   # android
   export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -118,6 +119,8 @@ if [ `uname` = "Linux" ]; then
   export PATH=$PATH:$ANDROID_HOME/emulator
   alias listAndroidEmulators="emulator -list-avds"
   alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p)"
+  alias adbWifiDown='adb shell svc wifi disable'
+  alias adbWifiUp='adb shell svc wifi enable'
   # hint: we can access local machine from Android emulator at: 10.0.2.2
 
   # node.js and npm
@@ -175,8 +178,6 @@ fi
 export PATH=$HOME/.local/lib/python3.6/site-packages/:$PATH
 
 # general aliases
-alias adbWifiDown='adb shell svc wifi disable'
-alias adbWifiUp='adb shell svc wifi enable'
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias resetTomcat="ps -ef | grep tomcat | awk '{print $2}' | xargs kill -9"
@@ -185,18 +186,12 @@ alias showMyExtIp="curl http://ipecho.net/plain; echo"
 alias prettyJson="python -m json.tool"
 alias showWeather="showWeatherIn Gliwice"
 alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
-alias runPythonHttpSever="python -m SimpleHTTPServer 8000"
-alias runPhpHttpServer="php -S localhost:8000 -t ./"
+alias runPythonHttpSever="python3 -m http.server 8000"
 alias connectToMySqlServer="sudo mysql -u root"
-alias moo="cowsay"
-alias cowthink="cowsay"
 alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 alias firstLine="head -n1"
 alias lastLine="tail -n1"
 alias excludeGrep="grep -v grep"
-alias countCpusWithPython="python -c 'import multiprocessing as mp; print(mp.cpu_count())'"
-alias javaInfo="echo 'JAVA_HOME:' $JAVA_HOME && java -version"
-alias lg="lazygit"
 alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
