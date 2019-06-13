@@ -127,9 +127,6 @@ if [ `uname` = "Darwin" ]; then
   cd $HOME
 fi
 
-# python
-export PATH=$HOME/.local/lib/python3.6/site-packages/:$PATH
-
 # general aliases
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
@@ -147,10 +144,6 @@ alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
 # general functions
-
-function lcd() {
-  cd "$1"; ls;
-}
 
 function cutLastChars() {
   numberOfCharsToCut=$1
@@ -176,10 +169,6 @@ function findDir() {
 
 function findDirInCurrentDir() {
   find . -type d -ls | grep "$1"
-}
-
-function getAndPlay() {
-  wget $@ && mplayer $(basename $@);
 }
 
 function showWeatherIn() {
