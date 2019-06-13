@@ -2,8 +2,6 @@ dotfiles
 ========
 my dotfiles for Linux and macOS
 
-![screenshot](screenshot.png)
-
 installation
 ------------
 
