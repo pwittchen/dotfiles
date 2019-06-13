@@ -95,14 +95,12 @@ if [ `uname` = "Linux" ]; then
       setupGitPersonal
   fi
 
-  # linux aliases
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
   alias mc="mc -S nicedark"
   alias tsm="transmission-remote"
   alias clearGnomeDesktopBgs="sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*"
 
-  # linux paths
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
@@ -113,18 +111,14 @@ if [ `uname` = "Linux" ]; then
   export PATH=$PATH:$ANDROID_HOME/emulator
   alias listAndroidEmulators="emulator -list-avds"
   alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p)"
-  # hint: we can access local machine from Android emulator at: 10.0.2.2
+  # hint: IP of the local machine visible for emulator: 10.0.2.2
 fi
 
 if [ `uname` = "Darwin" ]; then
-
-  # macOS functions
-
   function makeFilesVisible() {
     defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
   }
 
-  # macOS aliases
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
   alias restartMenuBar="killall -KILL SystemUIServer"
