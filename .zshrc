@@ -207,14 +207,6 @@ function removeDockerContainerByName() {
   sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
 }
 
-function gitPullAll() {
-  gitCmdAll $1 pull
-}
-
-function gitStatusAll() {
-  gitCmdAll $1 status
-}
-
 function gitCmdAll() {
   current_dir=$(pwd)
   echo "going into $1 directory"
