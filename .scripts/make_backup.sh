@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# this script is responsible for backup of my personal files on the ftp server
+
 source ~/.config/scripts/ftp_server.conf
 echo "starting backup process"
 rm -rf ~/Backup/*
