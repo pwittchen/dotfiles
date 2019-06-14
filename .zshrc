@@ -29,7 +29,7 @@ fi
 
 if [ `uname` = "Darwin" ]; then
   source ~/.scripts/functions/apple.sh
-  alias mc='mc -a -S modarin256-defbg'
+  alias mc="mc -a -S modarin256-defbg"
   cd $HOME
 fi
 
