@@ -21,7 +21,7 @@ if [ `uname` = "Linux" ]; then
 
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
-  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"i
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
 
   source ~/.scripts/functions/linux.sh
   source ~/.scripts/functions/android.sh

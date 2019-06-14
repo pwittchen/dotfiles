@@ -15,7 +15,7 @@ cp -avr ~/Dokumenty/licenses ~/Backup/licenses
 cp -avr ~/Dokumenty/other ~/Backup/other
 cp -avr ~/Dokumenty/presentations ~/Backup/presentations
 cp -avr ~/Dokumenty/secret ~/Backup/secret
-cp -avr ~/Dokumenty/sonatype ~/Backup/sonatype
+cp -avr ~/Dokumenty/tmp ~/Backup/tmp
 cp -avr ~/Dokumenty/travel ~/Backup/travel
 cp -avr ~/Dokumenty/work ~/Backup/work
 
