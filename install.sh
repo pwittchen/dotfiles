@@ -7,6 +7,6 @@ sudo cp .vimrc ~/
 sudo cp .zshrc ~/
 sudo cp .ghci ~/
 sudo cp .argos/* ~/.config/argos/
-sudo cp .scripts/* ~/.scripts/
+sudo cp -r .scripts/* ~/.scripts/
 echo "dotfiles installed successfully! \o/"
 echo "run source ~/.zshrc command manually to refresh your configuration"
