@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.config/scripts/make_backup.conf
+source ~/.config/scripts/ftp_server.conf
 echo "starting backup process"
 rm -rf ~/Backup/*
 cp -avr ~/Dokumenty/ebooks ~/Backup/ebooks
