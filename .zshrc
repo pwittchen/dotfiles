@@ -115,15 +115,11 @@ if [ `uname` = "Linux" ]; then
 fi
 
 if [ `uname` = "Darwin" ]; then
-  function makeFilesVisible() {
-    defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
-  }
-
+  source ~/.scripts/apple_functions.sh
   alias showHiddenFiles="makeFilesVisible YES"
   alias hideHiddenFiles="makeFilesVisible NO"
   alias restartMenuBar="killall -KILL SystemUIServer"
   alias mc='mc -a -S modarin256-defbg'
-
   cd $HOME
 fi
 
@@ -143,85 +139,8 @@ alias excludeGrep="grep -v grep"
 alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
-# general functions
-
-function cutLastChars() {
-  numberOfCharsToCut=$1
-  numberOfCharsToCut=$[numberOfCharsToCut+1];
-  rev | cut -c $numberOfCharsToCut- | rev
-}
-
-function findPhraseInCurrentDir() {
-  grep -r "$1" .
-}
-
-function findFile() {
-  find ~/ -type f -name "$1"
-}
-
-function findFileInCurrentDir() {
-  find . -type f -ls | grep "$1"
-}
-
-function findDir() {
-  find ~/ -type d -name "$1"
-}
-
-function findDirInCurrentDir() {
-  find . -type d -ls | grep "$1"
-}
-
-function showWeatherIn() {
-  curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
-}
-
-function catColorized() {
-  cat "$1" | colorize
-}
-
-function killProcessByName() {
-  ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
-}
-
-function killAllDetachedScreenSessions() {
-    screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
-}
-
-function killScreen() {
-    screen -X -S $1 quit
-}
-
-function showProcessStats() {
-  ps -p $1 -o %cpu,%mem,cmd
-}
-
-function tea() {
-  tee -a $1
-}
-
-function repeatOperation() {
-  watch -n 1 $1 
-}
-
-function removeDockerContainerByName() {
-  sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
-}
-
-function gitCmdAll() {
-  current_dir=$(pwd)
-  echo "going into $1 directory"
-  cd $1
-  projects=($(ls -1 $1 | tr "\n" " " | rev | cut -c 1- | rev))
-  for project in "${projects[@]}"
-  do
-      echo "executing git $2 for $project"
-      cd $1/$project
-      git $2 || true
-      echo "--------------------------"
-  done
-  echo "going back to $current_dir"
-  cd $current_dir
-}
+source ~/.scripts/general_functions.sh
+source ~/.scripts/docker_functions.sh
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
