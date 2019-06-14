@@ -97,15 +97,11 @@ if [ `uname` = "Linux" ]; then
   alias mc="mc -S nicedark"
   alias tsm="transmission-remote"
 
-  source ~/.scripts/functions/linux.sh
-
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"i
 
-  export ANDROID_HOME=$HOME/Android/Sdk
-  export PATH=$PATH:$ANDROID_HOME/tools/bin
-  export PATH=$PATH:$ANDROID_HOME/emulator
+  source ~/.scripts/functions/linux.sh
   source ~/.scripts/functions/android.sh
 fi
 
