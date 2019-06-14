@@ -15,6 +15,7 @@ cp -avr ~/Dokumenty/secret ~/Backup/secret
 cp -avr ~/Dokumenty/tmp ~/Backup/tmp
 cp -avr ~/Dokumenty/travel ~/Backup/travel
 cp -avr ~/Dokumenty/work ~/Backup/work
+cp -avr ~/Obrazy/wallpapers ~/Backup/wallpapers
 
 echo "uploading data to the FTP server"
 lftp ftp://$USER:$PASS@$HOST -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
