@@ -83,16 +83,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias setupGitUserName="git config --global user.name \"Piotr Wittchen\""
-alias setupGitPersonal="git config --global user.email \"piotr@wittchen.io\""
+source ~/.scripts/functions/personal.sh
 
 setupGitUserName
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
 
-  if [ `hostname` = "t470s" ]; then
-      setupGitPersonal
+  if [ `hostname` = $PERSONAL_MACHINE_NAME ]; then
+      setupGitPersonalEmail
   fi
 
   alias mc="mc -S nicedark"
@@ -116,24 +115,11 @@ if [ `uname` = "Darwin" ]; then
   cd $HOME
 fi
 
-alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
-alias reloadShell="source ~/.zshrc"
-alias showJavaProcesses="jps -lV"
-alias showMyExtIp="curl http://ipecho.net/plain; echo"
-alias prettyJson="python -m json.tool"
-alias showWeather="showWeatherIn Gliwice"
-alias connectToLinuxPl="ssh -l wittchen -p 59184 wittchen.linuxpl.info"
-alias runPythonHttpSever="python3 -m http.server 8000"
-alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
-alias firstLine="head -n1"
-alias lastLine="tail -n1"
-alias excludeGrep="grep -v grep"
-alias hex2bin="wcalc -d"
-alias bin2hex="wcalc -h"
-
 source ~/.scripts/functions/general.sh
 source ~/.scripts/functions/git.sh
 source ~/.scripts/functions/docker.sh
+source ~/.scripts/functions/java.sh
+source ~/.scripts/functions/python.sh
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
