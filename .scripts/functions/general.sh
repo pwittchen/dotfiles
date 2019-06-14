@@ -34,3 +34,42 @@ function repeatOperation() {
   watch -n 1 $1 
 }
 
+function reloadTmuxConf() {
+  tmux source-file ~/.tmux.conf
+}
+
+function reloadShell {
+  source ~/.zshrc
+}
+
+function showMyExtIp {
+  curl http://ipecho.net/plain
+}
+
+function prettyJson() {
+  python -m json.tool
+}
+
+function trim() {
+  awk '{gsub(/^ +| +$/,\"\")}1'
+}
+
+function firstLine() {
+  head -n1
+}
+
+function lastLine() {
+  tail -n1
+}
+
+function excludeGrep() {
+  grep -v grep
+}
+
+function hex2bin() {
+  wcalc -d
+}
+
+function bin2hex() {
+  wcalc -h
+}
