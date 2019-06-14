@@ -38,6 +38,7 @@ source ~/.scripts/functions/git.sh
 source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/java.sh
 source ~/.scripts/functions/python.sh
+source ~/.scripts/functions/recordings.sh
 
 export SDKMAN_DIR="/$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
