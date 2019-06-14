@@ -11,6 +11,10 @@ function pbpaste() {
   xsel --clipboard --output
 }
 
+function emptyTrash() {
+  rm -rf ~/.local/share/Trash/*
+}
+
 function clearGnomeDesktopBgs() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
