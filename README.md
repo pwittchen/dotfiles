@@ -23,7 +23,7 @@ git pull && ./install.sh
 config
 ------
 
-**note**: config for the scripts located in `.scripts` and `.argos` dirs have to be performed manually because this repo doesn't contain sensitive data like passwords, api keys, etc.
+config for the scripts located in `.scripts` and `.argos` dirs have to be performed manually because this repo doesn't contain sensitive data like passwords, api keys, etc.
 
 plugins
 -------
