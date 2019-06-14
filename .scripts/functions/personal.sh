@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-PERSONAL_MACHINE_NAME="t470s"
+USER_NAME="Piotr Wittchen"
+PERSONAL_EMAIL="piotr@wittchen.io"
+PERSONAL_MACHINE="t470s"
 
 function setupGitUserName() {
-  git config --global user.name "Piotr Wittchen"
+  git config --global user.name $USER_NAME
 }
 
 function setupGitPersonalEmail {
-  git config --global user.email "piotr@wittchen.io"
+  git config --global user.email $PERSONAL_EMAIL
 }
 
 function connectToLinuxPl() {

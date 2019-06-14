@@ -12,7 +12,7 @@ setupGitUserName
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
 
-  if [ `hostname` = $PERSONAL_MACHINE_NAME ]; then
+  if [ `hostname` = $PERSONAL_MACHINE ]; then
       setupGitPersonalEmail
   fi
 
