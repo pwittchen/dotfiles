@@ -95,35 +95,27 @@ if [ `uname` = "Linux" ]; then
       setupGitPersonal
   fi
 
-  alias pbcopy='xsel --clipboard --input'
-  alias pbpaste='xsel --clipboard --output'
   alias mc="mc -S nicedark"
   alias tsm="transmission-remote"
-  alias clearGnomeDesktopBgs="sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*"
+
+  source ~/.scripts/linux_functions.sh
 
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
-  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"i
 
-  # android
   export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/emulator
-  alias listAndroidEmulators="emulator -list-avds"
-  alias runAndroidEmulator="cd $ANDROID_HOME/emulator && emulator -use-system-libs -avd $(emulator -list-avds | sed -n 1p) && cd -"
-  # hint: IP of the local machine visible for emulator: 10.0.2.2
+  source ~/.scripts/android_functions.sh
 fi
 
 if [ `uname` = "Darwin" ]; then
   source ~/.scripts/apple_functions.sh
-  alias showHiddenFiles="makeFilesVisible YES"
-  alias hideHiddenFiles="makeFilesVisible NO"
-  alias restartMenuBar="killall -KILL SystemUIServer"
   alias mc='mc -a -S modarin256-defbg'
   cd $HOME
 fi
 
-# general aliases
 alias reloadTmuxConf="tmux source-file ~/.tmux.conf"
 alias reloadShell="source ~/.zshrc"
 alias showJavaProcesses="jps -lV"
@@ -140,6 +132,7 @@ alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
 source ~/.scripts/general_functions.sh
+source ~/.scripts/git_functions.sh
 source ~/.scripts/docker_functions.sh
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
