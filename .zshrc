@@ -98,7 +98,7 @@ if [ `uname` = "Linux" ]; then
   alias mc="mc -S nicedark"
   alias tsm="transmission-remote"
 
-  source ~/.scripts/linux_functions.sh
+  source ~/.scripts/functions/linux.sh
 
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
@@ -107,11 +107,11 @@ if [ `uname` = "Linux" ]; then
   export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$PATH:$ANDROID_HOME/tools/bin
   export PATH=$PATH:$ANDROID_HOME/emulator
-  source ~/.scripts/android_functions.sh
+  source ~/.scripts/functions/android.sh
 fi
 
 if [ `uname` = "Darwin" ]; then
-  source ~/.scripts/apple_functions.sh
+  source ~/.scripts/functions/apple.sh
   alias mc='mc -a -S modarin256-defbg'
   cd $HOME
 fi
@@ -131,9 +131,9 @@ alias excludeGrep="grep -v grep"
 alias hex2bin="wcalc -d"
 alias bin2hex="wcalc -h"
 
-source ~/.scripts/general_functions.sh
-source ~/.scripts/git_functions.sh
-source ~/.scripts/docker_functions.sh
+source ~/.scripts/functions/general.sh
+source ~/.scripts/functions/git.sh
+source ~/.scripts/functions/docker.sh
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
