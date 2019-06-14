@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 ZSH_THEME="agnoster"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions)
@@ -38,8 +39,5 @@ source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/java.sh
 source ~/.scripts/functions/python.sh
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
-
-# this must be at the end of the file for sdkman to work!
 export SDKMAN_DIR="/$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
