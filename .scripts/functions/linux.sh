@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+alias mc="mc -S nicedark"
+alias tsm="transmission-remote"
+
 function pbcopy() {
   xsel --clipboard --input
 }

@@ -16,9 +16,6 @@ if [ `uname` = "Linux" ]; then
       setupGitPersonalEmail
   fi
 
-  alias mc="mc -S nicedark"
-  alias tsm="transmission-remote"
-
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
@@ -29,7 +26,6 @@ fi
 
 if [ `uname` = "Darwin" ]; then
   source ~/.scripts/functions/apple.sh
-  alias mc="mc -a -S modarin256-defbg"
   cd $HOME
 fi
 
