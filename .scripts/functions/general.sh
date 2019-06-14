@@ -6,10 +6,6 @@ function cutLastChars() {
   rev | cut -c $numberOfCharsToCut- | rev
 }
 
-function showWeatherIn() {
-  curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
-}
-
 function killProcessByName() {
   ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
 }
@@ -42,10 +38,6 @@ function reloadShell {
   source ~/.zshrc
 }
 
-function showMyExtIp {
-  curl http://ipecho.net/plain
-}
-
 function prettyJson() {
   python -m json.tool
 }
@@ -73,3 +65,12 @@ function hex2bin() {
 function bin2hex() {
   wcalc -h
 }
+
+function showMyExtIp {
+  curl http://ipecho.net/plain
+}
+
+function showWeatherIn() {
+  curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
+}
+
