@@ -23,7 +23,7 @@ else
   if [ ! -z "$ip" ]; then
     echo "ETH $ip"
   else
-   echo "not connected"
+    echo "not connected"
   fi
   exit
 fi
