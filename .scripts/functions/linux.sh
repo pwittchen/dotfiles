@@ -20,5 +20,9 @@ function clearGnomeDesktopWallpapersCache() {
 }
 
 function setGnomeDesktopWallpaperWithPath() {
-  gsettings set org.gnome.desktop.background picture-uri $1
+  if [ $# -eq 0 ]; then
+    echo "no argument with path to the picture supplied"
+  else
+    gsettings set org.gnome.desktop.background picture-uri $1
+  fi
 }
