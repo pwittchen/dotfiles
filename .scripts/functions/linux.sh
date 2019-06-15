@@ -15,6 +15,10 @@ function emptyTrash() {
   rm -rf ~/.local/share/Trash/*
 }
 
-function clearGnomeDesktopBgs() {
+function clearGnomeDesktopWallpapersCache() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
+}
+
+function setGnomeDesktopWallpaperWithPath() {
+  gsettings set org.gnome.desktop.background picture-uri $1
 }
