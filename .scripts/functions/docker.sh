@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 function buildDockerContainerWithName() {
-  sudo docker build -t $1 .
+  if [ $# -eq 0  ]; then
+    echo "no arguments supplied"
+  else
+    sudo docker build -t $1 .
+  fi
 }
 
 function runDockerContainer() {
@@ -31,11 +35,19 @@ function runDockerContainerInBg() {
 }
 
 function stopRunningDockerContainerByName() {
-  sudo docker stop $(sudo docker ps | grep $1 | awk 'NF>1{print $NF}')
+  if [ $# -eq 0  ]; then
+    echo "no arguments supplied"
+  else
+    sudo docker stop $(sudo docker ps | grep $1 | awk 'NF>1{print $NF}')
+  fi
 }
 
 function removeDockerContainerByName() {
-  sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
+  if [ $# -eq 0  ]; then
+    echo "no arguments supplied"
+  else
+    sudo docker rmi -f $(sudo docker images | grep $1 | awk '{print $3}')
+  fi
 }
 
 function listDockerImages() {
