@@ -16,6 +16,10 @@ function runAndroidEmulator() {
   && cd -
 }
 
+function showLogsForCurrentApp() {
+ adb logcat --current
+}
+
 function showAndroidEmulatorServerIp() {
   echo "10.0.2.2"
 }
