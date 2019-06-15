@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-USER_NAME="Piotr Wittchen"
-PERSONAL_EMAIL="piotr@wittchen.io"
-PERSONAL_MACHINE="t470s"
+source ~/.config/scripts/personal.conf
 
 function setupGitUserName() {
   git config --global user.name $USER_NAME
@@ -13,5 +11,7 @@ function setupGitPersonalEmail {
 }
 
 function connectToLinuxPl() {
-  ssh -l wittchen -p 59184 wittchen.linuxpl.info
+  ssh -l $SSH_SERVER_LINUX_PL_USER \
+      -p $SSH_SERVER_LINUX_PL_PORT \
+      $SSH_SERVER_LINUX_PL
 }
