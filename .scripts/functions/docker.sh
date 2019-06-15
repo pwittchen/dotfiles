@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function buildDockerContainerWithName() {
+function buildDockerImageWithName() {
   if [ $# -eq 0  ]; then
     echo "no arguments supplied"
   else
@@ -42,7 +42,7 @@ function stopRunningDockerContainerByName() {
   fi
 }
 
-function removeDockerContainerByName() {
+function removeDockerImageByName() {
   if [ $# -eq 0  ]; then
     echo "no arguments supplied"
   else
