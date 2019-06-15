@@ -9,7 +9,7 @@ function listAndroidEmulators() {
   emulator -list-avds
 }
 
-function runAndroidEmulator() {
+function runFirstAndroidEmulator() {
   cd $ANDROID_HOME/emulator \
   && emulator -use-system-libs \
   -avd $(emulator -list-avds | sed -n 1p) \
