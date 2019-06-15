@@ -32,5 +32,5 @@ function listCpuIntensivePs() {
 }
 
 function listMemoryIntensivePs() {
-  ps axch -o cmd:15,%cpu --sort=-%cpu | head
+  ps axch -o cmd:15,%mem --sort=-%mem | head
 }
