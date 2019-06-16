@@ -65,13 +65,3 @@ function hex2bin() {
 function bin2hex() {
   wcalc -h
 }
-
-function showIpExt {
-  curl -s http://ipecho.net/plain | rev | cut -c 1- | rev
-
-}
-
-function showWeatherIn() {
-  curl -s http://wttr.in/"$1" | head -n 7 && printf "\n"
-}
-

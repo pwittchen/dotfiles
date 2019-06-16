@@ -30,6 +30,7 @@ if [ `uname` = "Darwin" ]; then
 fi
 
 source ~/.scripts/functions/general.sh
+source ~/.scripts/functions/web.sh
 source ~/.scripts/functions/git.sh
 source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/java.sh
