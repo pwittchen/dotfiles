@@ -66,7 +66,7 @@ function bin2hex() {
   wcalc -h
 }
 
-function showMyExtIp {
+function showIpExt {
   curl http://ipecho.net/plain
 }
 
