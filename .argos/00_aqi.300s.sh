@@ -16,7 +16,7 @@ AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | c
 ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice)
 
 if [ "$AQI" == "null" ]; then
-    echo "AQI unknown"
+    echo "AQI ?"
 else
     echo "AQI $AQI ($ADVICE)"
 fi
