@@ -13,19 +13,38 @@ RESPONSE=$(curl -X GET \
     "$URL")
 
 AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
-
-MSG="Unknown"
-
-case 1 in
-  $(($AQI <= 25)))  MSG="Great!";;
-  $(($AQI <= 50)))  MSG="Good!";;
-  $(($AQI <= 75)))  MSG="Medium";;
-  $(($AQI <= 100))) MSG="Bad";;
-  $(($AQI >= 101))) MSG="Very Bad";;
-esac
+ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice)
 
 if [ "$AQI" == "null" ]; then
-    echo "AQI sensor is off"
+    echo "AQI unkown"
 else
-    echo "AQI $AQI ($MSG)"
+    echo "AQI $AQI ($ADVICE)"
+fi
+
+echo "---"
+
+if [ "$AQI" == "null" ]; then
+    echo "API rate limit exceeded or sensor is off"
+else
+  echo "measurement details:"
+  echo ""
+
+  for i in {0..5}
+  do
+    if [ $i -lt 3 ]; then
+        tabs='\t\t'
+    else
+        tabs='\t'
+    fi
+    echo -e $(echo $RESPONSE | jq .current.values | jq ".[$i]".name) \
+            $tabs \
+            $(echo $RESPONSE | jq .current.values | jq ".[$i]".value)
+  done
+
+  echo -e  $(echo "AQI" \
+           '\t\t' \
+           echo $RESPONSE | jq .current.indexes | jq '.[0]'.value)
+  echo -e  $(echo "Description" \
+           '\t\t' \
+           echo $RESPONSE | jq .current.indexes | jq '.[0]'.description)
 fi
