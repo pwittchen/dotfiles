@@ -6,13 +6,13 @@ URL="https://airapi.airly.eu/v2/measurements/installation?installationId=$SENSOR
 API_KEY_PREFIX="apikey: "
 API_KEY_HEADER="$API_KEY_PREFIX$API_KEY"
 TYPE="Accept: application/json"
-
-AQI=$(curl -X GET \
+RESPONSE=$(curl -X GET \
     --silent \
     --header "$TYPE" \
     --header "$API_KEY_HEADER" \
-    "$URL" \
-    | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
+    "$URL")
+
+AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
 
 MSG="Unknown"
 
