@@ -15,6 +15,10 @@ function emptyTrash() {
   rm -rf ~/.local/share/Trash/*
 }
 
+function searchDocs() {
+  cd ~/Dokumenty && libreoffice $(fzf) && cd -
+}
+
 function clearGnomeDesktopWallpapersCache() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
