@@ -13,7 +13,5 @@ if [ -z "$ramUsage" ]; then
 fi
 
 echo "RAM $ramUsage%"
-
 echo "---"
-
 ps axch -o cmd:15,%mem --sort=-%mem | head
