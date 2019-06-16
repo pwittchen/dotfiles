@@ -26,3 +26,8 @@ else
   fi
 fi
 
+mac_address=$(ip -o link show dev wlp58s0 | awk '{print $17}')
+
+echo "---"
+echo "MAC: $mac_address"
+
