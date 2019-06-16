@@ -27,7 +27,6 @@ if [ "$AQI" == "null" ]; then
     echo "API rate limit exceeded or sensor is off"
 else
   echo "measurement details:"
-  echo ""
 
   for i in {0..5}
   do
