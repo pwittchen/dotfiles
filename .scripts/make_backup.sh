@@ -4,6 +4,7 @@ DISPLAY=:0.0
 XAUTHORITY=/home/matrix/.Xauthority
 
 source ~/.config/scripts/ftp_server.conf
+/usr/bin/notify-send "backup started"
 rm -rf ~/Backup/*
 cp -avr ~/Dokumenty/ebooks ~/Backup/ebooks
 cp -avr ~/Dokumenty/finance ~/Backup/finance
