@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 source ~/.config/scripts/external_disk.conf
 sudo cp -avr ~/Obrazy/photos/* /media/$(whoami)/$DISK_NAME/photos/
