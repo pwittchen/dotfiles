@@ -20,7 +20,7 @@ DESC=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.description | cut -d "\"
 if [ "$AQI" == "null" ]; then
     echo "AQI ?"
 else
-    echo "AQI $AQI ($DESC)"
+    echo "AQI $AQI"
 fi
 
 echo "---"
@@ -44,5 +44,6 @@ else
             $(echo $RESPONSE | jq .current.values | jq ".[$i]".value)
   done
 
+  echo $DESC
   echo $ADVICE
 fi
