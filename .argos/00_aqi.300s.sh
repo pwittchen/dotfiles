@@ -13,12 +13,14 @@ RESPONSE=$(curl -X GET \
     "$URL")
 
 AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
-ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice)
+ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice | cut -d "\"" -f 2)
+DESC=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.description | cut -d "\"" -f 2)
+
 
 if [ "$AQI" == "null" ]; then
     echo "AQI ?"
 else
-    echo "AQI $AQI ($ADVICE)"
+    echo "AQI $AQI ($DESC)"
 fi
 
 echo "---"
@@ -31,19 +33,16 @@ else
   for i in {0..5}
   do
     if [ $i -lt 3 ]; then
+        tabs='\t\t\t'
+    elif [ $i -lt 5 ]; then
         tabs='\t\t'
     else
         tabs='\t'
     fi
-    echo -e $(echo $RESPONSE | jq .current.values | jq ".[$i]".name) \
+    echo -e $(echo $RESPONSE | jq .current.values | jq ".[$i]".name | cut -d "\"" -f 2) \
             $tabs \
             $(echo $RESPONSE | jq .current.values | jq ".[$i]".value)
   done
 
-  echo -e  $(echo "AQI" \
-           '\t\t' \
-           echo $RESPONSE | jq .current.indexes | jq '.[0]'.value)
-  echo -e  $(echo "Description" \
-           '\t\t' \
-           echo $RESPONSE | jq .current.indexes | jq '.[0]'.description)
+  echo $ADVICE
 fi
