@@ -30,7 +30,7 @@ function repeatOperation() {
   watch -n 1 $1 
 }
 
-function reloadTmuxConf() {
+function reloadTmux() {
   tmux source-file ~/.tmux.conf
 }
 
