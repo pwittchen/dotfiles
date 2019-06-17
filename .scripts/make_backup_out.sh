@@ -12,5 +12,7 @@ cp -avr ~/Dokumenty/tmp ~/Backup/tmp
 cp -avr ~/Dokumenty/travel ~/Backup/travel
 cp -avr ~/Dokumenty/work ~/Backup/work
 cp -avr ~/Obrazy/wallpapers ~/Backup/wallpapers
+cp -avr ~/.gnupg ~/Backup/secret/.gnupg
+cp -avr ~/.password-store ~/Backup/secret/.password-store
 lftp ftp://$USER:$PASS@$HOST -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
 date >> ~/Dokumenty/logs/ftp_backup_out.log
