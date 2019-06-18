@@ -4,7 +4,7 @@ if [ "$disk_name" != "" ]; then
   rm -rf ~/Backup/*
   cp -avr ~/Dokumenty/ebooks ~/Backup/ebooks
   cp -avr ~/Dokumenty/finance ~/Backup/finance
-  cp -avr ~/Dokumenty/gym ~/Backup/gym
+  cp -avr ~/Dokumenty/sport ~/Backup/sport
   cp -avr ~/Dokumenty/guitar ~/Backup/guitar
   cp -avr ~/Dokumenty/licenses ~/Backup/licenses
   cp -avr ~/Dokumenty/other ~/Backup/other
