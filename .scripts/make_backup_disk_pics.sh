@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
-source ~/.config/scripts/external_disk.conf
-sudo cp -avr ~/Obrazy/photos/* /media/$(whoami)/$DISK_NAME/photos/
-date >> ~/Dokumenty/logs/disk_backup_pics.log
+disk_name=$(ls /media/`whoami` | tail -1)
+if [ $disk_name != "" ]; then
+  sudo cp -avru ~/Obrazy/photos/* /media/$(whoami)/$disk_name/photos/
+  date >> ~/Dokumenty/logs/disk_backup_pics.log
+else
+  echo "disk is not connected"
+fi

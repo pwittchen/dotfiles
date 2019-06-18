@@ -15,6 +15,10 @@ function emptyTrash() {
   rm -rf ~/.local/share/Trash/*
 }
 
+function dirSize() {
+  du -sh $1
+}
+
 function searchDocs() {
   cd ~/Dokumenty && libreoffice $(fzf) && cd -
 }
