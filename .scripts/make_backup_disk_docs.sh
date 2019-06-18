@@ -12,12 +12,17 @@ if [ "$disk_name" != "" ]; then
   cp -avr ~/Dokumenty/tmp ~/Backup/tmp
   cp -avr ~/Dokumenty/travel ~/Backup/travel
   cp -avr ~/Dokumenty/work ~/Backup/work
+  cp -avr ~/Drivers/ ~/Backup/drivers
   cp -avr ~/Obrazy/wallpapers ~/Backup/wallpapers
   mkdir -p ~/Backup/secrets
   cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
   cp -avr ~/.password-store ~/Backup/secrets/.password-store
   cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
-  sudo cp -avru ~/Backup/* /media/$(whoami)/$disk_name/documents/
+  destination=/media/$(whoami)/$disk_name/documents/
+  if [ ! -d "$destination" ]; then
+    mkdir -p $destination
+  fi
+  sudo cp -avru ~/Backup/* $destination
   date >> ~/Dokumenty/logs/disk_backup_docs.log
 else
   echo "disk is not connected"

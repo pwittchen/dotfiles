@@ -11,6 +11,7 @@ cp -avr ~/Dokumenty/presentations ~/Backup/presentations
 cp -avr ~/Dokumenty/tmp ~/Backup/tmp
 cp -avr ~/Dokumenty/travel ~/Backup/travel
 cp -avr ~/Dokumenty/work ~/Backup/work
+cp -avr ~/Drivers ~/Backup/drivers
 cp -avr ~/Obrazy/wallpapers ~/Backup/wallpapers
 mkdir -p ~/Backup/secrets
 cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
