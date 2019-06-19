@@ -22,7 +22,12 @@ function dirSize() {
 }
 
 function searchDocs() {
-  cd ~/Dokumenty && libreoffice $(fzf) && cd -
+  cd ~/Dokumenty
+  fzf_out=$(fzf)
+  if [ "$fzf_out" != "" ]; then
+    libreoffice $fzf_out
+  fi
+  cd -
 }
 
 function clearGnomeDesktopWallpapersCache() {
