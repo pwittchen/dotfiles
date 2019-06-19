@@ -2,12 +2,12 @@
 
 source ~/.config/scripts/personal.conf
 
-function setupGitUserName() {
+function setupGitName() {
   git config --global user.name $USER_NAME
 }
 
-function setupGitPersonalEmail {
-  git config --global user.email $PERSONAL_EMAIL
+function setupGitEmail {
+  git config --global user.email $USER_EMAIL
 }
 
 function connectToLinuxPl() {

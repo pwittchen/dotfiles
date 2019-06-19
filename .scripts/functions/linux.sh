@@ -3,6 +3,8 @@
 alias mc="mc -S nicedark"
 alias tsm="transmission-remote"
 
+export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+
 function pbcopy() {
   xsel --clipboard --input
 }

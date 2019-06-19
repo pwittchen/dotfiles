@@ -11,15 +11,9 @@ setupGitUserName
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
-
-  if [ `hostname` = $PERSONAL_MACHINE ]; then
-      setupGitPersonalEmail
-  fi
-
+  setupGitEmail
   export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
-  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-
   source ~/.scripts/functions/linux.sh
   source ~/.scripts/functions/android.sh
 fi
@@ -37,6 +31,4 @@ source ~/.scripts/functions/java.sh
 source ~/.scripts/functions/python.sh
 source ~/.scripts/functions/rust.sh
 source ~/.scripts/functions/recordings.sh
-
-export SDKMAN_DIR="/$HOME/.sdkman"
-[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
+source ~/.scripts/functions/sdkman.sh
