@@ -21,13 +21,21 @@ function dirSize() {
   du -sh $1
 }
 
-function searchDocs() {
-  cd ~/Dokumenty
+function fuzzySearchAndRun() {
+  cd $1
   fzf_out=$(fzf)
   if [ "$fzf_out" != "" ]; then
-    libreoffice $fzf_out
+    $2 $fzf_out
   fi
   cd -
+}
+
+function searchDocs() {
+  fuzzySearchAndRun ~/Dokumenty libreoffice
+}
+
+function searchScripts() {
+  fuzzySearchAndRun ~/.scripts vim
 }
 
 function clearGnomeDesktopWallpapersCache() {
