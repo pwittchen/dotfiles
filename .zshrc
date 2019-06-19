@@ -1,6 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
-
 ZSH_THEME="agnoster"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
