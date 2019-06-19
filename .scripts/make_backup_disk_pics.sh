@@ -6,7 +6,7 @@ if [ "$disk_name" != "" ]; then
     mkdir -p $destination
   fi
   sudo cp -avru ~/Obrazy/photos/* $destination
-  date >> ~/Dokumenty/logs/disk_backup_pics.log
+  date >> /var/log/scripts/disk_backup_pics.log
 else
   echo "disk is not connected"
 fi

@@ -25,7 +25,7 @@ function fuzzySearchAndRun() {
   cd $1
   fzf_out=$(fzf)
   if [ "$fzf_out" != "" ]; then
-    $2 $fzf_out
+    sudo $2 $fzf_out
   fi
   cd -
 }

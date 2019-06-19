@@ -23,7 +23,7 @@ if [ "$disk_name" != "" ]; then
     mkdir -p $destination
   fi
   sudo cp -avru ~/Backup/* $destination
-  date >> ~/Dokumenty/logs/disk_backup_docs.log
+  date >> /var/log/scripts/disk_backup_docs.log
 else
   echo "disk is not connected"
 fi
