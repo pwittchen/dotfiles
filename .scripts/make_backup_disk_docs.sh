@@ -18,9 +18,11 @@ if [ "$disk_name" != "" ]; then
   cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
   cp -avr ~/.password-store ~/Backup/secrets/.password-store
   cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
-  destination=/media/$(whoami)/$disk_name/documents/
+  destination=/media/$(whoami)/$disk_name/docs/
   if [ ! -d "$destination" ]; then
     mkdir -p $destination
+  else
+    sudo rm -rf $destination/*
   fi
   sudo cp -avru ~/Backup/* $destination
   date >> /var/log/scripts/disk_backup_docs.log

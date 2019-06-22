@@ -30,10 +30,6 @@ function fuzzySearchAndRun() {
   cd -
 }
 
-function searchDocs() {
-  fuzzySearchAndRun ~/Dokumenty libreoffice
-}
-
 function searchScripts() {
   fuzzySearchAndRun ~/.scripts vim
 }
