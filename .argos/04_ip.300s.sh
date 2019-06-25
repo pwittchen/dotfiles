@@ -2,7 +2,7 @@
 
 function get_ip_wlan() {
   no_of_broadcasts="$(ifconfig | grep broadcast | wc -l)"
-  if [ $no_of_broadcasts = "2" ]; then
+  if [ $no_of_broadcasts -gt "0" ]; then
     ip="$(ifconfig | grep broadcast | awk '{print $2}' | tail -n1)"
   fi
 }
@@ -25,9 +25,3 @@ else
     echo "not connected"
   fi
 fi
-
-mac_address=$(ip -o link show dev wlp58s0 | awk '{print $17}')
-
-echo "---"
-echo "MAC: $mac_address"
-
