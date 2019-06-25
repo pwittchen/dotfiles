@@ -23,7 +23,17 @@ git pull && ./install.sh
 config
 ------
 
-config for the scripts located in `.scripts` and `.argos` dirs have to be created manually because this repo doesn't contain sensitive data like passwords, api keys, etc.; right now configs are used by `.scripts/functions/personal.sh`, `~/.config/argos/00_aqi.300s.sh` script, backup scripts and configuration is kept in `~/.config/scripts/personal.conf`, `~/.config/scripts/ftp_server.conf` and `~/.config/scripts/aqi.conf` files in the system (not available in this repo)
+to generate empty config template files, in `~/.config/scripts` dir, type:
+
+```
+./install.sh config
+```
+
+you can restore old configs (in case you had it previously) by typing:
+
+```
+./install.sh configrestore
+```
 
 work
 ----
