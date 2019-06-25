@@ -28,7 +28,7 @@ config for the scripts located in `.scripts` and `.argos` dirs have to be create
 work
 ----
 
-on my computer at work, I don't need several scripts and stuff; to run work instllation type:
+on my computer at work, I don't need several scripts and stuff; to run work installation type:
 
 ```shell
 ./install.sh work
