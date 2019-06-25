@@ -23,7 +23,7 @@ git pull && ./install.sh
 config
 ------
 
-config for the scripts located in `.scripts` and `.argos` dirs have to be performed manually because this repo doesn't contain sensitive data like passwords, api keys, etc.
+config for the scripts located in `.scripts` and `.argos` dirs have to be performed manually because this repo doesn't contain sensitive data like passwords, api keys, etc.; right now configs are used by `.scripts/functions/personal.sh` script adn backup scripts and configuration is kept in `~/.config/scripts/personal.conf` and `~/.config/scripts/ftp_server.conf` files in the system (not available in this repo)
 
 work
 ----
