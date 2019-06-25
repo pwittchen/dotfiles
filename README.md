@@ -32,7 +32,7 @@ to generate empty config template files, in `~/.config/scripts` dir, type:
 you can restore old configs (in case you had it previously) by typing:
 
 ```
-./install.sh configrestore
+./install.sh restoreconfig
 ```
 
 work
