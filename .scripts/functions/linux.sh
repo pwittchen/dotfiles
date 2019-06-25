@@ -77,5 +77,6 @@ function showIp() {
 }
 
 function showMac() {
-  ip -o link show dev wlp58s0 | awk '{print $17}'
+  device=$(ifconfig -s | tail -n1 | awk '{print $1}')
+  ip -o link show dev $device | awk '{print $17}'
 }
