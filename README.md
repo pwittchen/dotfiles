@@ -25,6 +25,15 @@ config
 
 config for the scripts located in `.scripts` and `.argos` dirs have to be performed manually because this repo doesn't contain sensitive data like passwords, api keys, etc.
 
+work
+----
+
+at work I don't need several scripts and to remove them after running `./install.sh`, type:
+
+```shell
+./work_post_install.sh
+```
+
 plugins
 -------
 - **tmux**
