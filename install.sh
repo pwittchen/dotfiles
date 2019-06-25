@@ -12,5 +12,12 @@ mkdir ~/.config/argos
 mkdir ~/.scripts
 sudo cp -R .argos/* ~/.config/argos
 sudo cp -R .scripts/* ~/.scripts
+
+if [ ! -z $1  ] && [ $1 == "work" ]; then
+  sudo rm ~/.config/argos/00_aqi.300s.sh || true
+  sudo rm ~/.scripts/make_* -i || true
+  echo "work setup done"
+fi
+
 echo "dotfiles installed successfully! \o/"
 echo "run source ~/.zshrc command manually to refresh your configuration"

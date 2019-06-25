@@ -28,10 +28,10 @@ config for the scripts located in `.scripts` and `.argos` dirs have to be create
 work
 ----
 
-at work I don't need several scripts and to remove them after running `./install.sh`, type:
+on my computer at work, I don't need several scripts and stuff; to run work instllation type:
 
 ```shell
-./work_post_install.sh
+./install.sh work
 ```
 
 plugins
