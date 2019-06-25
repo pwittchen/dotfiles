@@ -6,10 +6,6 @@ function cutLastChars() {
   rev | cut -c $numberOfCharsToCut- | rev
 }
 
-function killProcessByName() {
-  ps -ef | grep $1 | awk '{print $2}' | head -n1 | xargs kill -9
-}
-
 function killAllDetachedScreenSessions() {
     screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
 }
@@ -18,7 +14,7 @@ function killScreen() {
     screen -X -S $1 quit
 }
 
-function showProcessStats() {
+function showProcessStatsByPid() {
   ps -p $1 -o %cpu,%mem,cmd
 }
 
