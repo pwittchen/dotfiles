@@ -38,7 +38,7 @@ you can restore old configs (in case you had it previously) by typing:
 work
 ----
 
-on my computer at work, I don't need several scripts and stuff; to run work installation type:
+on my computer at work, I don't need several scripts and stuff and to run work installation, we can type:
 
 ```shell
 ./install.sh work
