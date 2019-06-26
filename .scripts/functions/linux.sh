@@ -34,6 +34,10 @@ function searchScripts() {
   fuzzySearchAndRun ~/.scripts vim
 }
 
+function searchDocs() {
+  fuzzySearchAndRun ~/Dokumenty libreoffice
+}
+
 function clearGnomeDesktopWallpapersCache() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
