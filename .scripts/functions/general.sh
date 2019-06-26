@@ -25,23 +25,3 @@ function trim() {
 function run_http_server() {
   python3 -m http.server 8000
 }
-
-function first_line() {
-  head -n1
-}
-
-function last_line() {
-  tail -n1
-}
-
-function exclude_grep() {
-  grep -v grep
-}
-
-function hex2bin() {
-  wcalc -d
-}
-
-function bin2hex() {
-  wcalc -h
-}
