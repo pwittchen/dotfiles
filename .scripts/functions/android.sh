@@ -16,7 +16,7 @@ function runFirstAndroidEmulator() {
   && cd -
 }
 
-function showLogsForCurrentApp() {
+function logcatCurrent() {
  adb logcat --current
 }
 

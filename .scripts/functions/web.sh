@@ -2,7 +2,6 @@
 
 function showIpExt {
   curl -s http://ipecho.net/plain | rev | cut -c 1- | rev
-
 }
 
 function showWeatherIn() {

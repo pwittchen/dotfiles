@@ -38,7 +38,7 @@ function searchDocs() {
   fuzzySearchAndRun ~/Dokumenty libreoffice
 }
 
-function clearGnomeDesktopWallpapersCache() {
+function clearWallpapers() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
 
@@ -48,14 +48,6 @@ function setGnomeDesktopWallpaperWithPath() {
   else
     gsettings set org.gnome.desktop.background picture-uri $1
   fi
-}
-
-function listCpuIntensivePs() {
-  ps axch -o cmd:15,%cpu --sort=-%cpu | head
-}
-
-function listMemoryIntensivePs() {
-  ps axch -o cmd:15,%mem --sort=-%mem | head
 }
 
 function showIp() {
