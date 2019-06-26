@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 source ~/.config/scripts/personal.conf
 
 function show_ip_ext {

@@ -21,7 +21,7 @@ function dir_size() {
   du -sh $1
 }
 
-function fuzzy_searchAndRun() {
+function fuzzy_search_and_run() {
   cd $1
   fzf_out=$(fzf)
   if [ "$fzf_out" != "" ]; then
