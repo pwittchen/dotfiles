@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
+source ~/.config/scripts/personal.conf
 
-function gitCmdAll() {
+function init_git_email() {
+  git config --global user.email $USER_EMAIL
+}
+
+function git_all() {
   current_dir=$(pwd)
   echo "going into $1 directory"
   cd $1

@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-function cutLastChars() {
+function cut_last_chars() {
   numberOfCharsToCut=$1
   numberOfCharsToCut=$[numberOfCharsToCut+1];
   rev | cut -c $numberOfCharsToCut- | rev
 }
 
-function reloadTmux() {
+function reload_tmux() {
   tmux source-file ~/.tmux.conf
 }
 
-function reloadShell {
+function reload_shell {
   source ~/.zshrc
 }
 
-function prettyJson() {
+function pretty_json() {
   python3 -m json.tool
 }
 
@@ -22,19 +22,19 @@ function trim() {
   awk '{gsub(/^ +| +$/,\"\")}1'
 }
 
-function runHttpServer() {
+function run_http_server() {
   python3 -m http.server 8000
 }
 
-function firstLine() {
+function first_line() {
   head -n1
 }
 
-function lastLine() {
+function last_line() {
   tail -n1
 }
 
-function excludeGrep() {
+function exclude_grep() {
   grep -v grep
 }
 

@@ -2,19 +2,19 @@
 
 alias mc="mc -a -S modarin256-defbg"
 
-function makeFilesVisible() {
+function make_files_visible() {
   defaults write com.apple.finder AppleShowAllFiles $1 && sudo killall Finder
 }
 
-function showHiddenFiles {
+function show_hidden_files {
   makeFilesVisible YES
 }
 
-function hideHiddenFiles {
+function hide_hidden_files {
   makeFilesVisible NO
 }
 
-function restartMenuBar() {
+function restart_status_bar() {
   killall -KILL SystemUIServer
 }
 

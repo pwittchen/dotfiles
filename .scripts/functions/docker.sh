@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function buildDockerImageWithName() {
+function build_docker_image_with_name() {
   if [ $# -eq 0  ]; then
     echo "no arguments supplied"
   else
@@ -8,33 +8,21 @@ function buildDockerImageWithName() {
   fi
 }
 
-function runDockerContainer() {
+function run_docker_container(){
   host=$1
   port_in=$2
   port_out=$3
   image_name=$4
+  mode=$5
   if [ $# -eq 0 ]; then
     echo "no arguments supplied"
-    echo "usage: runDockerContainer HOST PORT_IN PORT_OUT IMAGE_NAME"
+    echo "usage: runDockerContainer HOST PORT_IN PORT_OUT IMAGE_NAME MODE (fg=""|bg="-d")"
   else
-    sudo docker run -p $host:$port_in:$port_out -t $image_name
+    sudo docker run -p $host:$port_in:$port_out -t $mode $image_name
   fi
 }
 
-function runDockerContainerInBg() {
-  host=$1
-  port_in=$2
-  port_out=$3
-  image_name=$4
-  if [ $# -eq 0 ]; then
-    echo "no arguments supplied"
-    echo "usage: runDockerContainerInBg HOST PORT_IN PORT_OUT IMAGE_NAME"
-  else
-    sudo docker run -p $host:$port_in:$port_out -td $image_name
-  fi
-}
-
-function stopRunningDockerContainerByName() {
+function stop_running_docker_container_by_name() {
   if [ $# -eq 0 ]; then
     echo "no arguments supplied"
   else
@@ -42,7 +30,7 @@ function stopRunningDockerContainerByName() {
   fi
 }
 
-function removeDockerImageByName() {
+function remove_docker_image_by_name() {
   if [ $# -eq 0 ]; then
     echo "no arguments supplied"
   else
@@ -50,10 +38,10 @@ function removeDockerImageByName() {
   fi
 }
 
-function listDockerImages() {
+function list_docker_images() {
   sudo docker images
 }
 
-function listRunningDockerContainers() {
+function list_running_docker_containers() {
     sudo docker ps
 }

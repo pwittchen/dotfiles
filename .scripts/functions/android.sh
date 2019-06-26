@@ -5,21 +5,21 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 
-function listAndroidEmulators() {
+function list_android_emulators() {
   emulator -list-avds
 }
 
-function runFirstAndroidEmulator() {
+function run_android_emulator() {
   cd $ANDROID_HOME/emulator \
   && emulator -use-system-libs \
   -avd $(emulator -list-avds | sed -n 1p) \
   && cd -
 }
 
-function logcatCurrent() {
+function logcat_current() {
  adb logcat --current
 }
 
-function showAndroidEmulatorServerIp() {
+function android_emulator_server_ip() {
   echo "10.0.2.2"
 }

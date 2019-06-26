@@ -13,15 +13,15 @@ function pbpaste() {
   xsel --clipboard --output
 }
 
-function emptyTrash() {
+function empty_trash() {
   rm -rf ~/.local/share/Trash/*
 }
 
-function dirSize() {
+function dir_size() {
   du -sh $1
 }
 
-function fuzzySearchAndRun() {
+function fuzzy_searchAndRun() {
   cd $1
   fzf_out=$(fzf)
   if [ "$fzf_out" != "" ]; then
@@ -30,19 +30,19 @@ function fuzzySearchAndRun() {
   cd -
 }
 
-function searchScripts() {
-  fuzzySearchAndRun ~/.scripts vim
+function search_scripts() {
+  fuzzy_search_and_run ~/.scripts vim
 }
 
-function searchDocs() {
-  fuzzySearchAndRun ~/Dokumenty libreoffice
+function search_docs() {
+  fuzzy_search_and_run ~/Dokumenty libreoffice
 }
 
-function clearWallpapers() {
+function clear_wallpapers() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
 
-function setGnomeDesktopWallpaperWithPath() {
+function set_wallpaper_with_path() {
   if [ $# -eq 0 ]; then
     echo "no argument with path to the picture supplied"
   else
@@ -50,7 +50,7 @@ function setGnomeDesktopWallpaperWithPath() {
   fi
 }
 
-function showIp() {
+function show_ip() {
   # get ip of wlan
   no_of_broadcasts="$(ifconfig | grep broadcast | wc -l)"
   if [ $no_of_broadcasts = "2" ]; then
@@ -72,7 +72,7 @@ function showIp() {
   fi
 }
 
-function showMac() {
+function show_mac() {
   device=$(ifconfig -s | tail -n1 | awk '{print $1}')
   ip -o link show dev $device | awk '{print $17}'
 }
