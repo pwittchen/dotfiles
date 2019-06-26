@@ -16,9 +16,9 @@ function run_docker_container(){
   mode=$5
   if [ $# -eq 0 ]; then
     echo "no arguments supplied"
-    echo "usage: runDockerContainer HOST PORT_IN PORT_OUT IMAGE_NAME MODE (fg=""|bg="-d")"
+    echo "usage: runDockerContainer HOST PORT_IN PORT_OUT IMAGE_NAME MODE (fg=""|bg="d")"
   else
-    sudo docker run -p $host:$port_in:$port_out -t $mode $image_name
+    sudo docker run -p $host:$port_in:$port_out -t$mode $image_name
   fi
 }
 
