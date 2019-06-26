@@ -7,11 +7,11 @@ function make_files_visible() {
 }
 
 function show_hidden_files {
-  makeFilesVisible YES
+  make_files_visible YES
 }
 
 function hide_hidden_files {
-  makeFilesVisible NO
+  make_files_visible NO
 }
 
 function restart_status_bar() {
