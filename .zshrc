@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
-ZSH_THEME="agnoster"
+ZSH_THEME="arrow"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
@@ -9,7 +9,6 @@ source ~/.scripts/functions/git.sh
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
   init_git_email
-  export DEV=$HOME/Development
   export PATH=$PATH:$HOME/.scripts
   source ~/.scripts/functions/linux.sh
   source ~/.scripts/functions/android.sh
