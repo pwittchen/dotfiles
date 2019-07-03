@@ -38,6 +38,8 @@ sudo cp -R .scripts/* ~/.scripts
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.config/argos/00_aqi.300s.sh -f || true
   sudo rm ~/.scripts/make_* -f || true
+  sudo rm -rf ~/.config/scripts/work
+  sudo mkdir -p ~/.config/scripts/work
   sudo cp .config/work/play.conf ~/.config/scripts/work/
   echo "work setup done"
 else
