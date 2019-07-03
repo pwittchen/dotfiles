@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ ! -z $(command -v mpstat) ]; then
-  cpu_usage=$(mpstat | awk '$12 ~ /[0-9.]+/ {print 100 - $12"%"}')
+  cpu_usage=$(mpstat | awk '$12 ~ /[0-9.]+/ {print 100 - $13"%"}')
 fi
 if [ ! -z $(command -v sensors) ]; then
   cpu_temp=$(sensors | awk '/^Package/ {print $4}')
