@@ -49,13 +49,15 @@ on my computer at work, I don't need several scripts and stuff and to run work i
 argos
 -----
 
-my argos scripts doesn't work the same on all computers, so they're exluded from the main install procedure
+my argos scripts don't work the same on all computers, so they're exluded from the main install procedure
 
 to install them explicitly, we need to invoke the following command:
 
 ```
 ./install.sh argos
 ```
+
+after installations, scripts may require adjustments
 
 plugins
 -------
