@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/scripts/personal.conf
+source ~/.config/scripts/web.conf
 
 function show_ip_ext {
   curl -s http://ipecho.net/plain | rev | cut -c 1- | rev
