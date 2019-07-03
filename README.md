@@ -35,6 +35,8 @@ you can restore old configs (in case you had it previously) by typing:
 ./install.sh restoreconfig
 ```
 
+sometimes, argos scripts and tmux plugins may need additional adjustments on several computers
+
 work
 ----
 
@@ -49,16 +51,10 @@ plugins
 - **tmux**
   - plugin manager: [tpm](https://github.com/tmux-plugins/tpm)
   - plugins:
-    - [tmux-sidebar](https://github.com/tmux-plugins/tmux-sidebar)
-    - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
-    - [tmux-pain-control](https://github.com/tmux-plugins/tmux-pain-control)
-    - [tmux-urlview](https://github.com/tmux-plugins/tmux-urlview)
     - [tmux-plugin-battery](https://github.com/pwittchen/tmux-plugin-battery)
     - [tmux-plugin-uptime](https://github.com/pwittchen/tmux-plugin-uptime)
     - [tmux-plugin-cpu](https://github.com/pwittchen/tmux-plugin-cpu)
     - [tmux-plugin-ram](https://github.com/pwittchen/tmux-plugin-ram)
-    - [tmux-plugin-ip](https://github.com/pwittchen/tmux-plugin-ip)
-    - [tmux-plugin-spotify](https://github.com/pwittchen/tmux-plugin-spotify)
 - **vim**
   - plugin manager: [vim-pathogen](https://github.com/tpope/vim-pathogen)
   - plugins:
@@ -67,8 +63,6 @@ plugins
     - [ctrlp](https://github.com/kien/ctrlp.vim)
     - [supertab](https://github.com/ervandew/supertab)
     - [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-    - [javap-vim](https://github.com/udalov/javap-vim)
-    - [vim-jdb](https://github.com/Dica-Developer/vim-jdb)
 
 themes and terminal emulators
 -----------------------------
@@ -79,7 +73,7 @@ themes and terminal emulators
   - font for macOS: `12 pt Meslo LG M DZ Regular for Powerline` can be found in [powerline/fonts](https://github.com/powerline/fonts) repository
   - font for Linux: [Menlo for PowerLine](https://github.com/abertsch/Menlo-for-Powerline)
 
-Terminal emulators I use:
+Terminal emulators I usually use:
 - [Tilix](https://gnunn1.github.io/tilix-web/) on Linux
    - color schemes for Tilix on Linux: https://github.com/storm119/Tilix-Themes
  - [iTerm2](https://www.iterm2.com/) on macOS
