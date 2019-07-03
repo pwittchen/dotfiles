@@ -6,6 +6,7 @@ cp -avr ~/Documents/finance ~/Backup/finance
 cp -avr ~/Documents/sport ~/Backup/sport
 cp -avr ~/Documents/guitar ~/Backup/guitar
 cp -avr ~/Documents/licenses ~/Backup/licenses
+cp -avr ~/Documents/notes ~/Backup/notes
 cp -avr ~/Documents/other ~/Backup/other
 cp -avr ~/Documents/presentations ~/Backup/presentations
 cp -avr ~/Documents/tmp ~/Backup/tmp
