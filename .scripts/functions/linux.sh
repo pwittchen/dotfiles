@@ -26,6 +26,10 @@ function search_scripts() {
   fuzzy_search_and_run ~/.scripts vim
 }
 
+function search_notes() {
+  fuzzy_search_and_run ~/Documents/notes vim
+}
+
 function clear_wallpapers() {
   sudo rm -rf $HOME/.cache/gnome-control-center/backgrounds/*
 }
