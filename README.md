@@ -46,6 +46,17 @@ on my computer at work, I don't need several scripts and stuff and to run work i
 ./install.sh work
 ```
 
+argos
+-----
+
+my argos scripts doesn't work the same on all computers, so they're exluded from the main install procedure
+
+to install them explicitly, we need to invoke the following command:
+
+```
+./install.sh argos
+```
+
 plugins
 -------
 - **tmux**

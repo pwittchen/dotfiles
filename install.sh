@@ -24,11 +24,15 @@ sudo cp .tmux.conf ~/
 sudo cp .vimrc ~/
 sudo cp .zshrc ~/
 sudo cp .ghci ~/
-sudo rm -rf ~/.config/argos || true
+
+if [ ! -z $1 ] && [ $1 == "argos" ]; then
+  sudo rm -rf ~/.config/argos || true
+  mkdir ~/.config/argos
+  sudo cp -R .argos/* ~/.config/argos
+fi
+
 sudo rm -rf ~/.scripts || true
-mkdir ~/.config/argos
 mkdir ~/.scripts
-sudo cp -R .argos/* ~/.config/argos
 sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
