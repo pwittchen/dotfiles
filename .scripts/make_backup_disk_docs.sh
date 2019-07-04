@@ -1,24 +1,22 @@
 #!/usr/bin/env bash
-disk_name=$(ls /media/`whoami` | tail -1)
+disk_name=$(ls /run/media/`whoami` | tail -1)
 if [ "$disk_name" != "" ]; then
   rm -rf ~/Backup/*
-  cp -avr ~/Dokumenty/ebooks ~/Backup/ebooks
-  cp -avr ~/Dokumenty/finance ~/Backup/finance
-  cp -avr ~/Dokumenty/sport ~/Backup/sport
-  cp -avr ~/Dokumenty/guitar ~/Backup/guitar
-  cp -avr ~/Dokumenty/licenses ~/Backup/licenses
-  cp -avr ~/Dokumenty/other ~/Backup/other
-  cp -avr ~/Dokumenty/presentations ~/Backup/presentations
-  cp -avr ~/Dokumenty/tmp ~/Backup/tmp
-  cp -avr ~/Dokumenty/travel ~/Backup/travel
-  cp -avr ~/Dokumenty/work ~/Backup/work
-  cp -avr ~/Drivers/ ~/Backup/drivers
-  cp -avr ~/Obrazy/wallpapers ~/Backup/wallpapers
+  cp -avr ~/Documents/ebooks ~/Backup/ebooks
+  cp -avr ~/Documents/finance ~/Backup/finance
+  cp -avr ~/Documents/sport ~/Backup/sport
+  cp -avr ~/Documents/guitar ~/Backup/guitar
+  cp -avr ~/Documents/licenses ~/Backup/licenses
+  cp -avr ~/Documents/other ~/Backup/other
+  cp -avr ~/Documents/presentations ~/Backup/presentations
+  cp -avr ~/Documents/tmp ~/Backup/tmp
+  cp -avr ~/Documents/travel ~/Backup/travel
+  cp -avr ~/Documents/work ~/Backup/work
   mkdir -p ~/Backup/secrets
   cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
   cp -avr ~/.password-store ~/Backup/secrets/.password-store
   cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
-  destination=/media/$(whoami)/$disk_name/docs/
+  destination=/run/media/$(whoami)/$disk_name/docs/
   if [ ! -d "$destination" ]; then
     mkdir -p $destination
   else
