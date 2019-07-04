@@ -6,12 +6,9 @@ function cut_last_chars() {
   rev | cut -c $numberOfCharsToCut- | rev
 }
 
-function reload_tmux() {
-  tmux source-file ~/.tmux.conf
-}
-
 function reload_shell {
   source ~/.zshrc
+  tmux source-file ~/.tmux.conf
 }
 
 function pretty_json() {
