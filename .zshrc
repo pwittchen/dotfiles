@@ -9,7 +9,6 @@ if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
   export PATH=$PATH:$HOME/.scripts
   source ~/.scripts/functions/linux.sh
-  source ~/.scripts/functions/android.sh
 fi
 
 if [ `uname` = "Darwin" ]; then
@@ -21,6 +20,11 @@ source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/python.sh
 source ~/.scripts/functions/rust.sh
 source ~/.scripts/functions/recording.sh
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
 
 export SDKMAN_DIR="/$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
