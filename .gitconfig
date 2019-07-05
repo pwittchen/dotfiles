@@ -3,7 +3,7 @@
     name = Piotr Wittchen
 [core]
     autocrlf = input
-    editor = vi
+    editor = vim
     excludesfile = ~/.gitignore_global
 [alias]
     ; metadata
