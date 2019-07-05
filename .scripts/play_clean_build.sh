@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source $HOME/.config/scripts/personal.conf
+source $HOME/.config/scripts/enginiety.conf
 cd $PLAY_BLD
 ant clean all
 cd -

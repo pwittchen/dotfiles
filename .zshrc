@@ -4,25 +4,23 @@ ZSH_THEME="kolo"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
-source ~/.scripts/functions/git.sh
+
+export PATH=$PATH:$HOME/.scripts
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
-  init_git_email
-  export PATH=$PATH:$HOME/.scripts
-  source ~/.scripts/functions/linux.sh
-  source ~/.scripts/functions/android.sh
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+  alias mc="mc -S nicedark"
 fi
 
 if [ `uname` = "Darwin" ]; then
-  source ~/.scripts/functions/apple.sh
-  cd $HOME
+  alias mc="mc -a -S modarin256-defbg"
 fi
 
-source ~/.scripts/functions/general.sh
-source ~/.scripts/functions/web.sh
-source ~/.scripts/functions/docker.sh
-source ~/.scripts/functions/python.sh
-source ~/.scripts/functions/rust.sh
-source ~/.scripts/functions/recording.sh
-source ~/.scripts/functions/sdkman.sh
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+
+export SDKMAN_DIR="/$HOME/.sdkman"
+[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"

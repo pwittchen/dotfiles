@@ -29,6 +29,7 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
   sudo rm -rf ~/.config/argos || true
   mkdir ~/.config/argos
   sudo cp -R .argos/* ~/.config/argos
+  echo "argos scripts copied"
 fi
 
 sudo rm -rf ~/.scripts || true
@@ -38,13 +39,13 @@ sudo cp -R .scripts/* ~/.scripts
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.config/argos/00_aqi.300s.sh -f || true
   sudo rm ~/.scripts/make_backup* -f || true
-  sudo rm -rf ~/.config/scripts/work
-  sudo mkdir -p ~/.config/scripts/work/enginiety
-  sudo cp .config/work/enginiety/play.conf ~/.config/scripts/work/enginiety/play.conf
+  sudo cp .config/enginiety.conf ~/.config/scripts/enginiety.conf
+  source .config/enginiety.conf
+  git config --global user.email $USER_EMAIL_WORK
   echo "work setup done"
-else
-  sudo rm -rf ~/.scripts/work
 fi
 
 echo "dotfiles installed successfully! \o/"
-echo "run source ~/.zshrc command manually to refresh your configuration"
+echo "restart terminal or run commands below to refresh configs"
+echo "run: source ~/.zshrc"
+echo "run: tmux source-file ~/.tmux.conf"
