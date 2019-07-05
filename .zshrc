@@ -11,7 +11,6 @@ if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
   export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
   alias mc="mc -S nicedark"
-  alias tsm="transmission-remote"
 fi
 
 if [ `uname` = "Darwin" ]; then
