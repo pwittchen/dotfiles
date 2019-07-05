@@ -35,7 +35,6 @@ fi
 sudo rm -rf ~/.scripts || true
 mkdir ~/.scripts
 sudo cp -R .scripts/* ~/.scripts
-echo "scripts copied"
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.config/argos/00_aqi.300s.sh -f || true
@@ -46,8 +45,9 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   echo "work setup done"
 else
   git config --global user.email $USER_EMAIL
-  echo "personal email set"
 fi
 
 echo "dotfiles installed successfully! \o/"
-echo "run source ~/.zshrc command manually to refresh your configuration"
+echo "restart terminal or run commands below to refresh configs"
+echo "run: source ~/.zshrc"
+echo "run: tmux source-file ~/.tmux.conf"
