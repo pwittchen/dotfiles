@@ -17,7 +17,6 @@ if [ `uname` = "Darwin" ]; then
   cd $HOME
 fi
 
-source ~/.scripts/functions/general.sh
 source ~/.scripts/functions/web.sh
 source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/python.sh
