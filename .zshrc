@@ -17,13 +17,14 @@ fi
 
 source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/python.sh
-source ~/.scripts/functions/rust.sh
 source ~/.scripts/functions/recording.sh
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
+
+PATH=$PATH:$HOME/.cargo/bin
 
 export SDKMAN_DIR="/$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
