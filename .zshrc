@@ -5,10 +5,13 @@ plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-hi
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
 
+export PATH=$PATH:$HOME/.scripts
+
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
-  export PATH=$PATH:$HOME/.scripts
-  source ~/.scripts/functions/linux.sh
+  export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+  alias mc="mc -S nicedark"
+  alias tsm="transmission-remote"
 fi
 
 if [ `uname` = "Darwin" ]; then
