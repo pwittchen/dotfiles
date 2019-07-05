@@ -12,8 +12,7 @@ if [ `uname` = "Linux" ]; then
 fi
 
 if [ `uname` = "Darwin" ]; then
-  source ~/.scripts/functions/apple.sh
-  cd $HOME
+  alias mc="mc -a -S modarin256-defbg"
 fi
 
 source ~/.scripts/functions/docker.sh
