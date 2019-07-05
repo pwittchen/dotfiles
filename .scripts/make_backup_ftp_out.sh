@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/scripts/ftp_server.conf
+source ~/.config/scripts/linuxpl.conf
 rm -rf ~/Backup/*
 cp -avr ~/Documents/ebooks ~/Backup/ebooks
 cp -avr ~/Documents/finance ~/Backup/finance
@@ -17,5 +17,5 @@ mkdir -p ~/Backup/secrets
 cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
 cp -avr ~/.password-store ~/Backup/secrets/.password-store
 cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
-/usr/bin/lftp ftp://$USER:$PASS@$HOST -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
+/usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUXPL_HOST -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
