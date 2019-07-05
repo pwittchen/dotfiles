@@ -18,7 +18,6 @@ if [ `uname` = "Darwin" ]; then
   alias mc="mc -a -S modarin256-defbg"
 fi
 
-source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/recording.sh
 
 export ANDROID_HOME=$HOME/Android/Sdk
