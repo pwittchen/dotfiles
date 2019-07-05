@@ -64,8 +64,10 @@ plugins
 - **tmux**
   - plugin manager: [tpm](https://github.com/tmux-plugins/tpm)
   - plugins:
+    - [tmux-sidebar](https://github.com/tmux-plugins/tmux-sidebar)
+    - [tmux-copycat](https://github.com/tmux-plugins/tmux-copycat)
+    - [tmux-pain-contro](https://github.com/tmux-plugins/tmux-pain-control)
     - [tmux-plugin-battery](https://github.com/pwittchen/tmux-plugin-battery)
-    - [tmux-plugin-uptime](https://github.com/pwittchen/tmux-plugin-uptime)
     - [tmux-plugin-cpu](https://github.com/pwittchen/tmux-plugin-cpu)
     - [tmux-plugin-ram](https://github.com/pwittchen/tmux-plugin-ram)
 - **vim**
