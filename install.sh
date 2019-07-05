@@ -38,11 +38,13 @@ sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.config/argos/00_aqi.300s.sh -f || true
-  sudo rm ~/.scripts/make_backup* -f || true
+  sudo rm ~/.scripts/make_backup_* -f || true
   sudo cp .config/enginiety.conf ~/.config/scripts/enginiety.conf
   source .config/enginiety.conf
   git config --global user.email $USER_EMAIL_WORK
   echo "work setup done"
+else
+  sudo rm ~/.scripts/play_* || true
 fi
 
 echo "dotfiles installed successfully! \o/"
