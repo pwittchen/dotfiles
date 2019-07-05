@@ -4,11 +4,9 @@ ZSH_THEME="kolo"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
-source ~/.scripts/functions/git.sh
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
-  init_git_email
   export PATH=$PATH:$HOME/.scripts
   source ~/.scripts/functions/linux.sh
   source ~/.scripts/functions/android.sh
