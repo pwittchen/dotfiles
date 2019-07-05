@@ -21,4 +21,6 @@ source ~/.scripts/functions/docker.sh
 source ~/.scripts/functions/python.sh
 source ~/.scripts/functions/rust.sh
 source ~/.scripts/functions/recording.sh
-source ~/.scripts/functions/sdkman.sh
+
+export SDKMAN_DIR="/$HOME/.sdkman"
+[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
