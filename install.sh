@@ -29,6 +29,7 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
   sudo rm -rf ~/.config/argos || true
   mkdir ~/.config/argos
   sudo cp -R .argos/* ~/.config/argos
+  echo "argos scripts copied"
 fi
 
 sudo rm -rf ~/.scripts || true
@@ -44,6 +45,7 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   echo "work setup done"
 else
   git config --global user.email $USER_EMAIL
+  echo "personal email set"
 fi
 
 echo "dotfiles installed successfully! \o/"
