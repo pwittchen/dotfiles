@@ -43,8 +43,6 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   source .config/enginiety.conf
   git config --global user.email $USER_EMAIL_WORK
   echo "work setup done"
-else
-  git config --global user.email $USER_EMAIL
 fi
 
 echo "dotfiles installed successfully! \o/"
