@@ -35,6 +35,7 @@ fi
 sudo rm -rf ~/.scripts || true
 mkdir ~/.scripts
 sudo cp -R .scripts/* ~/.scripts
+echo "scripts copied"
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.config/argos/00_aqi.300s.sh -f || true
