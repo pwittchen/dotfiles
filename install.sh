@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [ ! -z $1 ] && [ $1 == "config" ]; then
+if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo mkdir ~/.config/scripts_backup || true
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
   sudo rm -rf ~/.config/scripts || true
