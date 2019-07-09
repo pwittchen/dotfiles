@@ -18,9 +18,9 @@ DESC=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.description | cut -d "\"
 
 
 if [ "$AQI" == "null" ]; then
-    echo "😷 ?"
+    echo "AQI ?"
 else
-    echo "😷 $AQI"
+    echo "AQI $AQI"
 fi
 
 echo "---"
@@ -33,7 +33,7 @@ else
   for i in {0..5}
   do
     if [ $i -lt 3 ]; then
-        tabs='\t\t\t\t'
+        tabs='\t\t\t'
     elif [ $i -lt 5 ]; then
         tabs='\t\t'
     else
