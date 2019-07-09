@@ -6,7 +6,7 @@ if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
   sudo rm -rf ~/.config/scripts || true
   sudo mkdir -p ~/.config/scripts
-  sudo cp -R .config/* ~/.config/scripts
+  sudo cp -R .configtemplates/* ~/.config/scripts
   echo "empty config files created"
   exit 1
 fi
@@ -37,7 +37,7 @@ mkdir ~/.scripts
 sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
-  sudo cp .config/enginiety.conf ~/.config/scripts/enginiety.conf
+  sudo cp .configtemplates/enginiety.conf ~/.config/scripts/enginiety.conf
   source .config/enginiety.conf
   git config --global user.email $USER_EMAIL_WORK
   echo "work setup done"
