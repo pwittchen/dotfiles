@@ -40,6 +40,10 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo cp .configtemplates/enginiety.conf ~/.config/scripts/enginiety.conf
   source .config/enginiety.conf
   git config --global user.email $USER_EMAIL_WORK
+  sudo rm ~/.scripts/make_backup_*
+  sudo rm ~/.scripts/android_*
+  sudo rm ~/.scripts/ssh_linuxpl.sh
+  sudo rm ~/.scripts/datelog.sh
   echo "work setup done"
 else
   sudo rm ~/.scripts/play_* || true
