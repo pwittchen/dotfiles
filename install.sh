@@ -37,7 +37,6 @@ mkdir ~/.scripts
 sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
-  sudo rm ~/.scripts/make_backup_* -f || true
   sudo cp .config/enginiety.conf ~/.config/scripts/enginiety.conf
   source .config/enginiety.conf
   git config --global user.email $USER_EMAIL_WORK
