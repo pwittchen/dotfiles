@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
 set -e
 
+sudo cp .gitconfig ~/
+sudo cp .gitignore_global ~/
+sudo cp .tmux.conf ~/
+sudo cp .vimrc ~/
+sudo cp .zshrc ~/
+sudo cp .ghci ~/
+
+sudo rm -rf ~/.scripts || true
+mkdir ~/.scripts
+sudo cp -R .scripts/* ~/.scripts
+
 if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo mkdir ~/.config/scripts_backup || true
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
@@ -18,23 +29,12 @@ if [ ! -z $1 ] && [ $1 == "restoreconfig" ]; then
   exit 1
 fi
 
-sudo cp .gitconfig ~/
-sudo cp .gitignore_global ~/
-sudo cp .tmux.conf ~/
-sudo cp .vimrc ~/
-sudo cp .zshrc ~/
-sudo cp .ghci ~/
-
 if [ ! -z $1 ] && [ $1 == "argos" ]; then
   sudo rm -rf ~/.config/argos || true
   mkdir ~/.config/argos
   sudo cp -R .argos/* ~/.config/argos
   echo "argos scripts copied"
 fi
-
-sudo rm -rf ~/.scripts || true
-mkdir ~/.scripts
-sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo cp .configtemplates/enginiety.conf ~/.config/scripts/enginiety.conf
@@ -43,6 +43,10 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   echo "work setup done"
 else
   sudo rm ~/.scripts/play_* || true
+fi
+
+if [ `uname` != "Darwin" ]; then
+  sudo rm ~/.scripts/apple_* || true
 fi
 
 echo "dotfiles installed successfully! \o/"
