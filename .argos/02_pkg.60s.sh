@@ -5,4 +5,4 @@ echo "📦 $pkgs_count"
 
 echo "---"
 
-pacman -Qu
+pacman -Qu | head

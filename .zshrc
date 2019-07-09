@@ -4,8 +4,8 @@ ZSH_THEME="kolo"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
-
 export PATH=$PATH:$HOME/.scripts
+export VISUAL=vim
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
