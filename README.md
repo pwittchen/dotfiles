@@ -4,11 +4,14 @@ my dotfiles
 
 usage
 -----
-- installation/update: `./install.sh`
-- generating empty configs: `./install.sh emptyconfig`
-- restoring old configs: `./install.sh restoreconfig`
-- installing my current work setup: `./install.sh work`
-- installing argos scripts: `./install.sh argos`
+
+```
+installation/update:                 ./install.sh
+generating empty configs:             ./install.sh emptyconfig
+restoring old configs:                ./install.sh restoreconfig
+installing my current work setup:    ./install.sh work
+installing argos scripts:            ./install.sh argos
+```
 
 **please note**: part of this stuff may not work out of the box
 
