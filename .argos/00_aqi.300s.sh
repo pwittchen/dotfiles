@@ -2,6 +2,13 @@
 
 source ~/.config/scripts/aqi.conf
 
+check_online=$(nm-online | grep "online")
+
+if [ "$check_online" == "" ] ; then
+  echo "⚠️  aqi off"
+  exit
+fi
+
 URL="https://airapi.airly.eu/v2/measurements/installation?installationId=$SENSOR_ID"
 API_KEY_PREFIX="apikey: "
 API_KEY_HEADER="$API_KEY_PREFIX$API_KEY"
