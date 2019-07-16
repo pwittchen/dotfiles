@@ -36,6 +36,29 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
   echo "argos scripts copied"
 fi
 
+if [ ! -z $1 ] && [ $1 == "vim" ]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  git clone https://github.com/scrooloose/nerdtree ~/.vim/bundle/nerdtree
+  git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
+  git clone https://github.com/kien/ctrlp.vim ~/.vim/bundle/ctrlp
+  git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
+  git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
+  git clone https://github.com/Kazark/vim-SimpleSmoothScroll ~/.vim/bundle/vim-SimpleSmoothScroll
+  echo "pathogen and vim plugins installed"
+fi
+
+if [ ! -z $1 ] && [ $1 == "tmux" ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tmux-sidebar ~/.tmux/plugins/tmux-sidebar
+  git clone https://github.com/tmux-plugins/tmux-copycat ~/.tmux/plugins/tmux-copycat
+  git clone https://github.com/tmux-plugins/tmux-pain-control ~/.tmux/plugins/tmux-pain-control
+  git clone https://github.com/pwittchen/tmux-plugin-battery ~/.tmux/plugins/tmux-plugin-battery
+  git clone https://github.com/pwittchen/tmux-plugin-cpu ~/.tmux/plugins/tmux-plugin-cpu
+  git clone https://github.com/pwittchen/tmux-plugin-ram ~/.tmux/plugins/tmux-plugin-ram
+  echo "tpm and tmux plugins installed"
+fi
+
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo cp .configtemplates/enginiety.conf ~/.config/scripts/enginiety.conf
   source ~/.config/scripts/enginiety.conf
