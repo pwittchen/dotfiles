@@ -15,4 +15,5 @@ if [ "$msg_count" == "0" ] ; then
   echo "📪 $msg_count"
 else 
   echo "📫 $msg_count"
+  notify-send "e-mail" "you have $msg_count new message(s)"
 fi
