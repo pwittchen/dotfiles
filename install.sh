@@ -37,6 +37,7 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
 fi
 
 if [ ! -z $1 ] && [ $1 == "vim" ]; then
+  sudo rm -rf ~/.vim || true
   mkdir -p ~/.vim/autoload ~/.vim/bundle
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
   git clone https://github.com/scrooloose/nerdtree ~/.vim/bundle/nerdtree
@@ -49,6 +50,8 @@ if [ ! -z $1 ] && [ $1 == "vim" ]; then
 fi
 
 if [ ! -z $1 ] && [ $1 == "tmux" ]; then
+  sudo rm -rf ~/.tmux || true
+  mkdir -p ~/.tmux/plugins
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   git clone https://github.com/tmux-plugins/tmux-sidebar ~/.tmux/plugins/tmux-sidebar
   git clone https://github.com/tmux-plugins/tmux-copycat ~/.tmux/plugins/tmux-copycat
@@ -56,7 +59,9 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
   git clone https://github.com/pwittchen/tmux-plugin-battery ~/.tmux/plugins/tmux-plugin-battery
   git clone https://github.com/pwittchen/tmux-plugin-cpu ~/.tmux/plugins/tmux-plugin-cpu
   git clone https://github.com/pwittchen/tmux-plugin-ram ~/.tmux/plugins/tmux-plugin-ram
+  git clone https://github.com/pwittchen/tmux-plugin-uptime ~/.tmux/plugins/tmux-plugin-uptime
   echo "tpm and tmux plugins installed"
+  echo "type Ctrl+B + I to reload tmux plugins"
 fi
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
