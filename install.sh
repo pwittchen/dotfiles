@@ -1,17 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-sudo cp .gitconfig ~/
-sudo cp .gitignore_global ~/
-sudo cp .tmux.conf ~/
-sudo cp .vimrc ~/
-sudo cp .zshrc ~/
-sudo cp .ghci ~/
-
-sudo rm -rf ~/.scripts || true
-mkdir ~/.scripts
-sudo cp -R .scripts/* ~/.scripts
-
 if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo mkdir ~/.config/scripts_backup || true
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
@@ -34,6 +23,7 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
   mkdir ~/.config/argos
   sudo cp -R .argos/* ~/.config/argos
   echo "argos scripts copied"
+  exit 1
 fi
 
 if [ ! -z $1 ] && [ $1 == "vim" ]; then
@@ -47,6 +37,7 @@ if [ ! -z $1 ] && [ $1 == "vim" ]; then
   git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
   git clone https://github.com/Kazark/vim-SimpleSmoothScroll ~/.vim/bundle/vim-SimpleSmoothScroll
   echo "pathogen and vim plugins installed"
+  exit 1
 fi
 
 if [ ! -z $1 ] && [ $1 == "tmux" ]; then
@@ -62,7 +53,19 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
   git clone https://github.com/pwittchen/tmux-plugin-uptime ~/.tmux/plugins/tmux-plugin-uptime
   echo "tpm and tmux plugins installed"
   echo "type Ctrl+B + I to reload tmux plugins"
+  exit 1
 fi
+
+sudo cp .gitconfig ~/
+sudo cp .gitignore_global ~/
+sudo cp .tmux.conf ~/
+sudo cp .vimrc ~/
+sudo cp .zshrc ~/
+sudo cp .ghci ~/
+
+sudo rm -rf ~/.scripts || true
+mkdir ~/.scripts
+sudo cp -R .scripts/* ~/.scripts
 
 if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo cp .configtemplates/enginiety.conf ~/.config/scripts/enginiety.conf
