@@ -15,4 +15,4 @@ installing tpm and tmux plugins       ./install.sh tmux
 installing pathogen and vim plugins   ./install.sh vim
 ```
 
-**please note**: part of this stuff may not work out of the box
+**please note**: this is my personal setup and part of this stuff may not work out of the box
