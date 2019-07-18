@@ -13,8 +13,8 @@ fi
 
 if [ ! -z $1 ] && [ $1 == "restoreconfig" ]; then
   sudo cp -R ~/.config/scripts_backup/* ~/.config/scripts
-  sudo rm -rf ~/.config/scripts_backup
-  echo "backup config restored"
+  sudo rm -rf ~/.config/scripts_backup || true
+  echo "backup config files restored"
   exit 1
 fi
 
@@ -22,7 +22,7 @@ if [ ! -z $1 ] && [ $1 == "argos" ]; then
   sudo rm -rf ~/.config/argos || true
   mkdir ~/.config/argos
   sudo cp -R .argos/* ~/.config/argos
-  echo "argos scripts copied"
+  echo "argos scripts installed"
   exit 1
 fi
 
@@ -52,9 +52,11 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
   git clone https://github.com/pwittchen/tmux-plugin-ram ~/.tmux/plugins/tmux-plugin-ram
   git clone https://github.com/pwittchen/tmux-plugin-uptime ~/.tmux/plugins/tmux-plugin-uptime
   echo "tpm and tmux plugins installed"
-  echo "type Ctrl+B + I to reload tmux plugins"
+  echo "type Ctrl+B + I to reload tmux plugins in terminal"
   exit 1
 fi
+
+# main install process starts from here
 
 sudo cp .gitconfig ~/
 sudo cp .gitignore_global ~/
