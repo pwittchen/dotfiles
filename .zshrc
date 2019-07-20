@@ -10,8 +10,6 @@ export EDITOR=/usr/bin/vim
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
-  alias mc="mc -S nicedark"
-  alias trim="awk '{gsub(/^ +| +$/,\"\")}1'"
 fi
 
 if [ `uname` = "Darwin" ]; then
