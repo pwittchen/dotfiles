@@ -5,21 +5,15 @@ plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-hi
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:$HOME/.scripts
-export VISUAL=vim
 export EDITOR=/usr/bin/vim
-
-if [ `uname` = "Linux" ]; then
-  [[ $TERM != "screen" ]] && exec tmux
-fi
-
-if [ `uname` = "Darwin" ]; then
-  alias mc="mc -a -S modarin256-defbg"
-fi
-
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
+
+if [ `uname` = "Linux" ]; then
+  [[ $TERM != "screen" ]] && exec tmux
+fi
 
 export SDKMAN_DIR="/$HOME/.sdkman"
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
