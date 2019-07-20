@@ -2,13 +2,6 @@
 
 source ~/.config/scripts/aqi.conf
 
-check_online=$(nm-online | grep "online")
-
-if [ "$check_online" == "" ] ; then
-  echo " "
-  exit
-fi
-
 URL="https://airapi.airly.eu/v2/measurements/installation?installationId=$SENSOR_ID"
 API_KEY_PREFIX="apikey: "
 API_KEY_HEADER="$API_KEY_PREFIX$API_KEY"
@@ -22,6 +15,11 @@ RESPONSE=$(curl -X GET \
 AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
 ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice | cut -d "\"" -f 2)
 DESC=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.description | cut -d "\"" -f 2)
+
+if [ "$AQI" == "" ] ; then
+  echo " "
+  exit
+fi
 
 case 1 in
   $(($AQI <= 50)))  EMOJI="🌀";;

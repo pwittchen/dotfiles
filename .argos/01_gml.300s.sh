@@ -2,14 +2,14 @@
 
 source $HOME/.config/scripts/gmail.conf
 
-check_online=$(nm-online | grep "online")
+mail_feed=$(curl -u "$GMAIL_USER:$GMAIL_PASS" -s 'https://mail.google.com/mail/feed/atom')
 
-if [ "$check_online" == "" ] ; then
-  echo " "
-  exit
+if [ "$mail_feed" == "" ] ; then
+ echo " "
+ exit
 fi
 
-msg_count=$(curl -u "$GMAIL_USER:$GMAIL_PASS" -s 'https://mail.google.com/mail/feed/atom' | xmllint --format - | grep fullcount | sed -e 's/<[^>]*>//g' | sed 's/ //g')
+msg_count=$(echo $mail_feed | xmllint --format - | grep fullcount | sed -e 's/<[^>]*>//g' | sed 's/ //g')
 
 # tmp file is created to prevent sending the same notification multiple times
 tmp_file="/tmp/email_notification_sent"
