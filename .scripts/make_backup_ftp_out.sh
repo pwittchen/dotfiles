@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 source ~/.config/scripts/linuxpl.conf
+
+check_online=$(nm-online | grep "online")
+
+if [ "$check_online" == "" ] ; then
+  timestamp=$(date)
+  msg="$timestamp no backup [offline]"
+  echo "$msg" >> /var/log/scripts/ftp_backup_out.log
+  exit
+fi
+
 rm -rf ~/Backup/*
 cp -avr ~/Documents/ebooks ~/Backup/ebooks
 cp -avr ~/Documents/finance ~/Backup/finance
