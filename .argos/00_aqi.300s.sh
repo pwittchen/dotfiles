@@ -5,7 +5,7 @@ source ~/.config/scripts/aqi.conf
 check_online=$(nm-online | grep "online")
 
 if [ "$check_online" == "" ] ; then
-  echo "⚠️ AQI off"
+  echo " "
   exit
 fi
 
@@ -31,7 +31,7 @@ case 1 in
 esac
 
 if [ "$AQI" == "null" ]; then
-    echo "❔ AQI unknown"
+    echo "❔"
 else
     echo "$EMOJI $AQI"
 fi

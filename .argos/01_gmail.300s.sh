@@ -5,7 +5,7 @@ source $HOME/.config/scripts/gmail.conf
 check_online=$(nm-online | grep "online")
 
 if [ "$check_online" == "" ] ; then
-  echo "⚠️  email off"
+  echo " "
   exit
 fi
 
