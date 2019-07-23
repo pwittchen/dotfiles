@@ -77,6 +77,9 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo rm ~/.scripts/android_*
   sudo rm ~/.scripts/ssh_linuxpl.sh
   sudo rm ~/.scripts/datelog.sh
+  sudo head --lines=-3 ~/.scripts/aliases.sh > ~/.scripts/aliases_new.sh
+  sudo rm ~/.scripts/aliases.sh
+  sudo mv ~/.scripts/aliases_new.sh ~/.scripts/aliases.sh
   echo "work setup done"
 else
   sudo rm ~/.scripts/play_* || true
