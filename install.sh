@@ -80,6 +80,7 @@ if [ ! -z $1 ] && [ $1 == "work" ]; then
   sudo head --lines=-3 ~/.scripts/aliases.sh > ~/.scripts/aliases_new.sh
   sudo rm ~/.scripts/aliases.sh
   sudo mv ~/.scripts/aliases_new.sh ~/.scripts/aliases.sh
+  sudo chmod +x ~/.scripts/aliases.sh
   echo "work setup done"
 else
   sudo rm ~/.scripts/play_* || true
