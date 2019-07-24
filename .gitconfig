@@ -5,6 +5,16 @@
     autocrlf = input
     editor = vim
     excludesfile = ~/.gitignore_global
+[push]
+	; push only to the current branch
+    default = simple
+[diff]
+    tool = vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
 [alias]
     ; metadata
     aliases = !git config -l | grep alias | cut -c 7- | sort
@@ -73,10 +83,6 @@
 
     ; searching files
     find-file= !git ls-files | grep -i
-[push]
-    default = simple
-[diff]
-    tool = vimdiff
 
 ; interesting references for git aliases and configuration:
 ; - https://gist.github.com/mwhite/6887990
