@@ -22,16 +22,16 @@ if [ "$AQI" == "" ] ; then
 fi
 
 case 1 in
-  $(($AQI <= 50)))  EMOJI="🌀";;
-  $(($AQI <= 75)))  EMOJI="😕";;
-  $(($AQI <= 100))) EMOJI="😷";;
-  $(($AQI >= 101))) EMOJI="😱";;
+  $(($AQI <= 50)))  EMOJI="great!";;
+  $(($AQI <= 75)))  EMOJI="medium";;
+  $(($AQI <= 100))) EMOJI="bad";;
+  $(($AQI >= 101))) EMOJI="very bad";;
 esac
 
 if [ "$AQI" == "null" ]; then
-    echo "❔"
+  echo "?"
 else
-    echo "$EMOJI $AQI"
+  echo "AQI: $AQI ($EMOJI)"
 fi
 
 echo "---"
