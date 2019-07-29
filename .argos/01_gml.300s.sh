@@ -15,10 +15,10 @@ msg_count=$(echo $mail_feed | xmllint --format - | grep fullcount | sed -e 's/<[
 tmp_file="/tmp/email_notification_sent"
 
 if [ "$msg_count" == "0" ] ; then
-  echo "email: $msg_count"
+  echo "E: $msg_count"
   rm -f "$tmp_file" || true
 else 
-  echo "email: $msg_count"
+  echo "E: $msg_count"
   if [ ! -f "$tmp_file" ] ; then
     notify-send "e-mail" "you have $msg_count new message(s)"
     touch "$tmp_file"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pkgs_count=$(pacman -Qu | wc -l)
-echo "updates: $pkgs_count"
+echo "U: $pkgs_count"
 
 echo "---"
 
