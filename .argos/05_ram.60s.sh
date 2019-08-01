@@ -12,7 +12,7 @@ if [ -z "$ramUsage" ]; then
   getRamUsage
 fi
 
-echo "RAM: $ramUsage%"
+echo "📟 $ramUsage%"
 echo "---"
 echo "use most of RAM:"
 ps axch -o cmd:15,%mem --sort=-%mem | head

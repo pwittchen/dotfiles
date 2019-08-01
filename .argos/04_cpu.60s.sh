@@ -6,9 +6,9 @@ if [ ! -z $(command -v sensors) ]; then
   cpu_temp=$(sensors | awk '/^Package/ {print $4}')
 fi
 if [ ! -z $cpu_temp ]; then
-  echo "CPU: $cpu_usage ($cpu_temp)"
+  echo "💻 $cpu_usage (🌡️$cpu_temp)"
 else
-  echo "CPU: $cpu_usage"
+  echo "💻 $cpu_usage"
 fi
 echo "---"
 echo "use most of CPU:"
