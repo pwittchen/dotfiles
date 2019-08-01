@@ -15,6 +15,7 @@ cp -avr ~/Documents/tmp ~/Backup/tmp
 cp -avr ~/Documents/travel ~/Backup/travel
 cp -avr ~/Documents/work ~/Backup/work
 cp -avr ~/Pictures/wallpapers ~/Backup/wallpapers
+cp -avr ~/.newsboat ~/Backup/newsboat
 mkdir -p ~/Backup/secrets
 cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
 cp -avr ~/.password-store ~/Backup/secrets/.password-store
