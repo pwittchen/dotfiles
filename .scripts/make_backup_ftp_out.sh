@@ -11,7 +11,6 @@ cp -avr ~/Documents/notes ~/Backup/notes
 cp -avr ~/Documents/datelog ~/Backup/datelog
 cp -avr ~/Documents/other ~/Backup/other
 cp -avr ~/Documents/presentations ~/Backup/presentations
-cp -avr ~/Documents/tmp ~/Backup/tmp
 cp -avr ~/Documents/travel ~/Backup/travel
 cp -avr ~/Documents/work ~/Backup/work
 cp -avr ~/Pictures/wallpapers ~/Backup/wallpapers
