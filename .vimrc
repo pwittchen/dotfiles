@@ -32,4 +32,8 @@ set list                    "Shows whitespaces and end of line
 set nolist                  "Hides whitespaces and end of line
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
+let mapleader = ','
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
+
 execute pathogen#infect()
