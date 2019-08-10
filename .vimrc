@@ -35,5 +35,6 @@ map <F6> :setlocal spell! spelllang=en_us<CR>
 let mapleader = ','
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>g :Goyo<CR>
 
 execute pathogen#infect()
