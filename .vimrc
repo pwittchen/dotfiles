@@ -37,4 +37,7 @@ nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>g :Goyo<CR>
 
+" remove all trailing whitespaces on save
+autocmd BufWritePre * %s/\s\+$//e
+
 execute pathogen#infect()
