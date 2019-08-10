@@ -31,6 +31,8 @@ set pastetoggle=<F2>        "Toggles paste mode (useful while pasting text from 
 set list                    "Shows whitespaces and end of line
 set nolist                  "Hides whitespaces and end of line
 map <F6> :setlocal spell! spelllang=en_us<CR>
+vnoremap <C-c> "+y
+map <C-v> "+p
 
 let mapleader = ','
 nnoremap <leader>d :NERDTreeToggle<CR>
