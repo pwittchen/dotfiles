@@ -3,6 +3,7 @@ source ~/.config/scripts/linuxpl.conf
 
 rm -rf ~/Backup/*
 cp -avr ~/Documents/ebooks ~/Backup/ebooks
+cp -avr ~/Documents/articles ~/Backup/articles
 cp -avr ~/Documents/finance ~/Backup/finance
 cp -avr ~/Documents/sport ~/Backup/sport
 cp -avr ~/Documents/guitar ~/Backup/guitar
