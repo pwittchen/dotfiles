@@ -32,12 +32,13 @@ set list                    "Shows whitespaces and end of line
 set nolist                  "Hides whitespaces and end of line
 map <F6> :setlocal spell! spelllang=en_us<CR>
 vnoremap <C-c> "+y
-map <C-v> "+p
+map <C-p> "+p
 
 let mapleader = ','
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>g :Goyo<CR>
+nnoremap <leader>p :CtrlP<CR>
 
 " remove all trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
