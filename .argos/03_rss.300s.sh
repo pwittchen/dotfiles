@@ -13,8 +13,4 @@ else
   fi
 fi
 
-if [ "$no_of_unread_arts" == "" ] ; then
-  echo " "
-else
-  echo "📶 $no_of_unread_arts"
-fi
+echo "📶 $no_of_unread_arts"
