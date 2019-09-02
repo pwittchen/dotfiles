@@ -54,7 +54,7 @@
     reset-file = checkout HEAD --
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
-    remove-from-stage = reset HEAD -- 
+    remove-from-stage = reset HEAD --
     undo-last-commit = reset --hard HEAD^
     revert-merge-commit = git revert -m 1
     restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
@@ -75,7 +75,6 @@
     force-delete-branch = branch -D
     delete-remote-branch = push origin --delete
     delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-    delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
     diff-commit = diff --cached HEAD^
