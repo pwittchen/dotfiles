@@ -55,7 +55,7 @@
     discard-uncommited-changes = reset --hard
     discard-unstaged-changes = checkout -- .
     remove-from-stage = reset HEAD --
-    undo-last-commit = reset --hard HEAD^
+    undo-last-commit = reset --hard HEAD~1
     revert-merge-commit = git revert -m 1
     restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 
@@ -65,7 +65,6 @@
     remove-untracked-dirs = clean -fd
 
     ; merging/squashing commits
-    merge-commits = !sh -c 'git reset --soft HEAD~$1' -
     squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";  };f"
 
     ; branches
