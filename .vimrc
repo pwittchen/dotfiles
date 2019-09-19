@@ -34,11 +34,14 @@ map <F6> :setlocal spell! spelllang=en_us<CR>
 vnoremap <C-c> "+y
 map <C-p> "+p
 
+let g:mergetool_layout = 'LmR'
 let mapleader = ','
+
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>g :Goyo<CR>
 nnoremap <leader>p :CtrlP<CR>
+nnoremap <leader>m :MergetoolToggle<CR>
 
 " remove all trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
