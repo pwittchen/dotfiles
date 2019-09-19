@@ -37,6 +37,7 @@ if [ ! -z $1 ] && [ $1 == "vim" ]; then
   git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
   git clone https://github.com/Kazark/vim-SimpleSmoothScroll ~/.vim/bundle/vim-SimpleSmoothScroll
   git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo.vim
+  git clone https://github.com/samoshkin/vim-mergetool.git ~/.vim/bundle/vim-mergetool
   echo "pathogen and vim plugins installed"
   exit 1
 fi
