@@ -45,6 +45,8 @@ else
   do
     if [ $i -lt 3 ]; then
         tabs='\t\t\t\t'
+    elif [ $i -eq 4 ]; then
+        tabs='\t\t\t'
     elif [ $i -lt 5 ]; then
         tabs='\t\t'
     else
