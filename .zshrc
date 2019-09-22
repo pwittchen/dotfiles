@@ -2,13 +2,13 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 ZSH_THEME="bureau"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.scripts/aliases.sh
-export PATH=$PATH:$HOME/.scripts
 export EDITOR=/usr/bin/vim
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator
+export GOPATH=$HOME/go
+export ANDROID=$HOME/Android/Sdk
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 
 if [ `uname` = "Linux" ]; then
   [[ $TERM != "screen" ]] && exec tmux
