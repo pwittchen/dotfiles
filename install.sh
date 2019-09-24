@@ -71,24 +71,6 @@ sudo rm -rf ~/.scripts || true
 mkdir ~/.scripts
 sudo cp -R .scripts/* ~/.scripts
 
-if [ ! -z $1 ] && [ $1 == "work" ]; then
-  sudo cp .config_templates/enginiety.conf ~/.config/scripts/enginiety.conf
-  source ~/.config/scripts/enginiety.conf
-  git config --global user.email $USER_EMAIL_WORK
-  sudo rm ~/.scripts/make_backup_*
-  sudo rm ~/.scripts/android_*
-  sudo rm ~/.scripts/ssh_linuxpl.sh
-  sudo rm ~/.scripts/datelog.sh
-  sudo head --lines=10 ~/.scripts/aliases.sh > ~/.scripts/aliases_new.sh
-  sudo rm ~/.scripts/aliases.sh
-  sudo mv ~/.scripts/aliases_new.sh ~/.scripts/aliases.sh
-  sudo chmod +x ~/.scripts/aliases.sh
-  echo "work setup done"
-else
-  sudo rm ~/.scripts/play_* || true
-  echo "personal setup done"
-fi
-
 if [ `uname` != "Darwin" ]; then
   sudo rm ~/.scripts/apple_* || true
 else
