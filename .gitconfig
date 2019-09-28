@@ -73,7 +73,7 @@
     delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
-    diff-commit = diff --cached HEAD^
+    diff-commit = diff --cached HEAD~1
     diff-staged = diff --staged
 
     ; searching files
