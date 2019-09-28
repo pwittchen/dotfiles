@@ -6,7 +6,7 @@
     editor = vim
     excludesfile = ~/.gitignore_global
 [push]
-	; push only to the current branch
+    ; push only to the current branch
     default = simple
 [diff]
     tool = vimdiff
