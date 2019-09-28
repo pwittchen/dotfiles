@@ -29,10 +29,7 @@
     my-commits-last-month = "!git log --author=\"`git config user.name`\" --pretty=format:\"%cd %h %s\" --date=short --since=\"30 days ago\" --all --no-merges"
     last-commit-msg = log -1 --pretty=%B
     last-commit-hash = log -1 --pretty=%h
-    log-raw = log --raw
-    log-hist = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    log-hist-simple = log --graph --decorate --pretty=oneline --abbrev-commit
-    log-short = log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset %s %C(bold blue)[%cn]%Creset' --decorate --date=short
+    hist = log --graph --decorate --pretty=format:'%C(yellow)%h %Creset %C(red)%d %ad% %Creset %s %C(bold blue)[%cn]%Creset' --date=relative --abbrev-commit
     list-new-unstaged-files = ls-files --others --exclude-standard
     list-contributors = shortlog -sn
 
