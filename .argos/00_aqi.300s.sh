@@ -29,7 +29,7 @@ case 1 in
 esac
 
 if [ "$AQI" == "null" ]; then
-    echo "❔"
+    echo "🚫"
 else
     echo "$EMOJI $AQI"
 fi
