@@ -37,9 +37,9 @@ fi
 echo "---"
 
 if [ "$AQI" == "null" ]; then
-    echo "API rate limit exceeded or sensor is off"
+    echo "Airly API rate limit exceeded or sensor is off"
 else
-  echo "measurement details:"
+  echo "air measurement details:"
 
   for i in {0..5}
   do
