@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+################################################
+# parametrized installation utilities go first #
+################################################
+
 if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo mkdir ~/.config/scripts_backup || true
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
@@ -11,10 +15,10 @@ if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   exit 1
 fi
 
-if [ ! -z $1 ] && [ $1 == "restoreconfig" ]; then
+if [ ! -z $1 ] && [ $1 == "restorelastconfig" ]; then
   sudo cp -R ~/.config/scripts_backup/* ~/.config/scripts
   sudo rm -rf ~/.config/scripts_backup || true
-  echo "backup config files restored"
+  echo "backup of the last config files restored"
   exit 1
 fi
 
@@ -58,7 +62,9 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
   exit 1
 fi
 
-# main install process starts from here
+#########################################
+# main install process starts from here #
+#########################################
 
 sudo cp .gitconfig ~/
 sudo cp .gitignore_global ~/
@@ -73,11 +79,10 @@ sudo cp -R .scripts/* ~/.scripts
 
 if [ `uname` != "Darwin" ]; then
   sudo rm ~/.scripts/apple_* || true
+  echo "linux setup done"
 else
-  echo "apple setup done"
+  echo "apple/macos setup done"
 fi
 
 echo "dotfiles installed successfully! \o/"
-echo "restart terminal or run commands below to refresh configs"
-echo "run: source ~/.zshrc"
-echo "run: tmux source-file ~/.tmux.conf"
+echo "please, restart your terminal"
