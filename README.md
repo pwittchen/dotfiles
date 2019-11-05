@@ -7,8 +7,8 @@ usage
 
 ```
 installation/update:                  ./install.sh
-generating empty configs:              ./install.sh emptyconfig
-restoring old/last configs:            ./install.sh restorelastconfig
+generating empty configs:             ./install.sh emptyconfig
+restoring old/last configs:           ./install.sh restorelastconfig
 installing argos scripts:             ./install.sh argos
 installing tpm and tmux plugins:      ./install.sh tmux
 installing pathogen and vim plugins:  ./install.sh vim
