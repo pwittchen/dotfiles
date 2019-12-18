@@ -13,7 +13,6 @@ RESPONSE=$(curl -X GET \
     "$URL")
 
 AQI=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.value | cut -f1 -d"." | cut -f1 -d",")
-ADVICE=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.advice | cut -d "\"" -f 2)
 DESC=$(echo $RESPONSE | jq .current.indexes | jq '.[0]'.description | cut -d "\"" -f 2)
 
 if [ "$AQI" == "" ] ; then
@@ -56,5 +55,4 @@ else
   done
 
   echo $DESC
-  echo $ADVICE
 fi
