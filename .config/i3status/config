@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+        colors 		= true
+        interval 	= 5
     	color_good      = '#88b090'
     	color_degraded  = '#ccdc90'
     	color_bad       = '#e89393'
@@ -72,5 +72,5 @@ memory {
 }
 
 tztime local {
-        format = " %a %Y-%m-%d %H:%M"
+        format = " %a %Y-%m-%d %H:%M  "
 }
