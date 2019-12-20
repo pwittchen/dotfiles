@@ -49,7 +49,7 @@ battery 0 {
 }
 
 disk "/" {
-	format = "%avail"
+	format = " %avail"
 }
 
 disk "/home" {
@@ -72,5 +72,5 @@ memory {
 }
 
 tztime local {
-        format = "%a %Y-%m-%d %H:%M"
+        format = " %a %Y-%m-%d %H:%M"
 }

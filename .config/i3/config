@@ -14,6 +14,12 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# setting bg color
+exec --no-startup-id xsetroot -solid "#17212b"
+
+# setting wallpaper
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/forest/forest_in_clouds.jpg
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
