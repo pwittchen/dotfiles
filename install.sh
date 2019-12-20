@@ -10,7 +10,7 @@ if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
   sudo rm -rf ~/.config/scripts || true
   sudo mkdir -p ~/.config/scripts
-  sudo cp -R .config_templates/* ~/.config/scripts
+  sudo cp -R .config/scripts/* ~/.config/scripts
   echo "empty config files created"
   exit 1
 fi
