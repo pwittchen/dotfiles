@@ -62,6 +62,10 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
   exit 1
 fi
 
+if [ ! -z $1 ] && [ $1 == "i3" ]; then
+  sudo cp .config/i3/config ~/.config/i3/
+fi
+
 #########################################
 # main install process starts from here #
 #########################################
