@@ -4,7 +4,6 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -147,6 +146,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+b exec "i3lock -c 17212b" 
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -174,23 +175,34 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+mode "moveit" {
+    bindsym Up move up 20px
+    bindsym Left move left 20px
+    bindsym Down move down 20px
+    bindsym Right move right 20px
+    bindsym Mod4+m mode "default"
+}
+
+bindsym $mod+m focus floating; mode "moveit"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
 bar {
 	workspace_buttons yes
-    position top
-    status_command i3status
+    	position top
+    	status_command i3status
 	font pango:Roboto 10
+
 	colors {
 		background #17212b
-        statusline #ffffff
-        separator #666666
-
-        active_workspace   #2c3e50 #2c3e50 #1abc9c
-        focused_workspace  #2c3e50 #2c3e50 #1abc9c
-        inactive_workspace #2c3e50 #2c3e50 #ecf0f1
-        urgent_workspace   #e74c3c #e74c3c #ecf0f1
-    }
+        	statusline #ffffff
+        	separator  #666666
+        	active_workspace   #2c3e50 #2c3e50 #1abc9c
+        	focused_workspace  #2c3e50 #2c3e50 #1abc9c
+        	inactive_workspace #2c3e50 #2c3e50 #ecf0f1
+        	urgent_workspace   #e74c3c #e74c3c #ecf0f1
+    	}
 }
 
 # hide windows title bar
