@@ -25,7 +25,7 @@ fi
 if [ ! -z $1 ] && [ $1 == "argos" ]; then
   sudo rm -rf ~/.config/argos || true
   mkdir ~/.config/argos
-  sudo cp -R .argos/* ~/.config/argos
+  sudo cp -R .config/argos/* ~/.config/argos
   echo "argos scripts installed"
   exit 1
 fi
