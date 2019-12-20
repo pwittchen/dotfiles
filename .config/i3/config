@@ -178,15 +178,19 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	workspace_buttons yes
-    	position top
-    	status_command i3status
-	font pango:5 10
+    position top
+    status_command i3status
+	font pango:Roboto 10
 	colors {
-                background #000000
-                statusline #b7b7b7
-                focused_workspace  #454545 #225577 #ffffff
-                inactive_workspace #454545 #212121 #ffffff
-        }
+		background #17212b
+        statusline #ffffff
+        separator #666666
+
+        active_workspace   #2c3e50 #2c3e50 #1abc9c
+        focused_workspace  #2c3e50 #2c3e50 #1abc9c
+        inactive_workspace #2c3e50 #2c3e50 #ecf0f1
+        urgent_workspace   #e74c3c #e74c3c #ecf0f1
+    }
 }
 
 # hide windows title bar
