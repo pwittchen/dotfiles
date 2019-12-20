@@ -177,7 +177,16 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+	workspace_buttons yes
+    	position top
+    	status_command i3status
+	font pango:5 10
+	colors {
+                background #000000
+                statusline #b7b7b7
+                focused_workspace  #454545 #225577 #ffffff
+                inactive_workspace #454545 #212121 #ffffff
+        }
 }
 
 # hide windows title bar
