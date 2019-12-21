@@ -21,6 +21,7 @@ order += "disk /"
 order += "disk /home"
 order += "load"
 order += "memory"
+order += "read_file pacman_new_packages"
 order += "read_file weather"
 order += "tztime local"
 
@@ -64,6 +65,11 @@ memory {
         format = "%used / %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
+}
+
+read_file pacman_new_packages {
+	format = "📦 %content"
+	path = "/var/log/scripts/pacman_new_packages.log"
 }
 
 read_file weather {
