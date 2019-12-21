@@ -23,6 +23,7 @@ order += "load"
 order += "memory"
 order += "volume master"
 order += "read_file pacman_new_packages"
+order += "read_file rss"
 order += "read_file aqi"
 order += "read_file weather"
 order += "tztime local"
@@ -78,6 +79,11 @@ volume master {
 read_file pacman_new_packages {
 	format = "📦 %content"
 	path = "/var/log/scripts/pacman_new_packages.log"
+}
+
+read_file rss {
+	format = "📶 %content"
+	path = "/var/log/scripts/newsboat.log"
 }
 
 read_file aqi {
