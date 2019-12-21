@@ -70,8 +70,8 @@ memory {
 }
 
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
+        format = "♪ %volume"
+        format_muted = "♪ muted (%volume)"
         device = "pulse:1"
 }
 
@@ -81,7 +81,7 @@ read_file pacman_new_packages {
 }
 
 read_file aqi {
-	format = "aqi: %content"
+	format = "aqi %content"
 	path = "/var/log/scripts/aqi.log"
 }
 
