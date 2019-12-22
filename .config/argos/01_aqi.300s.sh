@@ -22,7 +22,7 @@ fi
 
 case 1 in
   $(($AQI <= 50)))  EMOJI="✔";;
-  $(($AQI <= 75)))  EMOJI="🔺";;
+  $(($AQI <= 75)))  EMOJI="🏭";;
   $(($AQI <= 100))) EMOJI="😷";;
   $(($AQI >= 101))) EMOJI="😱";;
 esac
