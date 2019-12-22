@@ -87,7 +87,7 @@ read_file rss {
 }
 
 read_file aqi {
-	format = "aqi %content"
+	format = "%content"
 	path = "/var/log/scripts/aqi.log"
 }
 
