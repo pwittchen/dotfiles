@@ -20,8 +20,24 @@ function wallreload {
   feh --bg-scale ~/Pictures/wallpapers/mountains/bw-mountain-clouds.jpg
 }
 
+function help {
+    echo "
+    monitor.sh is a simple wrapper for xrandr and feh to manage monitors and wallpapers
+
+    usage:
+
+    help            shows help
+    list            lists monitors
+    laptopoff       disables laptop primary monitor
+    laptopmirror    mirrors laptop monitor into external HDMI-2 output and preserving laptop resolution
+    reset           resets monitor configuration
+    wallreload      reloads wallpaper
+    "
+}
+
 function main {
-  if [ -z "$1" ] ; then
+  if [ -z "$1" ] || [ "$1" == "help" ] ; then
+    help
     exit
   fi
   if [ "$1" == "list" ]; then
