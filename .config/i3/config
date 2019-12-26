@@ -18,7 +18,7 @@ font pango:monospace 8
 exec --no-startup-id xsetroot -solid "#17212b"
 
 # setting wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/mountains/bw-mountain-clouds.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/mountains/dark_mountains.jpg
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
