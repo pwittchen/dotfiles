@@ -22,14 +22,6 @@ if [ ! -z $1 ] && [ $1 == "restorelastconfig" ]; then
   exit 1
 fi
 
-if [ ! -z $1 ] && [ $1 == "argos" ]; then
-  sudo rm -rf ~/.config/argos || true
-  mkdir ~/.config/argos
-  sudo cp -R .config/argos/* ~/.config/argos
-  echo "argos scripts installed"
-  exit 1
-fi
-
 if [ ! -z $1 ] && [ $1 == "vim" ]; then
   sudo rm -rf ~/.vim || true
   mkdir -p ~/.vim/autoload ~/.vim/bundle
