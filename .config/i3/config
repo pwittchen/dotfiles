@@ -201,6 +201,7 @@ bar {
     	status_command i3status
 	font pango:Roboto 10
 	height 25
+	tray_output none
 
 	colors {
 		background #17212b
