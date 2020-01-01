@@ -8,7 +8,7 @@
 
 general {
         colors 		= true
-        interval 	= 5
+        interval 	= 10
     	color_good      = '#88b090'
     	color_degraded  = '#ccdc90'
     	color_bad       = '#e89393'
@@ -20,6 +20,7 @@ order += "battery 0"
 order += "disk /"
 order += "disk /home"
 order += "load"
+order += "cpu_usage"
 order += "memory"
 order += "volume master"
 order += "read_file pacman_new_packages"
@@ -64,8 +65,12 @@ load {
         format = " %1min"
 }
 
+cpu_usage {
+	format = "💻 %usage"
+}
+
 memory {
-        format = "%used"
+        format = "📟 %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
