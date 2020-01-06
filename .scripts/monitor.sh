@@ -17,7 +17,7 @@ function reset {
 }
 
 function wallreload {
-  feh --bg-scale ~/Pictures/wallpapers/mountains/dark_mountains.jpg
+  feh --bg-scale ~/Pictures/wallpapers/water/baltic_sea_coast.jpg
 }
 
 function help {
