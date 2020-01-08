@@ -6,3 +6,6 @@ fi
 if grep -q Sorry /var/log/scripts/weather.log; then
   echo "" > /var/log/scripts/weather.log
 fi
+if grep -q Error /var/log/scripts/weather.log; then
+  echo "" > /var/log/scripts/weather.log
+fi
