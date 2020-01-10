@@ -182,6 +182,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# move window (you can also use mouse for that)
 mode "moveit" {
     bindsym Up move up 20px
     bindsym Left move left 20px
@@ -191,6 +192,10 @@ mode "moveit" {
 }
 
 bindsym $mod+m focus floating; mode "moveit"
+
+# brightness control (works for thinkpad, requires 'light' program)
+bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send 'Brightness (Up)' $(light)'%'"
+bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send 'Brightness (Down)' $(light)'%'"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
