@@ -23,6 +23,7 @@ order += "load"
 order += "cpu_usage"
 order += "memory"
 order += "volume master"
+order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
 order += "read_file rss"
 order += "read_file aqi"
@@ -81,6 +82,11 @@ volume master {
         device = "default"
 }
 
+read_file screen_brightness {
+        format = "🔆 %content"
+        path = "/var/log/scripts/screen_brightness.log"
+}
+
 read_file pacman_new_packages {
 	format = "📦 %content"
 	path = "/var/log/scripts/pacman_new_packages.log"
@@ -102,5 +108,5 @@ read_file weather {
 }
 
 tztime local {
-        format = " %a %Y-%m-%d %H:%M  "
+        format = " %a %Y-%m-%d %H:%M %Z %z  "
 }
