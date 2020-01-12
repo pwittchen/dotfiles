@@ -83,7 +83,7 @@ volume master {
 }
 
 read_file screen_brightness {
-        format = "🔆 %content"
+        format = "🔆 %content%"
         path = "/var/log/scripts/screen_brightness.log"
 }
 
