@@ -194,8 +194,13 @@ mode "moveit" {
 bindsym $mod+m focus floating; mode "moveit"
 
 # brightness control (works for thinkpad, requires 'light' program)
-bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send 'Brightness (Up)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status" 
-bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send 'Brightness (Down)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status" 
+bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send 'Brightness (Up)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
+bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send 'Brightness (Down)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
+
+# spotify play control (requires 'spotify-cli-linux' program)
+bindsym $mod+n exec "spotifycli --next"
+bindsym $mod+p exec "spotifycli --prev"
+bindsym $mod+Shift+p exec "spotifycli --playpause"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
