@@ -10,10 +10,10 @@ function london {
 
 function help {
     echo "
-    timezone.sh is a simple script for setting time zones 
+    set_timezone.sh is a simple script for setting time zones
 
     defined time zones:
-    
+
     warsaw
     london
    "
@@ -29,7 +29,7 @@ function main {
     exit
   fi
   if [ "$1" == "london" ]; then
-    london 
+    london
     exit
   fi
 }
