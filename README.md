@@ -5,7 +5,7 @@ my dotfiles
 screenshot
 ----------
 
-![](http://raw.githubusercontent.com/pwittchen/dotfiles/screen.png)
+![](https://raw.githubusercontent.com/pwittchen/dotfiles/master/screen.png)
 
 usage
 -----
