@@ -2,6 +2,11 @@ dotfiles
 ========
 my dotfiles
 
+screenshot
+----------
+
+![](http://raw.githubusercontent.com/pwittchen/dotfiles/screen.png)
+
 usage
 -----
 
