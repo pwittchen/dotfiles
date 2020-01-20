@@ -11,17 +11,7 @@ export PUBSUB_EMULATOR_HOST=localhost:8538
 export SDKMAN_DIR="/$HOME/.sdkman"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-
-if [ `uname` = "Linux" ]; then
-  [[ $TERM != "screen" ]] && exec tmux
-fi
-
-if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then
-  . '/usr/local/bin/google-cloud-sdk/path.zsh.inc';
-fi
-
-if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then
-  . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc';
-fi
-
+. '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
+. '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
+[[ $TERM != "screen" ]] && exec tmux
 [[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "/$HOME/.sdkman/bin/sdkman-init.sh"
