@@ -3,7 +3,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 ZSH_THEME="bureau"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-source $HOME/.scripts/aliases.sh
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/go
 export ANDROID=$HOME/Android/Sdk
@@ -11,6 +10,7 @@ export PUBSUB_EMULATOR_HOST=localhost:8538
 export SDKMAN_DIR="/$HOME/.sdkman"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
+. $HOME/.scripts/aliases.sh
 . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
 . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
 [[ $TERM != "screen" ]] && exec tmux
