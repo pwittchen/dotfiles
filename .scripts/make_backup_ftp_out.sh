@@ -20,6 +20,7 @@ mkdir -p ~/Backup/secrets
 cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
 cp -avr ~/.password-store ~/Backup/secrets/.password-store
 cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
+cp -avr ~/.config/openvpn ~/Backup/openvpn
 chmod 777 ~/Backup/*
 /usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUX_PL -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
