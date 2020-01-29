@@ -8,10 +8,6 @@ function paired_devices {
   bluetoothctl paired-devices 
 }
 
-function connections {
- nmcli connection show
-}
-
 function connect_headphones {
   mac_address=$(bluetoothctl devices | grep MOMENTUM | awk '{print $2}')
   bluetoothctl connect $mac_address
