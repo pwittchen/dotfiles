@@ -8,8 +8,20 @@ function paired_devices {
   bluetoothctl paired-devices 
 }
 
+function connect_mouse {
+  connect_device "MX Master"
+}
+
 function connect_headphones {
-  mac_address=$(bluetoothctl devices | grep MOMENTUM | awk '{print $2}')
+  connect_device "MOMENTUM TW"
+}
+
+function connect_speaker {
+  connect_device "JBL Charge 3"
+}
+
+function connect_device {
+  mac_address=$(bluetoothctl devices | grep "$1" | awk '{print $2}')
   bluetoothctl connect $mac_address
 }
 
@@ -34,7 +46,9 @@ function help {
     help               shows help
     devices	       shows devices
     paired_devices     shows paired devices
+    connect_mouse      connects mouse
     connect_headphones connects headphones
+    connect_speaker    connects speaker
     scan	       starts scanning
     on 		       turns bt on
     off		       turns bt off
@@ -58,8 +72,16 @@ function main {
     paired_devices
     exit
   fi
+  if [ "$1" == "connect_mouse" ]; then
+    connect_mouse
+    exit
+  fi
   if [ "$1" == "connect_headphones" ]; then
     connect_headphones
+    exit
+  fi
+  if [ "$1" == "connect_speaker" ]; then
+    connect_speaker
     exit
   fi
   if [ "$1" == "scan" ]; then
