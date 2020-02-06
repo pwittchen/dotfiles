@@ -84,7 +84,7 @@ volume master {
 }
 
 read_file spotify {
-	format = "🎵 %content"
+	format = "%content"
 	path = "/var/log/scripts/spotify.log"
 }
 
