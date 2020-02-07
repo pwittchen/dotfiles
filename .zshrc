@@ -6,12 +6,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/go
 export ANDROID=$HOME/Android/Sdk
-export PUBSUB_EMULATOR_HOST=localhost:8538
 export SDKMAN_DIR="/$HOME/.sdkman"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-. '/usr/local/bin/google-cloud-sdk/path.zsh.inc'
-. '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
 [[ $TERM != "screen" ]] && exec tmux
