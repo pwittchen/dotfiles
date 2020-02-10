@@ -24,7 +24,6 @@ order += "load"
 order += "cpu_usage"
 order += "memory"
 order += "volume master"
-order += "read_file spotify"
 order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
 order += "read_file rss"
@@ -96,11 +95,6 @@ volume master {
         format = "🔉 %volume"
         format_muted = "🔇 %volume"
         device = "default"
-}
-
-read_file spotify {
-	format = "%content"
-	path = "/var/log/scripts/spotify.log"
 }
 
 read_file screen_brightness {
