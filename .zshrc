@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
-ZSH_THEME="bureau"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
@@ -12,4 +12,4 @@ export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platfor
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
 [[ $TERM != "screen" ]] && exec tmux
-
+. $HOME/.p10k.zsh
