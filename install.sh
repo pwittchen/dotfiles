@@ -68,6 +68,7 @@ sudo cp .tmux.conf ~/
 sudo cp .vimrc ~/
 sudo cp .zshrc ~/
 sudo cp .ghci ~/
+sudo cp .p10k.zsh ~/
 
 sudo rm -rf ~/.scripts || true
 mkdir ~/.scripts
