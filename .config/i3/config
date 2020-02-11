@@ -198,9 +198,9 @@ bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send 'Brightness (Up)
 bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send 'Brightness (Down)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
 
 # spotify play control (requires 'spotify-cli-linux' program and media keys on keyboard)
-bindsym XF86AudioPlay exec "spotifycli --playpause && spotifycli --statusshort > /var/log/scripts/spotify.log && killall -SIGUSR1 i3status"
-bindsym XF86AudioNext exec "spotifycli --next && spotifycli --statusshort > /var/log/scripts/spotify.log && killall -SIGUSR1 i3status"
-bindsym XF86AudioPrev exec "spotifycli --prev && spotifycli --statusshort > /var/log/scripts/spotify.log && killall -SIGUSR1 i3status"
+bindsym XF86AudioPlay exec "spotifycli --playpause"
+bindsym XF86AudioNext exec "spotifycli --next"
+bindsym XF86AudioPrev exec "spotifycli --prev"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

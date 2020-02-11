@@ -412,3 +412,8 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+[spotify]
+    appname = Spotify
+    urgency = normal
+    script  = ~/.scripts/spotify_log.sh
+
