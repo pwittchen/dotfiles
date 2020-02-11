@@ -123,5 +123,5 @@ read_file weather {
 }
 
 tztime local {
-        format = " %a %Y-%m-%d %H:%M %Z %z  "
+        format = " %a %Y-%m-%d ⌚ %H:%M %Z %z  "
 }
