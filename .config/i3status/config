@@ -33,7 +33,7 @@ order += "read_file weather"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "  %quality %essid %ip"
+        format_up = " %quality %essid %ip"
         format_down = ""
 }
 
@@ -87,7 +87,7 @@ cpu_usage {
 }
 
 memory {
-        format = "📟 %used"
+        format = "⛁ %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -99,7 +99,7 @@ volume master {
 }
 
 read_file spotify {
-        format = "%content"
+        format = "♪ %content"
         path = "/var/log/scripts/spotify.log"
 }
 
