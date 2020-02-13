@@ -13,3 +13,5 @@ export PATH=$PATH:$HOME/.scripts:$GOPATH/bin:$ANDROID/tools/bin:$ANDROID/platfor
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . $HOME/.p10k.zsh
+. $HOME/google-cloud-sdk/path.zsh.inc
+. $HOME/google-cloud-sdk/completion.zsh.inc
