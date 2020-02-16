@@ -87,7 +87,7 @@ cpu_usage {
 }
 
 memory {
-        format = "⛁ %used"
+        format = "📟 %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -129,5 +129,5 @@ read_file weather {
 }
 
 tztime local {
-        format = " %a %Y-%m-%d ⌚ %H:%M %Z %z  "
+        format = "📅 %a %Y-%m-%d 🕒 %H:%M 🗺️ %Z %z  "
 }
