@@ -17,7 +17,7 @@ function reset {
 }
 
 function wallreload {
-  feh --bg-scale ~/Pictures/wallpapers/mountains/aerial-photography-of-snowy-field-viewing-mountain.jpg 
+  feh --bg-scale ~/Pictures/config/wallpaper/wallpaper.jpg
 }
 
 function help {
