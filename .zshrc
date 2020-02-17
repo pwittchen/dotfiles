@@ -5,6 +5,7 @@ plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-hi
 . $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
 export ANDROID=$HOME/Android/Sdk
 export SDKMAN_DIR="/$HOME/.sdkman"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
