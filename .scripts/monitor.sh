@@ -20,6 +20,11 @@ function wallreload {
   feh --bg-scale ~/Pictures/config/wallpaper/wallpaper.jpg
 }
 
+function initext {
+  laptopoff
+  wallreload
+}
+
 function help {
     echo "
     monitor.sh is a simple wrapper for xrandr and feh to manage monitors and wallpapers
@@ -32,6 +37,7 @@ function help {
     laptopmirror    mirrors laptop monitor into external HDMI-2 output and preserving laptop resolution
     reset           resets monitor configuration
     wallreload      reloads wallpaper
+    initext	    initializes external monitor (disables laptop screen and reloads wallpaper)
     "
 }
 
@@ -58,6 +64,10 @@ function main {
   fi
   if [ "$1" == "wallreload" ]; then
     wallreload
+    exit
+  fi
+  if [ "$1" == "initext" ]; then
+    initext
     exit
   fi
 
