@@ -14,6 +14,7 @@ function laptopmirror {
 
 function reset {
   xrandr --auto
+  wallreload
 }
 
 function wallreload {
