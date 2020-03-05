@@ -5,6 +5,21 @@ set -e
 # parametrized installation utilities go first #
 ################################################
 
+if [ ! -z $1 ] && [ $1 == "help" ]; then
+  echo "
+    install.sh script installs dotfiles from this repo
+    running script without parameters will install default doftiles
+    to install custom stuff, use one of the parameters below
+
+    shows help                            help
+    generating empty configs              emptyconfig
+    restoring old/last configs            restorelastconfig
+    installing tpm and tmux plugins       tmux
+    installing pathogen and vim plugins   vim
+    installing i3 config                  i3"
+  exit 1
+fi
+
 if [ ! -z $1 ] && [ $1 == "emptyconfig" ]; then
   sudo mkdir ~/.config/scripts_backup || true
   sudo cp -R ~/.config/scripts/* ~/.config/scripts_backup || true
