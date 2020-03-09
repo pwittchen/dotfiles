@@ -90,7 +90,7 @@ if [ ! -z $1 ] && [ $1 == "run" ]; then
     sudo rm ~/.scripts/apple_* || true
     echo "linux setup done"
   else
-    echo "apple/macos setup done"
+    echo "macos setup done"
   fi
 
   echo "dotfiles installed successfully!"
