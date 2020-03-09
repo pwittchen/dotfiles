@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-################################################
-# parametrized installation utilities go first #
-################################################
-
 if [ ! -z $1 ] && [ $1 == "help" ]; then
   echo "
     install.sh script installs dotfiles from this repo
-    running script without parameters will install default doftiles
-    to install custom stuff, use one of the parameters below
 
-    shows help                            help
+    showing help                          help
+    installation/update of dotfiles       run
     generating empty configs              emptyconfig
     restoring old/last configs            restorelastconfig
     installing tpm and tmux plugins       tmux
@@ -78,28 +73,26 @@ if [ ! -z $1 ] && [ $1 == "i3" ]; then
   exit 1
 fi
 
-#########################################
-# main install process starts from here #
-#########################################
+if [ ! -z $1 ] && [ $1 == "run" ]; then
+  sudo cp .gitconfig ~/
+  sudo cp .gitignore_global ~/
+  sudo cp .tmux.conf ~/
+  sudo cp .vimrc ~/
+  sudo cp .zshrc ~/
+  sudo cp .ghci ~/
+  sudo cp .p10k.zsh ~/
 
-sudo cp .gitconfig ~/
-sudo cp .gitignore_global ~/
-sudo cp .tmux.conf ~/
-sudo cp .vimrc ~/
-sudo cp .zshrc ~/
-sudo cp .ghci ~/
-sudo cp .p10k.zsh ~/
+  sudo rm -rf ~/.scripts || true
+  mkdir ~/.scripts
+  sudo cp -R .scripts/* ~/.scripts
 
-sudo rm -rf ~/.scripts || true
-mkdir ~/.scripts
-sudo cp -R .scripts/* ~/.scripts
+  if [ `uname` != "Darwin" ]; then
+    sudo rm ~/.scripts/apple_* || true
+    echo "linux setup done"
+  else
+    echo "apple/macos setup done"
+  fi
 
-if [ `uname` != "Darwin" ]; then
-  sudo rm ~/.scripts/apple_* || true
-  echo "linux setup done"
-else
-  echo "apple/macos setup done"
+  echo "dotfiles installed successfully!"
+  echo "please, restart your terminal"
 fi
-
-echo "dotfiles installed successfully! \o/"
-echo "please, restart your terminal"
