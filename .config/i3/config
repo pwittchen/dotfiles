@@ -228,5 +228,8 @@ bar {
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
+# hiding edge/external borders
+hide_edge_borders both
+
 # disables laptop screen after log in, when one external monitor is connected to the computer
 exec ~/.scripts/setup_external_monitor.sh
