@@ -32,7 +32,7 @@
     border:     0;
     text-color: @foreground;
     background-color: rgba ( 0, 0, 0, 0 % );
-    padding:    5;
+    padding:    10;
     text-color: @bordercolor;
     background-color: @background;
 }
