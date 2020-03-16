@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-/usr/bin/spotifycli --statusshort > /var/log/scripts/spotify.log
+status=$(/usr/bin/spotifycli --statusshort)
+echo "♪ $status" > /var/log/scripts/spotify.log
