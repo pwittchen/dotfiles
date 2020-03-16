@@ -72,11 +72,11 @@ battery 1 {
 }
 
 disk "/" {
-	format = " %avail"
+	format = " %avail"
 }
 
 disk "/home" {
-        format = "⌂ %avail"
+        format = " %avail"
 }
 
 load {
@@ -84,18 +84,18 @@ load {
 }
 
 cpu_usage {
-	format = "💻 %usage"
+	format = " %usage"
 }
 
 memory {
-        format = "📟 %used"
+        format = " %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
 
 volume master {
-        format = "🔉 %volume"
-        format_muted = "🔇 %volume"
+        format = " %volume"
+        format_muted = " %volume"
         device = "default"
 }
 
@@ -105,17 +105,17 @@ read_file spotify {
 }
 
 read_file screen_brightness {
-        format = "🔆 %content%"
+        format = " %content%"
         path = "/var/log/scripts/screen_brightness.log"
 }
 
 read_file pacman_new_packages {
-	format = "📦 %content"
+	format = " %content"
 	path = "/var/log/scripts/pacman_new_packages.log"
 }
 
 read_file rss {
-	format = "📶 %content"
+	format = " %content"
 	path = "/var/log/scripts/newsboat.log"
 }
 
@@ -135,5 +135,5 @@ read_file weather {
 }
 
 tztime local {
-	format = "📅 %a %Y-%m-%d 🕒 %H:%M 🗺️ %Z %z  "
+	format = " %a %Y-%m-%d  %H:%M  %Z %z  "
 }

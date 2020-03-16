@@ -227,3 +227,6 @@ bar {
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
+
+# disables laptop screen after log in, when one external monitor is connected to the computer
+exec ~/.scripts/setup_external_monitor.sh

@@ -33,7 +33,6 @@ function help {
     laptopmirror    mirrors laptop monitor into external HDMI-2 output and preserving laptop resolution
     reset           resets monitor configuration
     wallreload      reloads wallpaper
-    desk            laptopoff + wallreload
     "
 }
 
@@ -62,12 +61,6 @@ function main {
     wallreload
     exit
   fi
-  if [ "$1" == "desk" ]; then
-    laptopoff
-    wallreload
-    exit
-  fi
-
 }
 
 main "$@"
