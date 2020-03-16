@@ -68,7 +68,8 @@ if [ ! -z $1 ] && [ $1 == "i3" ]; then
   sudo cp .config/i3/config ~/.config/i3/
   sudo cp .config/i3status/config ~/.config/i3status/config
   sudo cp .config/dunst/dunstrc ~/.config/dunst/dunstrc
-  echo "i3 and dunst config installed"
+  sudo cp .config/rofi/config.rasi ~/.config/rofi/config.rasi
+  echo "i3, rofi and dunst config installed"
   echo "type mod+Shift+r to reload configs"
   exit 1
 fi
