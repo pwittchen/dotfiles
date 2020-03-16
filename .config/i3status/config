@@ -125,7 +125,7 @@ read_file aqi {
 }
 
 read_file covid {
-    	format = "☣️ %content"
+    	format = "%content"
     	path = "/var/log/scripts/covid_19_pl.log"
 }
 
