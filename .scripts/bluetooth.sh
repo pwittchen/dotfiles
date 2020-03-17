@@ -8,8 +8,12 @@ function paired_devices {
   bluetoothctl paired-devices 
 }
 
-function connect_mouse {
+function connect_mouse_mx {
   connect_device "MX Master"
+}
+
+function connect_mouse_ultrathin {
+  connect_device "Ultrathin Touch Mouse"
 }
 
 function connect_headphones {
@@ -43,15 +47,16 @@ function help {
 
     usage:
 
-    help               shows help
-    devices	       shows devices
-    paired_devices     shows paired devices
-    connect_mouse      connects mouse
-    connect_headphones connects headphones
-    connect_speaker    connects speaker
-    scan	       starts scanning
-    on 		       turns bt on
-    off		       turns bt off
+    help                      shows help
+    devices	              shows devices
+    paired_devices            shows paired devices
+    connect_mouse_mx          connects mx mouse
+    connect_mouse_ultrathin   connects ultrathin mouse
+    connect_headphones        connects headphones
+    connect_speaker           connects speaker
+    scan	              starts scanning
+    on 		              turns bt on
+    off		              turns bt off
     "
 }
 
@@ -72,8 +77,12 @@ function main {
     paired_devices
     exit
   fi
-  if [ "$1" == "connect_mouse" ]; then
-    connect_mouse
+  if [ "$1" == "connect_mouse_mx" ]; then
+    connect_mouse_mx
+    exit
+  fi
+  if [ "$1" == "connect_mouse_ultrathin" ]; then
+    connect_mouse_ultrathin
     exit
   fi
   if [ "$1" == "connect_headphones" ]; then
