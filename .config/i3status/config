@@ -110,7 +110,7 @@ read_file screen_brightness {
 }
 
 read_file pacman_new_packages {
-	format = " %content"
+	format = " %content"
 	path = "/var/log/scripts/pacman_new_packages.log"
 }
 
