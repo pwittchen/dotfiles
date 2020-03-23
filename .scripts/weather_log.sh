@@ -2,13 +2,8 @@
 
 source ~/.config/scripts/weather.conf
 
-/usr/bin/curl --compressed -s "wttr.in/$LOCATION?format=+%c+%t+%h+%p+%P+%w" > /var/log/scripts/weather.log
-if grep -q Unknown /var/log/scripts/weather.log; then
-  echo "" > /var/log/scripts/weather.log
-fi
-if grep -q Sorry /var/log/scripts/weather.log; then
-  echo "" > /var/log/scripts/weather.log
-fi
-if grep -q Error /var/log/scripts/weather.log; then
-  echo "" > /var/log/scripts/weather.log
-fi
+curl --compressed -s "wttr.in/$LOCATION?format=+%c+%t+%h+%p+%P+%w" > /var/log/scripts/weather.log
+grep -q Unknown /var/log/scripts/weather.log && echo "" > /var/log/scripts/weather.log
+grep -q Sorry /var/log/scripts/weather.log && echo "" > /var/log/scripts/weather.log
+grep -q Error /var/log/scripts/weather.log && echo "" > /var/log/scripts/weather.log
+grep -q Time-out /var/log/scripts/weather.log && echo "" > /var/log/scripts/weather.log
