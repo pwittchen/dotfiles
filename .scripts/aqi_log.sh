@@ -23,7 +23,5 @@ if [ "$AQI" != "" ] ; then
     $(($AQI >= 101))) EMOJI="😱";;
   esac
 
-  if [ "$AQI" != "null" ]; then
-    echo "$EMOJI $AQI" > /var/log/scripts/aqi.log
-  fi
+  [ "$AQI" != "null" ] && echo "$EMOJI $AQI" > /var/log/scripts/aqi.log
 fi
