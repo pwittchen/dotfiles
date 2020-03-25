@@ -4,9 +4,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting)
 . $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
-export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
-export ANDROID=$HOME/Android/Sdk
+export GOPATH=$HOME/Development/prv/go/sdk
+export GOBIN=$HOME/Development/prv/go/sdk/bin
+export ANDROID=$HOME/Development/prv/android/sdk
 export SDKMAN_DIR="/$HOME/.sdkman"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
@@ -14,5 +14,5 @@ export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-too
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . $HOME/.p10k.zsh
-. $HOME/google-cloud-sdk/path.zsh.inc
-. $HOME/google-cloud-sdk/completion.zsh.inc
+. $HOME/Development/prv/infra/tools/google-cloud-sdk/path.zsh.inc
+. $HOME/Development/prv/infra/tools/google-cloud-sdk/completion.zsh.inc
