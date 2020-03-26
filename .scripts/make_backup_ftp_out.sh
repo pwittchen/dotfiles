@@ -2,19 +2,18 @@
 source ~/.config/scripts/linuxpl.conf
 
 rm -rf ~/backup/*
-cp -avr ~/Documents/ebooks ~/backup/ebooks
-cp -avr ~/Documents/articles ~/backup/articles
-cp -avr ~/Documents/finance ~/backup/finance
-cp -avr ~/Documents/sport ~/backup/sport
-cp -avr ~/Documents/guitar ~/backup/guitar
-cp -avr ~/Documents/licenses ~/backup/licenses
-cp -avr ~/Documents/notes ~/backup/notes
-cp -avr ~/Documents/datelog ~/backup/datelog
-cp -avr ~/Documents/other ~/backup/other
-cp -avr ~/Documents/presentations ~/backup/presentations
-cp -avr ~/Documents/travel ~/backup/travel
-cp -avr ~/Documents/work ~/backup/work
-cp -avr ~/Pictures/wallpapers ~/backup/wallpapers
+cp -avr ~/documents/ebooks ~/backup/ebooks
+cp -avr ~/documents/articles ~/backup/articles
+cp -avr ~/documents/finance ~/backup/finance
+cp -avr ~/documents/sport ~/backup/sport
+cp -avr ~/documents/guitar ~/backup/guitar
+cp -avr ~/documents/licenses ~/backup/licenses
+cp -avr ~/documents/notes ~/backup/notes
+cp -avr ~/documents/datelog ~/backup/datelog
+cp -avr ~/documents/other ~/backup/other
+cp -avr ~/documents/presentations ~/backup/presentations
+cp -avr ~/documents/travel ~/backup/travel
+cp -avr ~/documents/work ~/backup/work
 cp -avr ~/.newsboat ~/backup/newsboat
 mkdir -p ~/backup/secrets
 cp -avr ~/.gnupg ~/backup/secrets/.gnupg
