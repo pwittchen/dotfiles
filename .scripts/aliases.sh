@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
 YEAR=$(date +"%Y")
-FINANCE_DIR="~/Documents/finance/budzet/$YEAR"
+FINANCE_DIR="~/documents/finance/budzet/$YEAR"
 
 alias scs="cd ~/.scripts                  	&& l"
-alias dvp="cd ~/Development               	&& l"
-alias dox="cd ~/Documents                 	&& l"
-alias dld="cd ~/Downloads                 	&& l"
-alias pix="cd ~/Pictures                  	&& l"
-alias vid="cd ~/Videos                   	&& l"
-alias mus="cd ~/Music                     	&& l"
-alias dtf="cd ~/Development/prv/bash/dotfiles 	&& l"
-alias wlp="cd ~/Pictures/wallpapers       	&& l"
+alias dvp="cd ~/development                     && l"
+alias dox="cd ~/documents                 	&& l"
+alias dld="cd ~/downloads                 	&& l"
+alias pix="cd ~/pictures                  	&& l"
+alias vid="cd ~/videos                   	&& l"
+alias dtf="cd ~/development/prv/bash/dotfiles 	&& l"
+alias wlp="cd ~/pictures/wallpapers       	&& l"
 alias kzm="libreoffice $FINANCE_DIR/koszty-zmienne.ods &"
 alias kst="libreoffice $FINANCE_DIR/koszty-stale.ods &"
 alias bdt="libreoffice $FINANCE_DIR/budzet.ods &"

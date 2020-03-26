@@ -3,21 +3,21 @@
 function record_screen {
   ffmpeg -f x11grab \
   -s $(xdpyinfo | grep dimension | awk '{print $2}') \
-  -i $DISPLAY ~/Videos/out.mkv
+  -i $DISPLAY ~/videos/out.mkv
 }
 
 function record_screen_with_mic {
   ffmpeg -f x11grab \
   -s $(xdpyinfo | grep dimension | awk '{print $2}') \
-  -i $DISPLAY -f alsa -i default ~/Videos/out.mkv
+  -i $DISPLAY -f alsa -i default ~/videos/out.mkv
 }
 
 function record_webcam {
-  ffmpeg -i /dev/video0 ~/Videos/out.mkv
+  ffmpeg -i /dev/video0 ~/videos/out.mkv
 }
 
 function record_webcam_with_mic {
-  ffmpeg -i /dev/video0 -f alsa -i default ~/Videos/out.mkv
+  ffmpeg -i /dev/video0 -f alsa -i default ~/videos/out.mkv
 }
 
 function help {

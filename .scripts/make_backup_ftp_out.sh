@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 source ~/.config/scripts/linuxpl.conf
 
-rm -rf ~/Backup/*
-cp -avr ~/Documents/ebooks ~/Backup/ebooks
-cp -avr ~/Documents/articles ~/Backup/articles
-cp -avr ~/Documents/finance ~/Backup/finance
-cp -avr ~/Documents/sport ~/Backup/sport
-cp -avr ~/Documents/guitar ~/Backup/guitar
-cp -avr ~/Documents/licenses ~/Backup/licenses
-cp -avr ~/Documents/notes ~/Backup/notes
-cp -avr ~/Documents/datelog ~/Backup/datelog
-cp -avr ~/Documents/other ~/Backup/other
-cp -avr ~/Documents/presentations ~/Backup/presentations
-cp -avr ~/Documents/travel ~/Backup/travel
-cp -avr ~/Documents/work ~/Backup/work
-cp -avr ~/Pictures/wallpapers ~/Backup/wallpapers
-cp -avr ~/.newsboat ~/Backup/newsboat
-mkdir -p ~/Backup/secrets
-cp -avr ~/.gnupg ~/Backup/secrets/.gnupg
-cp -avr ~/.password-store ~/Backup/secrets/.password-store
-cp -avr ~/.config/scripts ~/Backup/secrets/.configscripts
-cp -avr ~/.config/openvpn ~/Backup/openvpn
-chmod 777 ~/Backup/*
-/usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUX_PL -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/Backup backup; quit"
+rm -rf ~/backup/*
+cp -avr ~/Documents/ebooks ~/backup/ebooks
+cp -avr ~/Documents/articles ~/backup/articles
+cp -avr ~/Documents/finance ~/backup/finance
+cp -avr ~/Documents/sport ~/backup/sport
+cp -avr ~/Documents/guitar ~/backup/guitar
+cp -avr ~/Documents/licenses ~/backup/licenses
+cp -avr ~/Documents/notes ~/backup/notes
+cp -avr ~/Documents/datelog ~/backup/datelog
+cp -avr ~/Documents/other ~/backup/other
+cp -avr ~/Documents/presentations ~/backup/presentations
+cp -avr ~/Documents/travel ~/backup/travel
+cp -avr ~/Documents/work ~/backup/work
+cp -avr ~/Pictures/wallpapers ~/backup/wallpapers
+cp -avr ~/.newsboat ~/backup/newsboat
+mkdir -p ~/backup/secrets
+cp -avr ~/.gnupg ~/backup/secrets/.gnupg
+cp -avr ~/.password-store ~/backup/secrets/.password-store
+cp -avr ~/.config/scripts ~/backup/secrets/.configscripts
+cp -avr ~/.config/openvpn ~/backup/openvpn
+chmod 777 ~/backup/*
+/usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUX_PL -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
