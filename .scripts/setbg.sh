@@ -7,7 +7,11 @@ function setbg {
 }
 
 function setrandombg {
-  dir=$(ls -d ~/pictures/wallpapers/*/ | shuf | head -n1)
+  if [ -z "$1" ] ; then
+    dir=$(ls -d ~/pictures/wallpapers/*/ | shuf | head -n1)
+  else
+    dir=$1/
+  fi
   file=$(ls $dir | shuf | head -n1)
   setbg $dir$file
 }
@@ -20,6 +24,7 @@ function help {
 
     setbg.sh <filename>    sets given filename (*.jpg or *.png) as a wallpaper
     setbg.sh random        sets random wallpaper
+    setbg.sh random <dir>  sets random wallpaper from files in given dir
     "
 }
 
@@ -33,7 +38,7 @@ function main {
     exit
   fi
   if [ "$1" == "random" ] ; then
-    setrandombg
+    setrandombg $2
     exit
   fi
 }
