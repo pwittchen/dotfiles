@@ -23,3 +23,4 @@ cp -avr ~/.config/openvpn ~/backup/openvpn
 chmod 777 ~/backup/*
 /usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUX_PL -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
+notify-send "backup done (out)"
