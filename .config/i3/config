@@ -19,10 +19,10 @@ exec --no-startup-id xsetroot -solid "#17212b"
 
 # setting wallpaper
 # exec --no-startup-id feh --bg-scale ~/.config/wall.png
-exec --no-startup-id ~/.scripts/setbg_daytime.sh
+exec --no-startup-id ~/.scripts/set_bg_daytime.sh
 
 # disables laptop screen after log in, when one external monitor is connected to the computer
-exec --no-startup-id ~/.scripts/setup_external_monitor.sh
+exec --no-startup-id ~/.scripts/set_external_monitor.sh
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
