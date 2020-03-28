@@ -12,7 +12,7 @@ function help {
 
     usage:
 
-    setbg.sh <filename>
+    setbg.sh <filename>    sets given filename (*.jpg or *.png) as a wallpaper
     "
 }
 
