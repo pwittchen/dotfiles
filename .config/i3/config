@@ -234,4 +234,4 @@ new_window 1pixel
 hide_edge_borders both
 
 # disables laptop screen after log in, when one external monitor is connected to the computer
-exec ~/.scripts/setup_external_monitor.sh
+exec --no-startup-id ~/.scripts/setup_external_monitor.sh
