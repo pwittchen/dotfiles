@@ -44,6 +44,10 @@ function up {
   nmcli connection up $1
 }
 
+function publicip {
+  curl --compressed -s https://get.geojs.io/v1/ip
+}
+
 function help {
     echo "
     network.sh is a simple wrapper for nmcli for network management
@@ -62,6 +66,7 @@ function help {
     wifirescan      rescans wifi access points
     down            disconnects from the given connection
     up              connects back to the given connection
+    publicip        shows public ip
     "
 }
 
@@ -114,6 +119,11 @@ function main {
     up $2
     exit
   fi
+  if [ "$1" == "publicip" ]; then
+    publicip
+    exit
+  fi
+
 }
 
 main "$@"
