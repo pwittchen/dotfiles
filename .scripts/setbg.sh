@@ -25,9 +25,9 @@ function setdaytimebg {
   daytime=$(sunwait poll)
   if [[ $daytime == "DAY" ]] && [ $hour -lt 12 ] ; then
     setbg $1 # morning
-  elif [ $hour -gt 11 ] && [ $hour -lt 16 ] ; then
+  elif [ $hour -gt 11 ] && [ $hour -lt 15 ] ; then
     setbg $2 # midday
-  elif [ $hour -gt 15 ] && [[ $daytime == "DAY" ]] ; then
+  elif [ $hour -gt 14 ] && [[ $daytime == "DAY" ]] ; then
     setbg $3 # dawn
   elif [[ $daytime == "NIGHT" ]] ; then
     setbg $4 # night
