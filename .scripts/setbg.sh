@@ -13,7 +13,11 @@ function setrandombg {
     dir=$1/
   fi
   file=$(ls $dir | shuf | head -n1)
-  setbg $dir$file
+  if [[ "$file" == *".jpg"* ]] || [[ "$file" == *".png"* ]] ; then
+    setbg $dir$file
+  else
+    setrandombg
+  fi
 }
 
 function setdaytimebg {
