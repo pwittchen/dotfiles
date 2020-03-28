@@ -203,7 +203,7 @@ bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send 'Brightness (Up)
 bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send 'Brightness (Down)' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
 
 # spotify play control (requires 'spotify-cli-linux' program and media keys on keyboard)
-bindsym XF86AudioPlay exec "spotifycli --playpause"
+bindsym XF86AudioPlay exec "spotifycli --playpause && notify-send $(spotifycli --playbackstatus)' spotify' "
 bindsym XF86AudioNext exec "spotifycli --next"
 bindsym XF86AudioPrev exec "spotifycli --prev"
 
