@@ -18,7 +18,7 @@ function reset {
 }
 
 function wallreload {
-  feh --bg-scale ~/pictures/config/wallpaper/wallpaper.jpg
+  feh --bg-scale ~/.config/wall.jpg
 }
 
 function help {
