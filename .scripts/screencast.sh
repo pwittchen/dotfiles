@@ -36,7 +36,7 @@ function stream_webcam_external {
 
 function keys_on {
   screenkey &
-  notify-send "screenkey on"  
+  notify-send "screenkey on"
 }
 
 function keys_off {
@@ -46,7 +46,8 @@ function keys_off {
 
 function help {
     echo "
-    screencast.sh is a simple script for recording screen casts and videos from webcam
+    screencast.sh is a simple script for recording screencasts,
+    streaming videos from the webcam and displaying key strokes
 
     usage:
 
@@ -83,7 +84,7 @@ function main {
     exit
   fi
   if [ "$1" == "stream_webcam_internal" ]; then
-    stream_webcam_internal 
+    stream_webcam_internal
     exit
   fi
   if [ "$1" == "stream_webcam_external" ]; then
