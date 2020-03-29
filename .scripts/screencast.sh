@@ -1,37 +1,39 @@
 #!/usr/bin/env bash
 
 function record_screen {
+  notify-send "started recording screen"
   ffmpeg -f x11grab \
   -s $(xdpyinfo | grep dimension | awk '{print $2}') \
   -i $DISPLAY ~/videos/out.mkv
-  notify-send "started recording screen"
 }
 
 function record_screen_with_mic {
+  notify-send "started recording screen with mic"
   ffmpeg -f x11grab \
   -s $(xdpyinfo | grep dimension | awk '{print $2}') \
   -i $DISPLAY -f alsa -i default ~/videos/out.mkv
-  notify-send "started recording screen with mic"
 }
 
 function record_webcam {
-  ffmpeg -i /dev/video0 ~/videos/out.mkv
   notify-send "started recording webcam"
+  ffmpeg -i /dev/video0 ~/videos/out.mkv
 }
 
 function record_webcam_with_mic {
-  ffmpeg -i /dev/video0 -f alsa -i default ~/videos/out.mkv
   notify-send "started recording webcam with mic"
+  ffmpeg -i /dev/video0 -f alsa -i default ~/videos/out.mkv
 }
 
 function stream_webcam_internal {
-  mpv av://v4l2:/dev/video0
   notify-send "started streaming internal webcam"
+  mpv av://v4l2:/dev/video0
+  notify-send "stopped streaming internal webcam"
 }
 
 function stream_webcam_external {
-  mpv av://v4l2:/dev/video2
   notify-send "started streaming external webcam"
+  mpv av://v4l2:/dev/video2
+  notify-send "stopped streaming external webcam"
 }
 
 function keys_on {
