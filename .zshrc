@@ -8,6 +8,7 @@ export GOPATH=$HOME/development/prv/go/sdk
 export GOBIN=$HOME/development/prv/go/sdk/bin
 export ANDROID=$HOME/development/prv/android/sdk
 export SDKMAN_DIR="/$HOME/.sdkman"
+export WORKON_HOME=~/.virtualenvs
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 [[ $TERM != "screen" ]] && exec tmux
@@ -16,3 +17,4 @@ export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-too
 . $HOME/.p10k.zsh
 . $HOME/development/prv/infra/tools/google-cloud-sdk/path.zsh.inc
 . $HOME/development/prv/infra/tools/google-cloud-sdk/completion.zsh.inc
+. /usr/bin/virtualenvwrapper.sh
