@@ -23,15 +23,10 @@ function setrandombg {
 function setdaytimebg {
   hour=$(date +%H)
   daytime=$(sunwait poll 50.2849923N 18.6493647E)
-  if [[ $daytime == "DAY" ]] && [ $hour -lt 12 ] ; then
-    setbg $1 # morning
-  elif [ $hour -gt 11 ] && [ $hour -lt 15 ] ; then
-    setbg $2 # midday
-  elif [ $hour -gt 14 ] && [[ $daytime == "DAY" ]] ; then
-    setbg $3 # dusk
-  elif [[ $daytime == "NIGHT" ]] ; then
-    setbg $4 # night
-  fi
+  [[ $daytime == "DAY" ]] && [ $hour -lt 12 ] && setbg $1 # morning
+  [ $hour -gt 11 ] && [ $hour -lt 15 ]        && setbg $2 # midday
+  [ $hour -gt 14 ] && [[ $daytime == "DAY" ]] && setbg $3 # dusk
+  [[ $daytime == "NIGHT" ]]                   && setbg $4 # night
 }
 
 function help {
