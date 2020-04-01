@@ -27,6 +27,7 @@ order += "volume master"
 order += "read_file spotify"
 order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
+order += "read_file email"
 order += "read_file rss"
 order += "read_file covid"
 order += "read_file aqi"
@@ -112,6 +113,11 @@ read_file screen_brightness {
 read_file pacman_new_packages {
 	format = " %content"
 	path = "/var/log/scripts/pacman_new_packages.log"
+}
+
+read_file email {
+    format = " %content"
+    path = "/var/log/scripts/email.log"
 }
 
 read_file rss {
