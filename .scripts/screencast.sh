@@ -14,26 +14,36 @@ function record_screen_with_mic {
   -i $DISPLAY -f alsa -i default ~/videos/out.mkv
 }
 
-function record_webcam {
-  notify-send "started recording webcam"
+function record_webcam_0 {
+  notify-send "started recording webcam 0"
   ffmpeg -i /dev/video0 ~/videos/out.mkv
 }
 
-function record_webcam_with_mic {
-  notify-send "started recording webcam with mic"
+function record_webcam_0_mic {
+  notify-send "started recording webcam 0 with mic"
   ffmpeg -i /dev/video0 -f alsa -i default ~/videos/out.mkv
 }
 
-function stream_webcam_internal {
-  notify-send "started streaming internal webcam"
-  mpv av://v4l2:/dev/video0
-  notify-send "stopped streaming internal webcam"
+function record_webcam_2 {
+  notify-send "started recording webcam 2"
+  ffmpeg -i /dev/video2 ~/videos/out.mkv
 }
 
-function stream_webcam_external {
-  notify-send "started streaming external webcam"
+function record_webcam_2_mic {
+  notify-send "started recording webcam 2 with mic"
+  ffmpeg -i /dev/video2 -f alsa -i default ~/videos/out.mkv
+}
+
+function stream_webcam_0 {
+  notify-send "started streaming webcam 0"
+  mpv av://v4l2:/dev/video0
+  notify-send "stopped streaming webcam 0"
+}
+
+function stream_webcam_2 {
+  notify-send "started streaming webcam 2"
   mpv av://v4l2:/dev/video2
-  notify-send "stopped streaming external webcam"
+  notify-send "stopped streaming webcam 2"
 }
 
 function keys_on {
@@ -55,52 +65,29 @@ function help {
 
     record_screen             records video from screen
     record_screen_with_mic    records video from screen with sound from microphone
-    record_webcam             records video from webcam
-    record_webcam_with_mic    records video from webcam with sound from microphone
-    stream_webcam_internal    streams built-in laptop webcam with mpv
-    stream_webcam_external    streams external connected webcam with mpv
+    record_webcam_0           records video from webcam 0
+    record_webcam_0_mic       records video from webcam 0 with sound from microphone
+    record_webcam_2           records video from webcam 2
+    record_webcam_2_mic       records video from webcam 2 with sound from microphone
+    stream_webcam_0           streams webcam 0
+    stream_webcam_2           streams webcam 2
     keys_on                   displays key strokes with screenkey
     keys_off                  stops displaying key strokes with screenkey
    "
 }
 
 function main {
-  if [ -z "$1" ] || [ "$1" == "help" ] ; then
-    help
-    exit
-  fi
-  if [ "$1" == "record_screen" ]; then
-    record_screen
-    exit
-  fi
-  if [ "$1" == "record_screen_with_mic" ]; then
-    record_screen_with_mic
-    exit
-  fi
-  if [ "$1" == "record_webcam" ]; then
-    record_webcam
-    exit
-  fi
-  if [ "$1" == "record_webcam_with_mic" ]; then
-    record_webcam_with_mic
-    exit
-  fi
-  if [ "$1" == "stream_webcam_internal" ]; then
-    stream_webcam_internal
-    exit
-  fi
-  if [ "$1" == "stream_webcam_external" ]; then
-    stream_webcam_external
-    exit
-  fi
-  if [ "$1" == "keys_on" ]; then
-    keys_on
-    exit
-  fi
-  if [ "$1" == "keys_off" ]; then
-    keys_off
-    exit
-  fi
+  [ -z "$1" ] || [ "$1" == "help" ] && help && exit
+  [ "$1" == "record_screen" ] && record_screen && exit
+  [ "$1" == "record_screen_with_mic" ] && record_screen_with_mic && exit
+  [ "$1" == "record_webcam_0" ] && record_webcam_0 && exit
+  [ "$1" == "record_webcam_0_mic" ] && record_webcam_0_mic && exit
+  [ "$1" == "record_webcam_2" ] && record_webcam_2 && exit
+  [ "$1" == "record_webcam_2_mic" ] && record_webcam_2_mic && exit
+  [ "$1" == "stream_webcam_0" ] && stream_webcam_0 && exit
+  [ "$1" == "stream_webcam_2" ] && stream_webcam_2 && exit
+  [ "$1" == "keys_on" ] && keys_on && exit
+  [ "$1" == "keys_off" ] && keys_off && exit
 }
 
 main "$@"
