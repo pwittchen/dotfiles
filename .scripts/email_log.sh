@@ -5,5 +5,5 @@ wifi_ap_name=$(nmcli connection show --active | tail -n1 | awk '{print $1}')
 source $HOME/.config/scripts/email.conf
 mail_feed=$(curl -u "$USER:$PASS" -s 'https://mail.google.com/mail/u/0/feed/atom')
 msg_count=$(echo $mail_feed | xmllint --format - | grep fullcount | sed -e 's/<[^>]*>//g' | sed 's/ //g')
-[ "$msg_count" != "0" ] && notify-send "email" "you have $msg_count new message(s)"
+[ "$msg_count" != "0" ] && export DISPLAY=:0.0 && notify-send "email" "you have $msg_count unread message(s)"
 echo "$msg_count" > /var/log/scripts/email.log

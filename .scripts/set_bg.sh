@@ -2,7 +2,7 @@
 
 function setbg {
   cp $1 ~/.config/wall.jpg
-  DISPLAY=:0.0 feh --bg-scale ~/.config/wall.jpg
+  export DISPLAY=:0.0 && feh --bg-scale ~/.config/wall.jpg
   notify-send "wallpaper changed"
 }
 
