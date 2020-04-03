@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-wifi_ap_name=$(nmcli connection show --active | tail -n1 | awk '{print $1}')
+wifi_ap_name=$(nmcli connection show --active | grep wifi | awk '{print $1}')
 # this script should be executed in my home only to avoid google bans
 [ "$wifi_ap_name" != "vcu" ] && notify-send "email" "not connected to home network\nskipping email check" && exit
 source $HOME/.config/scripts/email.conf
