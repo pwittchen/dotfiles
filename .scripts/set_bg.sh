@@ -20,7 +20,7 @@ function setrandombg {
   fi
 }
 
-function setdaytimebg {
+function setdaynightbg {
   hour=$(date +%H)
   time_of_day=$(sunwait poll 50.2849923N 18.6493647E)
   [[ $time_of_day == "DAY" ]] && [ $hour -lt 12 ] && setbg $1 # morning
@@ -38,7 +38,7 @@ function help {
     setbg.sh <filename>                                  sets given filename (*.jpg or *.png) as a wallpaper
     setbg.sh random                                      sets random wallpaper
     setbg.sh random <dir>                                sets random wallpaper from files in given dir
-    setbg.sh daytime <morning> <midday> <dawn> <night>   sets different wallpaper according to time of the day
+    setbg.sh daynight <morning> <midday> <dawn> <night>  sets different wallpaper according to time of the day
     "
 }
 
@@ -55,8 +55,8 @@ function main {
     setrandombg $2
     exit
   fi
-  if [ "$1" == "daytime" ] ; then
-    setdaytimebg $2 $3 $4 $5
+  if [ "$1" == "daynight" ] ; then
+    setdaynightbg $2 $3 $4 $5
     exit
   fi
 
