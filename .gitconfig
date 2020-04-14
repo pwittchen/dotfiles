@@ -71,6 +71,7 @@
     force-delete-branch = branch -D
     delete-remote-branch = push origin --delete
     delete-branches-merged-to-master = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    delete-branches-merged-to-develop = "!git checkout develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     ; showing diffs
     diff-commit = diff --cached HEAD~1
