@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function run {
+function build {
   sudo docker build -t $1 .
 }
 
@@ -18,12 +18,12 @@ function remove {
 
 function help {
     echo "
-    docker.sh is a helper script for docker 
+    docker.sh is a helper script for docker
 
     usage:
-    run <image>
+    build <image>
     stop <image>
-    stop_recent 
+    stop_recent
     remove <image>
    "
 }
@@ -33,16 +33,16 @@ function main {
     help
     exit
   fi
-  if [ "$1" == "run" ]; then
-    run $2 
+  if [ "$1" == "build" ]; then
+    build $2
     exit
   fi
   if [ "$1" == "stop" ]; then
-    stop $2 
+    stop $2
     exit
   fi
   if [ "$1" == "stop_recent" ]; then
-    stop_recent 
+    stop_recent
     exit
   fi
   if [ "$1" == "remove" ]; then
