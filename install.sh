@@ -74,6 +74,7 @@ if [ ! -z $1 ] && [ $1 == "tmux" ]; then
 fi
 
 if [ ! -z $1 ] && [ $1 == "i3" ]; then
+  sudo cp .xinitrc ~/.xinitrc
   sudo cp .config/i3/config ~/.config/i3/
   sudo cp .config/i3status/config ~/.config/i3status/config
   sudo cp .config/dunst/dunstrc ~/.config/dunst/dunstrc
