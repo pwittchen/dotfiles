@@ -11,7 +11,9 @@ if [ ! -z $1 ] && [ $1 == "help" ]; then
     restoring old/last configs            restorelastconfig
     installing tpm and tmux plugins       tmux
     installing pathogen and vim plugins   vim
-    installing i3 config                  i3"
+    installing i3 config                  i3
+    installing ly config                  ly
+    "
   exit 1
 fi
 
@@ -73,6 +75,14 @@ if [ ! -z $1 ] && [ $1 == "i3" ]; then
   echo "type mod+Shift+r to reload configs"
   exit 1
 fi
+
+if [ ! -z $1 ] && [ $1 == "ly" ]; then
+  sudo cp .config/ly/config.ini /etc/ly/config.ini
+  echo "ly config installed"
+  echo "disable your current display manager, enable ly and restart computer"
+  exit 1
+fi
+
 
 if [ ! -z $1 ] && [ $1 == "run" ]; then
   sudo cp .gitconfig ~/
