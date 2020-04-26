@@ -9,6 +9,7 @@ if [ ! -z $1 ] && [ $1 == "help" ]; then
     installation/update of dotfiles       run
     generating empty configs              emptyconfig
     restoring old/last configs            restorelastconfig
+    installing bluetooth config           bluetooth
     installing tpm and tmux plugins       tmux
     installing pathogen and vim plugins   vim
     installing i3 config                  i3
@@ -31,6 +32,12 @@ if [ ! -z $1 ] && [ $1 == "restorelastconfig" ]; then
   sudo cp -R ~/.config/scripts_backup/* ~/.config/scripts
   sudo rm -rf ~/.config/scripts_backup || true
   echo "backup of the last config files restored"
+  exit 1
+fi
+
+if [ ! -z $1 ] && [ $1 == "bluetooth" ]; then
+  sudo cp .config/bluetooth/main.conf /etc/bluetooth/main.conf
+  echo "bluetooth config installed"
   exit 1
 fi
 
