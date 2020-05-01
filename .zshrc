@@ -11,7 +11,7 @@ export SDKMAN_DIR="/$HOME/.sdkman"
 export WORKON_HOME=~/.virtualenvs
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator:$PYENV_ROOT/bin
+export PATH=$PATH:$HOME/.scripts:$GOBIN:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator:$PYENV_ROOT/bin:$HOME/anaconda3/bin
 [[ $TERM != "screen" ]] && exec tmux
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
