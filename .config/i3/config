@@ -239,3 +239,6 @@ for_window [class="^Spotify*"] [floating] resize set 2000 1300
 
 # hiding edge/external borders
 hide_edge_borders both
+
+# relocate floating window to the center of the screen
+bindsym $mod+Shift+t move absolute position 650 80
