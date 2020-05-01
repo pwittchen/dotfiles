@@ -233,9 +233,10 @@ bar {
     }
 }
 
-# define size of floating Spotify and Brave windows on wide screen monitor
+# define size of floating windows for specific programs on wide screen monitor
 for_window [class="^Spotify*"] [floating] resize set 2200 1350
 for_window [class="^Brave*"] [floating] resize set 2200 1350
+for_window [class="^Gnome Terminal*"] [floating] resize set 2200 1350
 
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
