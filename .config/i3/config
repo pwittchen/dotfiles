@@ -230,15 +230,15 @@ bar {
     }
 }
 
+# define size of floating Spotify window
+for_window [class="^Spotify*"] [floating] resize set 2000 1300
+
+# relocate floating Spotify window to the center of the screen
+bindsym $mod+Shift+t move absolute position 650 80
+
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
-# define size of floating Spotify window
-for_window [class="^Spotify*"] [floating] resize set 2000 1300
-
 # hiding edge/external borders
 hide_edge_borders both
-
-# relocate floating window to the center of the screen
-bindsym $mod+Shift+t move absolute position 650 80
