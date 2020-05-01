@@ -234,5 +234,8 @@ bar {
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
+# define size of floating Spotify window
+for_window [class="^Spotify*"] [floating] resize set 2000 1200
+
 # hiding edge/external borders
 hide_edge_borders both
