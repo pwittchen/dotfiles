@@ -9,12 +9,10 @@ export GOBIN=$HOME/development/prv/go/sdk/bin
 export ANDROID=$HOME/development/prv/android/sdk
 export SDKMAN_DIR="/$HOME/.sdkman"
 export WORKON_HOME=~/.virtualenvs
-export PYENV_ROOT="$HOME/.pyenv"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-export PATH=$PATH:$PYENV_ROOT/bin:$HOME/anaconda3/bin
 [[ $TERM != "screen" ]] && exec tmux
 . $HOME/.scripts/aliases.sh
 . $HOME/.sdkman/bin/sdkman-init.sh
@@ -22,4 +20,3 @@ export PATH=$PATH:$PYENV_ROOT/bin:$HOME/anaconda3/bin
 . $HOME/development/prv/infra/tools/google-cloud-sdk/path.zsh.inc
 . $HOME/development/prv/infra/tools/google-cloud-sdk/completion.zsh.inc
 . /usr/bin/virtualenvwrapper.sh
-eval "$(pyenv init -)"
