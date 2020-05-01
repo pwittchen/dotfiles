@@ -163,38 +163,38 @@ bindsym $mod+b exec "i3lock -c 17212b"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	bindsym j resize shrink width 10 px or 10 ppt
+	bindsym k resize grow height 10 px or 10 ppt
+	bindsym l resize shrink height 10 px or 10 ppt
+	bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	#same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+	# back to normal: Enter or Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
 # move window (you can also use mouse for that)
 mode "moveit" {
-    bindsym Up move up 20px
-    bindsym Left move left 20px
-    bindsym Down move down 20px
-    bindsym Right move right 20px
-    bindsym Mod4+m mode "default"
+	bindsym Up move up 20px
+	bindsym Left move left 20px
+	bindsym Down move down 20px
+	bindsym Right move right 20px
+	bindsym Mod4+m mode "default"
 }
 
 bindsym $mod+m focus floating; mode "moveit"
@@ -213,21 +213,21 @@ bindsym XF86AudioPrev exec "spotifycli --prev"
 
 bar {
 	workspace_buttons yes
-    	position top
-    	status_command i3status
+	position top
+	status_command i3status
 	font pango:Roboto 10
 	height 25
 	tray_output none
 
 	colors {
 		background #17212b
-        	statusline #ffffff
-        	separator  #666666
-        	active_workspace   #2c3e50 #2c3e50 #1abc9c
-        	focused_workspace  #2c3e50 #2c3e50 #1abc9c
-        	inactive_workspace #2c3e50 #2c3e50 #ecf0f1
-        	urgent_workspace   #e74c3c #e74c3c #ecf0f1
-    	}
+		statusline #ffffff
+		separator  #666666
+		active_workspace   #2c3e50 #2c3e50 #1abc9c
+		focused_workspace  #2c3e50 #2c3e50 #1abc9c
+		inactive_workspace #2c3e50 #2c3e50 #ecf0f1
+		urgent_workspace   #e74c3c #e74c3c #ecf0f1
+	}
 }
 
 # hide windows title bar
