@@ -36,14 +36,12 @@ function record_webcam_2_mic {
 
 function stream_webcam_0 {
   notify-send "started streaming webcam 0"
-  mpv av://v4l2:/dev/video0
-  notify-send "stopped streaming webcam 0"
+  mpv av://v4l2:/dev/video0 &
 }
 
 function stream_webcam_2 {
   notify-send "started streaming webcam 2"
-  mpv av://v4l2:/dev/video2
-  notify-send "stopped streaming webcam 2"
+  mpv av://v4l2:/dev/video2 &
 }
 
 function keys_on {
