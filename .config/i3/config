@@ -233,11 +233,8 @@ bar {
     }
 }
 
-# define size of floating windows for specific programs on wide screen monitor
-for_window [class="Spotify Premium"] [floating] resize set 2200 1350
-for_window [class="Brave"] [floating] resize set 2200 1350
-for_window [class="Nozbe"] [floating] resize set 2200 1350
-for_window [class="Gnome Terminal"] [floating] resize set 2200 1350
+# define size of floating windows on wide screen monitor
+for_window [class="^.*"] [floating] resize set 2200 1350
 
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
