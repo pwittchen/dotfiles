@@ -234,11 +234,11 @@ bar {
 }
 
 # define size of floating windows on wide screen monitor
-for_window [class="^Spotify$"] [floating] resize set 2200 1350
-for_window [class="^Brave$"] [floating] resize set 2200 1350
-for_window [class="^Nozbe$"] [floating] resize set 2200 1350
-for_window [class="^Gnome-terminal$"] [floating] resize set 2200 1350
-for_window [class="^mpv$"] [floating] resize set 500 500
+for_window [class="Spotify"] [floating] resize set 2200 1350
+for_window [class="Brave"] [floating] resize set 2200 1350
+for_window [class="Nozbe"] [floating] resize set 2200 1350
+for_window [class="Terminal"] [floating] resize set 2200 1350
+for_window [class="mpv"] [floating] resize set 500 500
 
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
