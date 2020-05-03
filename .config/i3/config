@@ -207,7 +207,7 @@ bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send ' brightness 
 bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send ' brightness  ' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
 
 # spotify play control (requires 'spotify-cli-linux' program and media keys on keyboard)
-bindsym XF86AudioPlay exec "spotifycli --playpause && notify-send $(spotifycli --playbackstatus)' spotify' "
+bindsym XF86AudioPlay exec "spotifycli --playpause && notify-send $(spotifycli --playbackstatus)' spotify'"
 bindsym XF86AudioNext exec "spotifycli --next"
 bindsym XF86AudioPrev exec "spotifycli --prev"
 
@@ -234,11 +234,11 @@ bar {
 }
 
 # define size of floating windows on wide screen monitor
-for_window [class="Spotify"] [floating] resize set 2200 1350
-for_window [class="Brave"] [floating] resize set 2200 1350
-for_window [class="Nozbe"] [floating] resize set 2200 1350
-for_window [class="Terminal"] [floating] resize set 2200 1350
-for_window [class="mpv"] [floating] resize set 500 500
+for_window [class="Spotify" floating] resize set 2200 1350
+for_window [class="Brave" floating] resize set 2200 1350
+for_window [class="Nozbe" floating] resize set 2200 1350
+for_window [class="Gnome-terminal" floating] resize set 2200 1350
+for_window [class="mpv" floating] resize set 500 500
 
 # hide windows title bar
 for_window [class="^.*"] border pixel 1
