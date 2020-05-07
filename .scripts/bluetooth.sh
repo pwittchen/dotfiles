@@ -16,6 +16,10 @@ function connect_mouse_ultrathin {
   connect_device "Ultrathin Touch Mouse"
 }
 
+function connect_keyboard {
+  connect_device "Keyboard K380"
+}
+
 function connect_headphones {
   connect_device "MOMENTUM TW"
 }
