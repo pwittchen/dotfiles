@@ -3,7 +3,12 @@
 function setbg {
   cp $1 ~/.config/wall.jpg
   export DISPLAY=:0.0 && feh --bg-scale ~/.config/wall.jpg
+  setlockscreenbg $1
   notify-send "wallpaper changed"
+}
+
+function setlockscreenbg {
+  cp $1 ~/.cache/i3lock/current/l_resized.png
 }
 
 function setrandombg {

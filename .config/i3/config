@@ -159,7 +159,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # set key binding for screen lock
-bindsym $mod+b exec "betterlockscreen -l dim -t 'pw @ arch'"
+bindsym $mod+b exec "betterlockscreen -l -t 'pw @ arch'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
