@@ -29,7 +29,6 @@ order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
 order += "read_file email"
 order += "read_file rss"
-order += "read_file covid"
 order += "read_file aqi"
 order += "read_file weather"
 order += "tztime local"
@@ -123,11 +122,6 @@ read_file email {
 read_file rss {
     format = " %content"
     path = "/var/log/scripts/newsboat.log"
-}
-
-read_file covid {
-    format = "%content"
-    path = "/var/log/scripts/covid_19_pl.log"
 }
 
 read_file aqi {
