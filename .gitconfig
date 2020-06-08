@@ -8,6 +8,8 @@
 [push]
     ; push only to the current branch
     default = simple
+[pull]
+	rebase = false
 [diff]
     tool = vimdiff
 [merge]
