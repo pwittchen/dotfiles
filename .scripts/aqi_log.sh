@@ -24,8 +24,5 @@ if [ "$AQI" != "" ] ; then
   esac
 
   [ "$AQI" != "null" ] && echo "$EMOJI $AQI" > /var/log/scripts/aqi.log
-
-  if [ $AQI -gt 50 ] ; then
-    notify-send "current AQI is $AQI (air pollution)"
-  fi
+  [ "$AQI" == "null" ] && echo "" > /var/log/scripts/aqi.log
 fi

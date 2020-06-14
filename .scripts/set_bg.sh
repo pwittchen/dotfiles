@@ -29,8 +29,8 @@ function setdaynightbg {
   hour=$(date +%H)
   time_of_day=$(sunwait poll 50.2849923N 18.6493647E)
   [[ $time_of_day == "DAY" ]] && [ $hour -lt 12 ] && setbg $1 # morning
-  [ $hour -gt 11 ] && [ $hour -lt 15 ]            && setbg $2 # midday
-  [ $hour -gt 14 ] && [[ $time_of_day == "DAY" ]] && setbg $3 # dusk
+  [ $hour -gt 11 ] && [ $hour -lt 16 ]            && setbg $2 # midday
+  [ $hour -gt 15 ] && [[ $time_of_day == "DAY" ]] && setbg $3 # dusk
   [[ $time_of_day == "NIGHT" ]]                   && setbg $4 # night
 }
 
