@@ -9,7 +9,7 @@
     ; push only to the current branch
     default = simple
 [pull]
-	rebase = false
+    rebase = false
 [diff]
     tool = vimdiff
 [merge]
