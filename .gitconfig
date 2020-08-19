@@ -33,7 +33,7 @@
     last-commit-hash = log -1 --pretty=%h
     hist = log --graph --decorate --pretty=format:'%C(yellow)%h %Creset %C(red)%d %ad% %Creset %s %C(bold blue)[%cn]%Creset' --date=relative --abbrev-commit
     list-new-unstaged-files = ls-files --others --exclude-standard
-    list-contributors = shortlog -sn
+    contributors = shortlog -sn
 
     ; tracked files
     tracked-files = ls-files -t
