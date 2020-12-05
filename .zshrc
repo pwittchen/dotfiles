@@ -18,3 +18,4 @@ export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . /usr/bin/virtualenvwrapper.sh
+eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
