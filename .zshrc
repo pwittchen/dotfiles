@@ -11,9 +11,9 @@ export SDKMAN_DIR=$HOME/.sdkman
 export WORKON_HOME=$HOME/.virtualenvs
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.krew/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-export PATH=$PATH:$HOME/.krew/bin
 [[ $TERM != "screen" ]] && exec tmux
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
