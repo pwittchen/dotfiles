@@ -13,6 +13,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
+export PATH=$PATH:$HOME/.krew/bin
 [[ $TERM != "screen" ]] && exec tmux
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
