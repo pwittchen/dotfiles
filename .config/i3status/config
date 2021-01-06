@@ -28,8 +28,9 @@ order += "read_file sound_output"
 order += "read_file spotify"
 order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
-order += "read_file email"
 order += "read_file rss"
+order += "read_file email"
+order += "read_file phone"
 order += "read_file aqi"
 order += "read_file weather"
 order += "tztime local"
@@ -120,14 +121,19 @@ read_file pacman_new_packages {
     path = "/var/log/scripts/pacman_new_packages.log"
 }
 
+read_file rss {
+    format = " %content"
+    path = "/var/log/scripts/newsboat.log"
+}
+
 read_file email {
     format = " %content"
     path = "/var/log/scripts/email.log"
 }
 
-read_file rss {
-    format = " %content"
-    path = "/var/log/scripts/newsboat.log"
+read_file phone {
+    format = "%content"
+    path = "/var/log/scripts/phone.log"
 }
 
 read_file aqi {
