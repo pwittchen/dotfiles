@@ -18,8 +18,11 @@ font pango:monospace 8
 exec --no-startup-id xsetroot -solid "#17212b"
 
 # setting wallpaper (regular/dynamic -> macOS-like)
-# exec --no-startup-id feh --bg-scale ~/.config/wall.png
-exec --no-startup-id ~/.scripts/set_bg_daynight.sh
+exec --no-startup-id feh --bg-scale ~/.config/wall.png
+# exec --no-startup-id ~/.scripts/set_bg_daynight.sh
+
+# sets wallpapers for screen and laptop screen in appropriate resolution, when no external monitor is connected to the computer
+exec --no-startup-id ~/.scripts/set_laptop_monitor.sh
 
 # disables laptop screen after log in, when one external monitor is connected to the computer
 exec --no-startup-id ~/.scripts/set_external_monitor.sh
