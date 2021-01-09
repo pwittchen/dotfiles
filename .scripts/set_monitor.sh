@@ -17,7 +17,7 @@ if [ $(xrandr --listmonitors | wc -l) == "2" ]; then # run instructions only whe
   if [ $(xrandr --listmonitors | grep 1920 | wc -l) == "1" ]; then
     if [ "$current_setup" == "laptop" ]; then
       if [ "$ac_connected" == "off-line" ]; then
-        exit # laptop monitor is on, ac is on and setup is laptop
+        exit # laptop monitor is on, ac is off and setup is laptop
       fi
     fi
   fi
