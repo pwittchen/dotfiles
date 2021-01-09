@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# this script describes monitor setup specific for my own personal environment
+# basically, I want to disable laptop screen when external monitor is connected
+# via usb-C and is charging battery at the same time
+# and set wallpaper and lock screen background with appropriate resolution
+# for external monitor or laptop screen
+# I also want to avoid additional reload of the settings when it's not needed
+
 current_setup=$(cat ~/.config/.monitor)
 ac_connected=$(acpi -a | awk '{print $3}')
 
