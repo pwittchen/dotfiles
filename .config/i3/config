@@ -17,11 +17,6 @@ font pango:monospace 8
 # setting bg color
 exec --no-startup-id xsetroot -solid "#17212b"
 
-# setting wallpaper (regular -> macOS-like)
-# exec --no-startup-id feh --bg-scale ~/.config/wall.png
-# setting wallpaper (dynamic -> macOS-like)
-# exec --no-startup-id ~/.scripts/set_bg_daynight.sh
-
 # sets wallpapers for screen and lock screen for external monitor or latpot screen
 exec --no-startup-id ~/.scripts/set_monitor.sh
 
@@ -160,7 +155,6 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # set key binding for screen lock
-# bindsym $mod+b exec "i3lock -c 17212b"
 bindsym $mod+b exec "betterlockscreen -l -t 'pw @ arch'"
 
 # resize window (you can also use the mouse for that)
