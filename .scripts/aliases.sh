@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+alias v="vim"
 alias scs="cd ~/.scripts"
 alias dvp="cd ~/development"
 alias dox="cd ~/documents"
