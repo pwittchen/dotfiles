@@ -14,6 +14,7 @@ cp -avr ~/documents/other ~/backup/other
 cp -avr ~/documents/presentations ~/backup/presentations
 cp -avr ~/documents/travel ~/backup/travel
 cp -avr ~/documents/work ~/backup/work
+cp -avr ~/documents/notebook ~/backup/notebook
 cp -avr ~/.newsboat ~/backup/newsboat
 mkdir -p ~/backup/secrets
 cp -avr ~/.gnupg ~/backup/secrets/.gnupg
