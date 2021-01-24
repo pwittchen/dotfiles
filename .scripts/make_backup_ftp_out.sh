@@ -19,6 +19,7 @@ cp -avr ~/.newsboat ~/backup/newsboat
 mkdir -p ~/backup/secrets
 cp -avr ~/.gnupg ~/backup/secrets/.gnupg
 cp -avr ~/.password-store ~/backup/secrets/.password-store
+cp -avr ~/.kube/configs-backup ~/backup/secrets/kube-configs-backup
 cp -avr ~/.config/scripts ~/backup/secrets/.configscripts
 cp -avr ~/.ssh/ ~/backup/secrets/.ssh
 cp -avr ~/.ssh ~/backup/secrets/.vpn
