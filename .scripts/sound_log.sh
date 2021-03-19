@@ -9,7 +9,7 @@ function is_connected {
 }
 
 speaker_mac=$(get_mac "JBL Charge 3")
-headphones_mac=$(get_mac "LE-MOMENTUM TW")
+headphones_mac=$(get_mac "MOMENTUM TW")
 
 if [ "$(is_connected $speaker_mac)" == "yes" ]; then
   echo "S" > /var/log/scripts/sound.log
