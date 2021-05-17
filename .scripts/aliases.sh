@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-alias v="vim"
-alias s="systemctl"
+alias v="sudo vim"
+alias s="sudo systemctl"
 alias scs="cd ~/.scripts"
 alias dvp="cd ~/development"
 alias dox="cd ~/documents"
