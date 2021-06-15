@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# showing information
+
 function devices {
   bluetoothctl devices 
 }
@@ -7,6 +9,8 @@ function devices {
 function paired_devices {
   bluetoothctl paired-devices 
 }
+
+# connecting to devices
 
 function connect_mouse_mx {
   connect_device "MX Master"
@@ -16,7 +20,7 @@ function connect_mouse_ultrathin {
   connect_device "Ultrathin Touch Mouse"
 }
 
-function connect_keyboard {
+function connect_keyboard_k380 {
   connect_device "Keyboard K380"
 }
 
@@ -28,10 +32,39 @@ function connect_speaker {
   connect_device "JBL Charge 3"
 }
 
+# disconnecting from devices
+
+function disconnect_mouse_mx {
+  disconnect_device "MX Master"
+}
+
+function disconnect_mouse_ultrathin {
+  disconnect_device "Ultrathin Touch Mouse"
+}
+
+function disconnect_keyboard_k380 {
+  disconnect_device "Keyboard K380"
+}
+
+function disconnect_headphones {
+  disconnect_device "MOMENTUM TW"
+}
+
+function disconnect_speaker {
+  disconnect_device "JBL Charge 3"
+}
+
 function connect_device {
   mac_address=$(bluetoothctl devices | grep "$1" | awk '{print $2}')
   bluetoothctl connect $mac_address
 }
+
+function disconnect_device {
+  mac_address=$(bluetoothctl devices | grep "$1" | awk '{print $2}')
+  bluetoothctl disconnect $mac_address
+}
+
+# general controls
 
 function scan {
   bluetoothctl scan on
@@ -51,16 +84,25 @@ function help {
 
     usage:
 
-    help                      shows help
-    devices	              shows devices
-    paired_devices            shows paired devices
-    connect_mouse_mx          connects mx mouse
-    connect_mouse_ultrathin   connects ultrathin mouse
-    connect_headphones        connects headphones
-    connect_speaker           connects speaker
-    scan	              starts scanning
-    on 		              turns bt on
-    off		              turns bt off
+    help                         shows help
+    devices                      shows devices
+    paired_devices               shows paired devices
+    
+    connect_mouse_mx             connects mx mouse
+    connect_mouse_ultrathin      connects ultrathin mouse
+    connect_keyboard_k380        connects keyboard k380
+    connect_headphones           connects headphones
+    connect_speaker              connects speaker
+
+    disconnect_mouse_mx          connects mx mouse
+    disconnect_mouse_ultrathin   connects ultrathin mouse
+    disconnect_keyboard_k380     connects keyboard k380
+    disconnect_headphones        connects headphones
+    disconnect_speaker           connects speaker
+ 
+    scan                         starts scanning
+    on                           turns bt on
+    off                          turns bt off
     "
 }
 
@@ -89,12 +131,36 @@ function main {
     connect_mouse_ultrathin
     exit
   fi
+  if [ "$1" == "connect_keyboard_k380" ]; then
+    connect_keyboard_k380
+    exit
+  fi
   if [ "$1" == "connect_headphones" ]; then
     connect_headphones
     exit
   fi
   if [ "$1" == "connect_speaker" ]; then
     connect_speaker
+    exit
+  fi
+  if [ "$1" == "disconnect_mouse_mx" ]; then
+    disconnect_mouse_mx
+    exit
+  fi
+  if [ "$1" == "disconnect_mouse_ultrathin" ]; then
+    disconnect_mouse_ultrathin
+    exit
+  fi
+  if [ "$1" == "disconnect_keyboard_k380" ]; then
+    disconnect_keyboard_k380
+    exit
+  fi
+  if [ "$1" == "disconnect_headphones" ]; then
+    disconnect_headphones
+    exit
+  fi
+  if [ "$1" == "disconnect_speaker" ]; then
+    disconnect_speaker
     exit
   fi
   if [ "$1" == "scan" ]; then
@@ -104,7 +170,7 @@ function main {
     on 
   fi
   if [ "$1" == "off" ]; then
-    off 
+    off
   fi
 }
 
