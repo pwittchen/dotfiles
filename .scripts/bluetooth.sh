@@ -16,6 +16,10 @@ function connect_mouse_mx {
   connect_device "MX Master"
 }
 
+function connect_mouse_mx_3 {
+  connect_device "MX Master 3"
+}
+
 function connect_mouse_ultrathin {
   connect_device "Ultrathin Touch Mouse"
 }
@@ -36,6 +40,10 @@ function connect_speaker {
 
 function disconnect_mouse_mx {
   disconnect_device "MX Master"
+}
+
+function disconnect_mouse_mx_3 {
+  disconnect_device "MX Master 3"
 }
 
 function disconnect_mouse_ultrathin {
@@ -89,6 +97,7 @@ function help {
     paired_devices               shows paired devices
     
     connect_mouse_mx             connects mx mouse
+    connect_mouse_mx_3           connects mx 3 mouse
     connect_mouse_ultrathin      connects ultrathin mouse
     connect_keyboard_k380        connects keyboard k380
     connect_headphones           connects headphones
@@ -127,6 +136,10 @@ function main {
     connect_mouse_mx
     exit
   fi
+  if [ "$1" == "connect_mouse_mx_3" ]; then
+    connect_mouse_mx_3
+    exit
+  fi
   if [ "$1" == "connect_mouse_ultrathin" ]; then
     connect_mouse_ultrathin
     exit
@@ -145,6 +158,10 @@ function main {
   fi
   if [ "$1" == "disconnect_mouse_mx" ]; then
     disconnect_mouse_mx
+    exit
+  fi
+  if [ "$1" == "disconnect_mouse_mx_3" ]; then
+    disconnect_mouse_mx_3
     exit
   fi
   if [ "$1" == "disconnect_mouse_ultrathin" ]; then
