@@ -28,6 +28,10 @@ function connect_keyboard_k380 {
   connect_device "Keyboard K380"
 }
 
+function connect_k3 {
+  connect_device "Keychron K3"
+}
+
 function connect_headphones {
   connect_device "MOMENTUM TW"
 }
@@ -52,6 +56,10 @@ function disconnect_mouse_ultrathin {
 
 function disconnect_keyboard_k380 {
   disconnect_device "Keyboard K380"
+}
+
+function disconnect_keyboard_k3 {
+  disconnect_device "Keychron K3"
 }
 
 function disconnect_headphones {
@@ -99,13 +107,15 @@ function help {
     connect_mouse_mx             connects mx mouse
     connect_mouse_mx_3           connects mx 3 mouse
     connect_mouse_ultrathin      connects ultrathin mouse
-    connect_keyboard_k380        connects keyboard k380
+    connect_keyboard_k380        connects keyboard logitech k380
+    connect_keyboard_k3          connects keyboard keychron k3
     connect_headphones           connects headphones
     connect_speaker              connects speaker
 
     disconnect_mouse_mx          connects mx mouse
     disconnect_mouse_ultrathin   connects ultrathin mouse
-    disconnect_keyboard_k380     connects keyboard k380
+    disconnect_keyboard_k380     connects keyboard logitech k380
+    disconnect_keyboard_k3       connects keyboard keychron k3
     disconnect_headphones        connects headphones
     disconnect_speaker           connects speaker
  
@@ -148,6 +158,10 @@ function main {
     connect_keyboard_k380
     exit
   fi
+  if [ "$1" == "connect_keyboard_k3" ]; then
+    connect_keyboard_k3
+    exit
+  fi
   if [ "$1" == "connect_headphones" ]; then
     connect_headphones
     exit
@@ -170,6 +184,10 @@ function main {
   fi
   if [ "$1" == "disconnect_keyboard_k380" ]; then
     disconnect_keyboard_k380
+    exit
+  fi
+  if [ "$1" == "disconnect_keyboard_k3" ]; then
+    disconnect_keyboard_k3
     exit
   fi
   if [ "$1" == "disconnect_headphones" ]; then
