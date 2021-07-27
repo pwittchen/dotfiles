@@ -28,7 +28,7 @@ function connect_keyboard_k380 {
   connect_device "Keyboard K380"
 }
 
-function connect_k3 {
+function connect_keyboard_k3 {
   connect_device "Keychron K3"
 }
 
