@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 wifi_ap_name=$(nmcli connection show --active | grep wifi | awk '{print $1}')
+wired_ap_device=$(nmcli connection show --active | grep ethernet | awk '{print $4}')
 # this script should be executed in my home only to avoid google bans
-[ "$wifi_ap_name" != "vcu" ] && notify-send "email" "not connected to home network\nskipping email check" && exit
+[ "$wifi_ap_name" != "vcu" ] && [ "$wired_ap_device" != "enp0s31f6" ] && notify-send "email" "not connected to home network\nskipping email check" && exit
 source $HOME/.config/scripts/email.conf
 mail_feed=$(curl -u "$USER:$PASS" -s 'https://mail.google.com/mail/u/0/feed/atom')
 msg_count=$(echo $mail_feed | xmllint --format - | grep fullcount | sed -e 's/<[^>]*>//g' | sed 's/ //g')
