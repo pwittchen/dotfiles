@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-function linuxpl {
-  source ~/.config/scripts/linuxpl.conf
-  ssh -l $SERVER_LINUX_PL_USER -p $SERVER_LINUX_PL_SSH_PORT $SERVER_LINUX_PL
+function cyberfolks {
+  source ~/.config/scripts/cyberfolks.conf
+  ssh -l $SERVER_CYBERFOLKS_USER -p $SERVER_CYBERFOLKS_SSH_PORT $SERVER_CYBERFOLKS
 }
 
 function help {
@@ -11,7 +11,7 @@ function help {
 
     defined servers:
 
-      linuxpl
+      cyberfolks
     "
 }
 
@@ -20,8 +20,8 @@ function main {
     help
     exit
   fi
-  if [ "$1" == "linuxpl" ]; then
-    linuxpl
+  if [ "$1" == "cyberfolks" ]; then
+    cyberfolks
     exit
   fi
 }
