@@ -24,8 +24,14 @@ function connect_mouse_ultrathin {
   connect_device "Ultrathin Touch Mouse"
 }
 
-function connect_keyboard_k380 {
-  connect_device "Keyboard K380"
+function connect_keyboard_k380_1 {
+  mac_address=$(bluetoothctl devices | grep "K380" | awk '{print $2}' | head -n 1)
+  bluetoothctl connect $mac_address
+}
+
+function connect_keyboard_k380_2 {
+  mac_address=$(bluetoothctl devices | grep "K380" | awk '{print $2}' | tail -n 1)
+  bluetoothctl connect $mac_address
 }
 
 function connect_keyboard_k3 {
@@ -54,8 +60,14 @@ function disconnect_mouse_ultrathin {
   disconnect_device "Ultrathin Touch Mouse"
 }
 
-function disconnect_keyboard_k380 {
-  disconnect_device "Keyboard K380"
+function disconnect_keyboard_k380_1 {
+  mac_address=$(bluetoothctl devices | grep "K380" | awk '{print $2}' | head -n 1)
+  bluetoothctl disconnect $mac_address
+}
+
+function disconnect_keyboard_k380_2 {
+  mac_address=$(bluetoothctl devices | grep "K380" | awk '{print $2}' | tail -n 1)
+  bluetoothctl disconnect $mac_address
 }
 
 function disconnect_keyboard_k3 {
@@ -107,14 +119,16 @@ function help {
     connect_mouse_mx             connects mx mouse
     connect_mouse_mx_3           connects mx 3 mouse
     connect_mouse_ultrathin      connects ultrathin mouse
-    connect_keyboard_k380        connects keyboard logitech k380
+    connect_keyboard_k380_1      connects keyboard logitech k380 (first)
+    connect_keyboard_k380_2      connects keyboard logitech k380 (second)
     connect_keyboard_k3          connects keyboard keychron k3
     connect_headphones           connects headphones
     connect_speaker              connects speaker
 
     disconnect_mouse_mx          connects mx mouse
     disconnect_mouse_ultrathin   connects ultrathin mouse
-    disconnect_keyboard_k380     connects keyboard logitech k380
+    disconnect_keyboard_k380_1   connects keyboard logitech k380 (first)
+    disconnect_keyboard_k380_2   connects keyboard logitech k380 (second)
     disconnect_keyboard_k3       connects keyboard keychron k3
     disconnect_headphones        connects headphones
     disconnect_speaker           connects speaker
@@ -154,8 +168,12 @@ function main {
     connect_mouse_ultrathin
     exit
   fi
-  if [ "$1" == "connect_keyboard_k380" ]; then
-    connect_keyboard_k380
+  if [ "$1" == "connect_keyboard_k380_1" ]; then
+    connect_keyboard_k380_1
+    exit
+  fi
+  if [ "$1" == "connect_keyboard_k380_2" ]; then
+    connect_keyboard_k380_2
     exit
   fi
   if [ "$1" == "connect_keyboard_k3" ]; then
@@ -182,8 +200,12 @@ function main {
     disconnect_mouse_ultrathin
     exit
   fi
-  if [ "$1" == "disconnect_keyboard_k380" ]; then
-    disconnect_keyboard_k380
+  if [ "$1" == "disconnect_keyboard_k380_1" ]; then
+    disconnect_keyboard_k380_1
+    exit
+  fi
+  if [ "$1" == "disconnect_keyboard_k380_2" ]; then
+    disconnect_keyboard_k380_2
     exit
   fi
   if [ "$1" == "disconnect_keyboard_k3" ]; then
