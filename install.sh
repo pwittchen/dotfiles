@@ -78,9 +78,10 @@ if [ ! -z $1 ] && [ $1 == "i3" ]; then
   sudo cp .config/i3/config ~/.config/i3/
   sudo cp .config/i3status/config ~/.config/i3status/config
   sudo cp .config/dunst/dunstrc ~/.config/dunst/dunstrc
-  sudo cp .config/rofi/config.rasi ~/.config/rofi/config.rasi
+  sudo cp .config/rofi/config.rasi ~/.local/share/rofi/themes/custom.rasi
   echo "i3, rofi and dunst config installed"
   echo "type mod+Shift+r to reload configs"
+  echo "type rofi-theme-selector to select new rofi theme"
   exit 1
 fi
 
