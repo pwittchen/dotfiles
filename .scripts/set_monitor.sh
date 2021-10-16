@@ -32,8 +32,7 @@ fi
 
 xrandr --auto # reset default settings
 
-if [ $(xrandr --listmonitors | wc -l) == "2" ]; then # run instructions only when one monitor is active
-
+if [ $(xrandr --listmonitors | wc -l) == "1" ]; then # run instructions only when one monitor is active
   if [ "$current_setup" == "laptop" ]; then
     exit # only laptop screen is active and laptop setup is active -> no need to do anything
   fi
@@ -48,7 +47,7 @@ fi
 
 # setup for external connected screeen and turn off the laptop screen (when at least two screens are connected)
 
-if [ $(xrandr --listmonitors | wc -l) == "3" ]; then # run instructions only when external monitor is connected
+if [ $(xrandr --listmonitors | wc -l) == "2" ]; then # run instructions only when external monitor is connected
   if [ "$current_setup" == "external" ]; then
     xrandr --output eDP-1 --off # turn off the primary (laptop) monitor
     feh --bg-scale ~/.config/wall.png # reload wallpaper to adjust it to the screen size
@@ -63,6 +62,5 @@ if [ $(xrandr --listmonitors | wc -l) == "3" ]; then # run instructions only whe
   xrandr --output eDP-1 --off # turn off the primary (laptop) monitor
   feh --bg-scale ~/.config/wall.png # reload wallpaper to adjust it to the screen size
   i3-msg "workspace 1" # switch to the workspace 1 (secondary monitor is on the workspace 2 in the beginning)
-
   echo "external" > ~/.config/.monitor
 fi
