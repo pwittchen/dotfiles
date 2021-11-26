@@ -37,7 +37,7 @@ map <C-p> "+p
 let g:mergetool_layout = 'LmR'
 let mapleader = ','
 
-nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>g :Goyo<CR>
 nnoremap <leader>p :CtrlP<CR>
