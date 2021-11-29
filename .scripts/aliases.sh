@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias v="sudo vim"
+alias v="vim"
 alias s="sudo systemctl"
 alias scs="cd ~/.scripts"
 alias dvp="cd ~/development"
