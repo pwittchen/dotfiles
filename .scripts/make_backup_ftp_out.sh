@@ -27,3 +27,4 @@ chmod 777 ~/backup/*
 /usr/bin/lftp ftp://$SERVER_CYBERFOLKS_USER:$SERVER_CYBERFOLKS_PASS@$SERVER_CYBERFOLKS -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
 export DISPLAY=:0.0 && notify-send "backup" "backup data saved on server"
+rm -rf ~/backup/*
