@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/scripts/linuxpl.conf
+source ~/.config/scripts/cyberfolks.conf
 
 rm -rf ~/backup/*
 cp -avr ~/documents/ebooks ~/backup/ebooks
@@ -24,6 +24,6 @@ cp -avr ~/.config/scripts ~/backup/secrets/.configscripts
 cp -avr ~/.ssh/ ~/backup/secrets/.ssh
 cp -avr ~/.vpn/ ~/backup/secrets/.vpn
 chmod 777 ~/backup/*
-/usr/bin/lftp ftp://$SERVER_LINUX_PL_USER:$SERVER_LINUX_PL_PASS@$SERVER_LINUX_PL -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/backup backup; quit"
+/usr/bin/lftp ftp://$SERVER_CYBERFOLKS_USER:$SERVER_CYBERFOLKS_PASS@$SERVER_CYBERFOLKS -e "set ftp:ssl-allow no; mirror -R -v --delete-first ~/backup backup; quit"
 date >> /var/log/scripts/ftp_backup_out.log
 export DISPLAY=:0.0 && notify-send "backup" "backup data saved on server"
