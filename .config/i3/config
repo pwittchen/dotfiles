@@ -37,10 +37,10 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status && notify-send " volume  "
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status && notify-send " volume  "
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status && notify-send " volume mute/unmute"
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status && notify-send " microphone mute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status && notify-send " volume  " -u low
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status && notify-send " volume  " -u low
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status && notify-send " volume mute/unmute" -u low
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status && notify-send " microphone mute" -u low
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -199,11 +199,11 @@ bindsym $mod+m focus floating; mode "moveit"
 bindsym $mod+Shift+t move absolute position 630 60
 
 # brightness control (works for thinkpad, requires 'light' program)
-bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send ' brightness  ' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
-bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send ' brightness  ' $(light)'%' && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
+bindsym XF86MonBrightnessUp exec "sudo light -A 20; notify-send ' brightness  ' $(light)'%' -u low && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
+bindsym XF86MonBrightnessDown exec "sudo light -U 20; notify-send ' brightness  ' $(light)'%' -u low && light > /var/log/scripts/screen_brightness.log && killall -SIGUSR1 i3status"
 
 # spotify play control (requires 'spotify-cli-linux' program and media keys on keyboard)
-bindsym XF86AudioPlay exec "spotifycli --playpause && notify-send $(spotifycli --playbackstatus)' spotify'"
+bindsym XF86AudioPlay exec "spotifycli --playpause && notify-send $(spotifycli --playbackstatus)' spotify' -u low"
 bindsym XF86AudioNext exec "spotifycli --next"
 bindsym XF86AudioPrev exec "spotifycli --prev"
 
