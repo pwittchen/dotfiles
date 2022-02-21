@@ -20,6 +20,9 @@ exec --no-startup-id xsetroot -solid "#17212b"
 # initializes setup for laptop screen or external monitor, wallpapers and lock screens
 exec --no-startup-id ~/.scripts/set_monitor.sh
 
+# rotating right screen (vertical) -> it's my current office setup
+# exec xrandr --output DVI-D-1 --rotate left
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
