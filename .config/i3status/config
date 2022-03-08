@@ -29,7 +29,6 @@ order += "read_file spotify"
 order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
 order += "read_file rss"
-order += "read_file email"
 order += "read_file phone"
 order += "read_file aqi"
 order += "read_file weather"
@@ -124,11 +123,6 @@ read_file pacman_new_packages {
 read_file rss {
     format = " %content"
     path = "/var/log/scripts/newsboat.log"
-}
-
-read_file email {
-    format = " %content"
-    path = "/var/log/scripts/email.log"
 }
 
 read_file phone {
