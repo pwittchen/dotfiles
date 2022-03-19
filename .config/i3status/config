@@ -28,7 +28,6 @@ order += "read_file sound_output"
 order += "read_file spotify"
 order += "read_file screen_brightness"
 order += "read_file pacman_new_packages"
-order += "read_file rss"
 order += "read_file phone"
 order += "read_file aqi"
 order += "read_file weather"
@@ -118,11 +117,6 @@ read_file screen_brightness {
 read_file pacman_new_packages {
     format = " %content"
     path = "/var/log/scripts/pacman_new_packages.log"
-}
-
-read_file rss {
-    format = " %content"
-    path = "/var/log/scripts/newsboat.log"
 }
 
 read_file phone {
