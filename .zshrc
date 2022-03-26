@@ -16,27 +16,22 @@ if [ `uname` = "Darwin" ]; then
   export HOMEBREW=/opt/homebrew/bin
   export GOPATH=$DEV/prv/go/workspace
   export ANDROID=$HOME/Library/Android/sdk
-  export SDKMAN_DIR=$HOME/.sdkman
-  export WORKON_HOME=$HOME/.virtualenvs
   export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3
   export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
 else
   export DEV=$HOME/development
   export GOPATH=$DEV/prv/go/sdk
   export ANDROID=$DEV/prv/android/sdk
-  export SDKMAN_DIR=$HOME/.sdkman
-  export WORKON_HOME=$HOME/.virtualenvs
 fi
+
+export SDKMAN_DIR=$HOME/.sdkman
+export WORKON_HOME=$HOME/.virtualenvs
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.krew/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-
-if [ `uname` != "Darwin" ]; then
-  [[ $TERM != "screen" ]] && exec tmux
-fi
 
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
@@ -49,4 +44,5 @@ if [ `uname` = "Darwin" ]; then
 else
   . /usr/bin/virtualenvwrapper.sh
   eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
+  [[ $TERM != "screen" ]] && exec tmux
 fi
