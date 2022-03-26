@@ -1,22 +1,52 @@
+if [ `uname` = "Darwin" ]; then
+    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+      source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    fi
+fi
+
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting kubectl)
 . $ZSH/oh-my-zsh.sh
 export EDITOR=/usr/bin/vim
-export GOPATH=$HOME/development/prv/go/sdk
-export GOBIN=$HOME/development/prv/go/sdk/bin
-export ANDROID=$HOME/development/prv/android/sdk
-export SDKMAN_DIR=$HOME/.sdkman
-export WORKON_HOME=$HOME/.virtualenvs
+
+if [ `uname` = "Darwin" ]; then
+  export DEV=$HOME/Development
+  export HOMEBREW=/opt/homebrew/bin
+  export GOPATH=$DEV/prv/go/workspace
+  export ANDROID=$HOME/Library/Android/sdk
+  export SDKMAN_DIR=$HOME/.sdkman
+  export WORKON_HOME=$HOME/.virtualenvs
+  export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3
+  export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
+else
+  export DEV=$HOME/development
+  export GOPATH=$DEV/prv/go/sdk
+  export ANDROID=$DEV/prv/android/sdk
+  export SDKMAN_DIR=$HOME/.sdkman
+  export WORKON_HOME=$HOME/.virtualenvs
+fi
+
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.krew/bin
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
-[[ $TERM != "screen" ]] && exec tmux
+
+if [ `uname` != "Darwin" ]; then
+  [[ $TERM != "screen" ]] && exec tmux
+fi
+
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
-. /usr/bin/virtualenvwrapper.sh
-eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
+
+if [ `uname` = "Darwin" ]; then
+  . $HOMEBREW/virtualenvwrapper.sh
+  eval "$(ssh-agent -s)" &> /dev/null
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  . /usr/bin/virtualenvwrapper.sh
+  eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
+fi
