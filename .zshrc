@@ -19,7 +19,7 @@ else
   export GOPATH=$DEV/prv/go/sdk
   export ANDROID=$DEV/prv/android/sdk
   . /usr/bin/virtualenvwrapper.sh
-  eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
+  eval "$(ssh-agent -s)" &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
   [[ $TERM != "screen" ]] && exec tmux
 fi
 
