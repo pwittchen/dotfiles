@@ -11,16 +11,10 @@ if [ `uname` = "Darwin" ]; then
   export ANDROID=$HOME/Library/Android/sdk
   export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3
   export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
-  . $HOMEBREW/virtualenvwrapper.sh
-  eval "$(ssh-agent -s)" &> /dev/null
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   export DEV=$HOME/development
   export GOPATH=$DEV/prv/go/sdk
   export ANDROID=$DEV/prv/android/sdk
-  . /usr/bin/virtualenvwrapper.sh
-  eval "$(ssh-agent -s)" &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
-  [[ $TERM != "screen" ]] && exec tmux
 fi
 
 export EDITOR=/usr/bin/vim
@@ -36,3 +30,14 @@ export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
+
+if [ `uname` = "Darwin" ]; then
+  . $HOMEBREW/virtualenvwrapper.sh
+  eval "$(ssh-agent -s)" &> /dev/null
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  . /usr/bin/virtualenvwrapper.sh
+  eval "$(ssh-agent -s)" &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
+  [[ $TERM != "screen" ]] && exec tmux
+fi
+
