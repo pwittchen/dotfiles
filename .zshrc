@@ -5,23 +5,19 @@ plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-hi
 . $ZSH/oh-my-zsh.sh
 
 if [ `uname` = "Darwin" ]; then
-  # macOS
   export DEV=$HOME/Development
   export HOMEBREW=/opt/homebrew/bin
   export GOPATH=$DEV/prv/go/workspace
   export ANDROID=$HOME/Library/Android/sdk
   export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3
   export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
-
   . $HOMEBREW/virtualenvwrapper.sh
   eval "$(ssh-agent -s)" &> /dev/null
   eval "$(/opt/homebrew/bin/brew shellenv)"
 else
-  # Arch Linux
   export DEV=$HOME/development
   export GOPATH=$DEV/prv/go/sdk
   export ANDROID=$DEV/prv/android/sdk
-
   . /usr/bin/virtualenvwrapper.sh
   eval `ssh-agent` &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
   [[ $TERM != "screen" ]] && exec tmux
