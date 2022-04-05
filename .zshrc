@@ -26,6 +26,7 @@ export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.krew/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
+export PATH=$PATH:$HOME/.poetry/bin
 
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
@@ -40,4 +41,3 @@ else
   eval "$(ssh-agent -s)" &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
   [[ $TERM != "screen" ]] && exec tmux
 fi
-
