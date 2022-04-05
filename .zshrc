@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git colorize brew mvn gradle pip sudo zsh-autosuggestions zsh-syntax-highlighting kubectl)
+plugins=(git colorize brew mvn gradle pip poetry sudo zsh-autosuggestions zsh-syntax-highlighting kubectl)
 . $ZSH/oh-my-zsh.sh
 
 if [ `uname` = "Darwin" ]; then
