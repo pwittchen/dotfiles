@@ -39,5 +39,5 @@ if [ `uname` = "Darwin" ]; then
 else
   . /usr/bin/virtualenvwrapper.sh
   eval "$(ssh-agent -s)" &> /dev/null && ssh-add -k ~/.ssh/id_rsa_df &> /dev/null
-  [[ $TERM != "screen" ]] && exec tmux
+  # [[ $TERM != "screen" ]] && exec tmux
 fi
