@@ -1,6 +1,6 @@
 dotfiles
 ========
-my dotfiles
+my dotfiles use both on Arch Linux and macOS
 
 usage
 -----
