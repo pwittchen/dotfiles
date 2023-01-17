@@ -35,6 +35,9 @@
     list-new-unstaged-files = ls-files --others --exclude-standard
     contributors = shortlog -sn
 
+    ; tags
+    tags-by-date=tag --sort version:refname
+
     ; tracked files
     tracked-files = ls-files -t
     untracked-files = ls-files --others
