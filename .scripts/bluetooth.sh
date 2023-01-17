@@ -3,11 +3,11 @@
 # showing information
 
 function devices {
-  bluetoothctl devices 
+  bluetoothctl devices
 }
 
 function paired_devices {
-  bluetoothctl paired-devices 
+  bluetoothctl paired-devices
 }
 
 # connecting to devices
@@ -36,6 +36,10 @@ function connect_keyboard_k380_2 {
 
 function connect_keyboard_k3 {
   connect_device "Keychron K3"
+}
+
+function connect_keyboard_mx_keys_mini {
+  connect_device "MX Keys Mini"
 }
 
 function connect_headphones {
@@ -112,30 +116,31 @@ function help {
 
     usage:
 
-    help                         shows help
-    devices                      shows devices
-    paired_devices               shows paired devices
-    
-    connect_mouse_mx             connects mx mouse
-    connect_mouse_mx_3           connects mx 3 mouse
-    connect_mouse_ultrathin      connects ultrathin mouse
-    connect_keyboard_k380_1      connects keyboard logitech k380 (first)
-    connect_keyboard_k380_2      connects keyboard logitech k380 (second)
-    connect_keyboard_k3          connects keyboard keychron k3
-    connect_headphones           connects headphones
-    connect_speaker              connects speaker
+    help                           shows help
+    devices                        shows devices
+    paired_devices                 shows paired devices
 
-    disconnect_mouse_mx          connects mx mouse
-    disconnect_mouse_ultrathin   connects ultrathin mouse
-    disconnect_keyboard_k380_1   connects keyboard logitech k380 (first)
-    disconnect_keyboard_k380_2   connects keyboard logitech k380 (second)
-    disconnect_keyboard_k3       connects keyboard keychron k3
-    disconnect_headphones        connects headphones
-    disconnect_speaker           connects speaker
- 
-    scan                         starts scanning
-    on                           turns bt on
-    off                          turns bt off
+    connect_mouse_mx               connects mx mouse
+    connect_mouse_mx_3             connects mx 3 mouse
+    connect_mouse_ultrathin        connects ultrathin mouse
+    connect_keyboard_k380_1        connects keyboard logitech k380 (first)
+    connect_keyboard_k380_2        connects keyboard logitech k380 (second)
+    connect_keyboard_k3            connects keyboard keychron k3
+    connect_keyboard_mx_keys_mini  connects keyboard logitech mx keys mini
+    connect_headphones             connects headphones
+    connect_speaker                connects speaker
+
+    disconnect_mouse_mx            connects mx mouse
+    disconnect_mouse_ultrathin     connects ultrathin mouse
+    disconnect_keyboard_k380_1     connects keyboard logitech k380 (first)
+    disconnect_keyboard_k380_2     connects keyboard logitech k380 (second)
+    disconnect_keyboard_k3         connects keyboard keychron k3
+    disconnect_headphones          connects headphones
+    disconnect_speaker             connects speaker
+
+    scan                           starts scanning
+    on                             turns bt on
+    off                            turns bt off
     "
 }
 
@@ -145,7 +150,7 @@ function main {
     exit
   fi
   if [ "$1" == "status" ]; then
-    info 
+    info
     exit
   fi
   if [ "$1" == "devices" ]; then
@@ -178,6 +183,10 @@ function main {
   fi
   if [ "$1" == "connect_keyboard_k3" ]; then
     connect_keyboard_k3
+    exit
+  fi
+  if [ "$1" == "connect_keyboard_mx_keys_mini" ]; then
+    connect_keyboard_mx_keys_mini
     exit
   fi
   if [ "$1" == "connect_headphones" ]; then
@@ -224,7 +233,7 @@ function main {
     scan
   fi
   if [ "$1" == "on" ]; then
-    on 
+    on
   fi
   if [ "$1" == "off" ]; then
     off
