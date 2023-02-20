@@ -9,7 +9,7 @@ if [ `uname` = "Darwin" ]; then
   export HOMEBREW=/opt/homebrew/bin
   export GOPATH=$DEV/prv/go/workspace
   export ANDROID=$HOME/Library/Android/sdk
-  export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3
+  export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3.10
   export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
 else
   export DEV=$HOME/development
