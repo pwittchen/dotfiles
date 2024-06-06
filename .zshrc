@@ -28,6 +28,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 export PATH=$PATH:$HOME/.poetry/bin
 
+. $HOME/.config/artifactory.config
 . $HOME/.scripts/aliases.sh
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
