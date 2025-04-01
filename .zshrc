@@ -24,7 +24,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 # path config
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 export PATH="$PATH:/Users/pw/.lmstudio/bin"
@@ -32,7 +31,7 @@ export PATH="$PATH:/Users/pw/.local/bin"
 
 # external scripts
 
-. $HOME/.scripts/aliases.sh
+. $HOME/.aliases.sh
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . $HOME/.cargo/env
