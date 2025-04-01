@@ -2,7 +2,7 @@ dotfiles
 ========
 my dotfiles used both on Arch Linux and macOS
 
-Git branches:
+git branches:
 
 - `master` - here I keep my current setup for the macOS (currently active)
 - `legacy-arch-linux-config` - here I keep my legacy Arch Linux config
