@@ -6,6 +6,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git colorize brew mvn gradle pip poetry sudo zsh-autosuggestions zsh-syntax-highlighting kubectl)
+
 . $ZSH/oh-my-zsh.sh
 
 # env variables
@@ -29,16 +30,19 @@ export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 export PATH="$PATH:/Users/pw/.lmstudio/bin"
 export PATH="$PATH:/Users/pw/.local/bin"
 
-# external scripts
+# custom aliases
 
 . $HOME/.aliases.sh
+
+# tools config
+
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . $HOME/.cargo/env
+. $HOMEBREW/virtualenvwrapper.sh
 
 # homebrew config
 
-. $HOMEBREW/virtualenvwrapper.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # nvm config
