@@ -53,7 +53,3 @@ fpath=(/Users/pw/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 
-# dfp artifactory secret configuration
-
-. $HOME/.artifactory_dfp.sh
-
