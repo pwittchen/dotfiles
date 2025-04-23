@@ -22,7 +22,7 @@ export EDITOR=/usr/bin/vim
 export SDKMAN_DIR=$HOME/.sdkman
 export WORKON_HOME=$HOME/.virtualenvs
 
-# path config
+# path configs
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$GOPATH/bin
@@ -34,7 +34,7 @@ export PATH="$PATH:/Users/pw/.local/bin"
 
 . $HOME/.aliases.sh
 
-# tools config
+# tools configs
 
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
