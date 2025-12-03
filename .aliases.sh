@@ -10,3 +10,5 @@ alias pix="cd ~/pictures"
 alias mvs="cd ~/movies"
 alias dtf="cd ~/development/prv/bash/dotfiles"
 alias wlp="cd ~/pictures/wallpapers"
+alias sshm="ssh root@marek245.mikrus.xyz -p10245"
+alias ai-links='ln -sf .ai/prompts/CLAUDE.md CLAUDE.md && ln -sf .ai/prompts/AGENTS.md AGENTS.md'
