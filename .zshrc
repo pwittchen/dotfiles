@@ -1,4 +1,4 @@
-# main zsh config
+# main zsh config (maocs)
 
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
@@ -57,3 +57,12 @@ fpath=(/Users/pw/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 
+# google antigravity
+export PATH="/Users/pw/.antigravity/antigravity/bin:$PATH"
+
+# rancher
+export PATH="/Users/pw/.rd/bin:$PATH"
+
+# disabling telemetry for claude code
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
