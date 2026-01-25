@@ -1,7 +1,7 @@
 # main zsh config (maocs)
 
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
