@@ -53,3 +53,8 @@ compinit
 # disabling telemetry for claude code
 export DISABLE_TELEMETRY=1
 export DISABLE_ERROR_REPORTING=1
+
+# bun
+[ -s "/Users/pw/.bun/_bun" ] && source "/Users/pw/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
