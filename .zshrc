@@ -20,6 +20,10 @@ export VIRTUALENVWRAPPER_VIRTUALENV=$HOMEBREW/virtualenv
 export EDITOR=/usr/bin/vim
 export SDKMAN_DIR=$HOME/.sdkman
 export WORKON_HOME=$HOME/.virtualenvs
+export NVM_DIR="$HOME/.nvm"
+export BUN_INSTALL="$HOME/.bun"
+export DISABLE_TELEMETRY=1
+export DISABLE_ERROR_REPORTING=1
 
 # path configs
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -27,34 +31,26 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$ANDROID/tools/bin:$ANDROID/platform-tools:$ANDROID/emulator
 export PATH="$PATH:/Users/pw/.lmstudio/bin"
 export PATH="$PATH:/Users/pw/.local/bin"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
-# custom aliases
+# aliases
 . $HOME/.aliases.sh
 
-# tools configs
+# tools
 . $HOME/.p10k.zsh
 . $HOME/.sdkman/bin/sdkman-init.sh
 . $HOME/.cargo/env
 . $HOMEBREW/virtualenvwrapper.sh
 
-# homebrew config
+# homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# nvm config
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# docker
+fpath=(/Users/pw/.docker/completions $fpath) && autoload -Uz compinit && compinit
 
-# docker cli completions
-fpath=(/Users/pw/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-
-# disabling telemetry for claude code
-export DISABLE_TELEMETRY=1
-export DISABLE_ERROR_REPORTING=1
+# nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # bun
 [ -s "/Users/pw/.bun/_bun" ] && source "/Users/pw/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+
