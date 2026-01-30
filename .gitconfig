@@ -85,6 +85,9 @@
     ; searching files
     find-file= !git ls-files | grep -i
 
+    ; updating commits
+    commit-time-now = commit --amend --no-edit --date=now
+
 ; interesting references for git aliases and configuration:
 ; - https://gist.github.com/mwhite/6887990
 ; - http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
