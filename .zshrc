@@ -33,6 +33,9 @@ export PATH="$PATH:/Users/pw/.lmstudio/bin"
 export PATH="$PATH:/Users/pw/.local/bin"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# secrets
+. $HOME/.secrets
+
 # aliases
 . $HOME/.aliases.sh
 
@@ -54,3 +57,5 @@ fpath=(/Users/pw/.docker/completions $fpath) && autoload -Uz compinit && compini
 # bun
 [ -s "/Users/pw/.bun/_bun" ] && source "/Users/pw/.bun/_bun"
 
+# opencode
+export PATH=/Users/pw/.opencode/bin:$PATH
