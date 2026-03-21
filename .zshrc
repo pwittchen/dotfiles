@@ -12,7 +12,7 @@ plugins=(git colorize brew mvn gradle pip poetry sudo zsh-autosuggestions zsh-sy
 # env variables
 export DEV=$HOME/Development
 export HOMEBREW=/opt/homebrew/bin
-export GOPATH=$DEV/prv/go/workspace
+export GOPATH=$HOME/go/workspace
 export ANDROID=$HOME/Library/Android/sdk
 export ANDROID_HOME=$ANDROID
 export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW/python3.10
