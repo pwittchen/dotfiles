@@ -33,9 +33,6 @@ export PATH="$PATH:/Users/pw/.lmstudio/bin"
 export PATH="$PATH:/Users/pw/.local/bin"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# secrets
-. $HOME/.secrets
-
 # aliases
 . $HOME/.aliases.sh
 
