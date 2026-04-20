@@ -35,8 +35,9 @@ vnoremap <C-c> "+y
 map <C-p> "+p
 
 let g:mergetool_layout = 'LmR'
-let mapleader = ','
 
+" configure shortcuts for custom plugins
+let mapleader = ','
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>g :Goyo<CR>
@@ -46,4 +47,13 @@ nnoremap <leader>m :MergetoolToggle<CR>
 " remove all trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
 
-execute pathogen#infect()
+" configure custom plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'junegunn/goyo.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'samoshkin/vim-mergetool'
+
+call plug#end()
