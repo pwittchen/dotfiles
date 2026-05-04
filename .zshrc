@@ -33,8 +33,8 @@ export PATH="$PATH:/Users/pw/.lmstudio/bin"
 export PATH="$PATH:/Users/pw/.local/bin"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# aliases
-. $HOME/.aliases.sh
+# my custom aliases and functions
+. $HOME/.func.sh
 
 # tools
 . $HOME/.p10k.zsh
