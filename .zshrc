@@ -56,3 +56,6 @@ fpath=(/Users/pw/.docker/completions $fpath) && autoload -Uz compinit && compini
 
 # opencode
 export PATH=/Users/pw/.opencode/bin:$PATH
+
+# kimchi
+. $HOME/.kimchi
