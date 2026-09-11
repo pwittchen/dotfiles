@@ -54,6 +54,9 @@ fpath=(/Users/pw/.docker/completions $fpath) && autoload -Uz compinit && compini
 # bun
 [ -s "/Users/pw/.bun/_bun" ] && source "/Users/pw/.bun/_bun"
 
+# jrs
+source <(jrs completions zsh)
+
 # opencode
 export PATH=/Users/pw/.opencode/bin:$PATH
 
