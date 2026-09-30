@@ -59,6 +59,3 @@ source <(jrs completions zsh)
 
 # opencode
 export PATH=/Users/pw/.opencode/bin:$PATH
-
-# kimchi
-. $HOME/.kimchi
